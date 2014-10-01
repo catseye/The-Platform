@@ -30,26 +30,30 @@ version number is 0.1-PRE.  When 0.1 is released, it will say something
 like this here:
 
 > The current released version of The Cat's Eye Technologies Platform is
-> version 0.1.  It was built with Funicular version 0.1 and contains
+> version 0.1.  It can be built with Funicular version 0.1 and contains
 > toolshelf version 0.1-2014.0930.
-> 
-> The main virtue of version 0.1 is that, for almost all of Cat's Eye
-> Technologies' software projects, there is a released version number
-> which builds on NetBSD, whose tests (if any) pass on NetBSD, and which
-> interoperates with the included versions of all the other pieces of
-> software in The Cat's Eye Technologies Platform.
+
+All of the pieces of software that make up The Platform are interoperable;
+that is, every piece builds successfully on NetBSD 6.1.4, and those with
+test suites pass all of their relevant automated tests.  The pieces are
+not, however, thoroughly tested manually.
+
+Each version of The Cat's Eye Technologies Platform can be thought of as a
+"versionset" on a collection of software distributions, "frozen" at points
+in their development where they are all mutually compatible.
 
 Quick Start
 -----------
 
-Eventually, there will probably be a NetBSD disk image or ISO you can
+Eventually, there will probably be a NetBSD disk image or ISO that you can
 download with everything on it, but for now, if you want it, you'll have
-to build it.
+to build it.  The disk image is roughly 3.6G in size, so make sure you have
+some free space.
 
 *   Install [Funicular][] (via [toolshelf][], we would suggest)
 *   Put a copy of (or a symbolic link to) the
     [NetBSD 6.1.4](http://www.netbsd.org/releases/formal-6/NetBSD-6.1.4.html)
-    install ISO for **i386**, called `NetBSD-6.1.4-i386.iso`, in this repo's
+    install ISO for i386, called `NetBSD-6.1.4-i386.iso`, in this repo's
     root directory — since it is fairly large (314M) it is not automatically
     downloaded by Funicular, and you may wish to obtain it via a torrent or
     by some other method.
@@ -78,10 +82,10 @@ Note that, in case this listing is out-of-date or inaccurate, see the
 `skel` directory for more accurate, machine-readable version numbers.
 
 The Platform can be thought of as being constructed in stages, with each
-stage building upon the last.  The first stage (the "NetBSD Gondola" stage,
+stage building upon the previous.  The first stage (the "NetBSD Gondola" stage,
 although this is something of a misnomer now) consists of:
 
-*   NetBSD 6.1.4 (minimal install + compiler tools) ♡
+*   NetBSD 6.1.4 (minimal install + compiler tools) ♡ + ♢
 *   Lua 5.1.4 (note that this is already a part of NetBSD 6.1.4) ♡
 *   cPython 2.7.6 ♦¹
 *   toolshelf 0.1-2014.0924 ♡
@@ -102,12 +106,12 @@ that come with NetBSD.)
 
 The third stage, "Cat's Eye Infrastructure", consists of:
 
-*   catseye-realpath 1.0          (for Pixley and others) ♥
-*   Falderal 0.9-2014.0525        (for tests) ♡
-*   yucca 1.1                     (for building Dungeons of Ekileugor) ♡
-*   Mini-Scheme 0.85ce1           (our fork, for Pixley) ♥
-*   OpenZz 1.0.4-4ce1             (our fork, for Zzrk) ♢¹
-*   Ophis 2.1                     (our mirror, for building 6502 stuff) ♡
+*   catseye-realpath 1.0     (for Pixley and others) ♥
+*   Falderal 0.9-2014.0525   (for tests) ♡
+*   yucca 1.1                (for building Dungeons of Ekileugor) ♡
+*   Mini-Scheme 0.85ce1      (our fork, for Pixley) ♥
+*   OpenZz 1.0.4-4ce1        (our fork, for Zzrk) ♢¹
+*   Ophis 2.1                (our Mercurial mirror, for building 6502 stuff) ♡
 
 The fourth and "final" stage, the "Cat's Eye" stage, consists of the
 remainder of almost all of Cat's Eye Technologies' software distributions.
@@ -156,7 +160,7 @@ in The Platform.
 *   [yoob](http://catseye.tc/node/yoob_(Applet)).  Reference implementation
     is written in Java, and no Java implementation is installed.
 
-### No great use to you ###
+### Of no great use to you ###
 
 This is the list we want to minimize, either by allowing these to run in
 The Platform somehow, or allowing them to run on the web, in an HTML5 browser,
@@ -224,6 +228,8 @@ in an included technology was added to the project.
 Appendix A.  How to make a bootable USB stick of The Platform
 -------------------------------------------------------------
 
+The instructions in this section have not been thoroughly tested.
+
 First,
 
     funicular backup wd0-hdboot
@@ -260,6 +266,8 @@ manually, which is annoying.
 
 TODO
 ----
+
+The information in this section is likely to be random and outdated.
 
 *   If we have git repos, version git clones after docking them.  To do this
     we either need to mess with Dulwich (sigh) or build git on the guest.
