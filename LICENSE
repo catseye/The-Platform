@@ -1,0 +1,33 @@
+It is important, first, to make a distinction between the contents of
+this repository (which only builds The Cat's Eye Technologies Platform),
+and the contents of The Cat's Eye Technologies Platform itself (which is
+not contained in this repository, but which would be contained in a
+filesystem image built by the software in this repository.)
+
+The contents of this repository are covered by the following
+BSD-compatible license, modelled after the "Report on the Programming
+Language Haskell 98" license:
+
+-----------------------------------------------------------------------------
+
+  Copyright (c)2014 Chris Pressey, Cat's Eye Technologies.
+
+  The authors intend this Funicular to belong to the entire Esolang
+  community, and so we grant permission to copy and distribute it for
+  any purpose, provided that it is reproduced in its entirety,
+  including this Notice.  Modified versions of this Funicular may also be
+  copied and distributed for any purpose, provided that the modified
+  version is clearly presented as such, and that it does not claim to
+  be a definition of The Cat's Eye Technologies Platform.
+
+-----------------------------------------------------------------------------
+
+A filesystem image comprising The Cat's Eye Technologies Platform is
+an aggregation (in our opinion, a "mere aggregation") of diverse pieces
+of software under various licenses.  These are primarily, but not
+exclusively, open-source licenses, so do be aware of the details if you
+intend to re-distribute The Cat's Eye Technologies Platform.  For a
+non-normative guide to which pieces of software are covered under which
+licenses, see the file `README.markdown` in this directory; for specific
+information on each piece of software, please consult that software's
+own license documentation.
