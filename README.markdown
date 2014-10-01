@@ -28,9 +28,10 @@ Version
 The Cat's Eye Technologies Platform is not yet released.  Its nominal
 version number is 0.1-PRE.  When 0.1 is released, it will say something
 like this here:
-    
+
 > The current released version of The Cat's Eye Technologies Platform is
-> version 0.1.
+> version 0.1.  It was built with Funicular version 0.1 and contains
+> toolshelf version 0.1-2014.0930.
 > 
 > The main virtue of version 0.1 is that, for almost all of Cat's Eye
 > Technologies' software projects, there is a released version number
@@ -109,7 +110,7 @@ The third stage, "Cat's Eye Infrastructure", consists of:
 *   Ophis 2.1                     (our mirror, for building 6502 stuff) ♡
 
 The fourth and "final" stage, the "Cat's Eye" stage, consists of the
-remainder of almostr all of Cat's Eye Technologies' software distributions.
+remainder of almost all of Cat's Eye Technologies' software distributions.
 See `skel/catseye.catalog` for a list of these and their version numbers.
 
 What's Not Included?
@@ -152,8 +153,14 @@ in The Platform.
     installed.
 *   [Whothm](http://catseye.tc/node/Whothm_(Applet)).  Reference implementation
     is written in Java, and no Java implementation is installed.
+*   [yoob](http://catseye.tc/node/yoob_(Applet)).  Reference implementation
+    is written in Java, and no Java implementation is installed.
 
 ### No great use to you ###
+
+This is the list we want to minimize, either by allowing these to run in
+The Platform somehow, or allowing them to run on the web, in an HTML5 browser,
+somehow.  But for some of them, neither of those options make sense either.
 
 *   Apple Befunge.  No Apple II emulator installed.
 *   C64 Demo Depot.  No Commodore 64 emulator installed.  **still buildable**
@@ -164,11 +171,12 @@ in The Platform.
     automation for this, and no tests.  Well, it's a junk-drawer anyway.
 *   Dungeons of Ekileugor.  No VIC-20 emulator / BASIC interpreter installed.
     **does not quite build, needs petcat**
-*   ILLGOL.  No DOS emulator installed.  **still buildable**
+*   ILLGOL.  No DOS emulator installed to run the executables produced by
+    the compiler(s).  **still buildable and runnable**
 *   Troupe.  Not implemented.  When it will be implemented, it will probably
     be implemented in Javascript first.
-*   yoob.  no Java implementation installed.
-*   yoob.js.  no Javascript implementation installed.
+*   yoob.js.  no Javascript implementation installed.  and it's a framework,
+    really, with nothing of itself per se to run.
 
 Software Selection Criteria
 ---------------------------
