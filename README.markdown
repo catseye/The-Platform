@@ -53,34 +53,23 @@ to build it.
 [Funicular]: https://github.com/catseye/Funicular/
 [Cat's Eye Technologies]: http://catseye.tc/
 
-Software selection criteria
----------------------------
+What's Included?
+----------------
 
-For inclusion in The Platform, we generally prefer software that:
-
-*   builds under NetBSD (ideally, under any supported architecture)
-*   has a reasonable build system
-*   has few dependencies
-*   is lightweight
-*   has an unrestrictive license (public domain > BSD/MIT/ISC > LGPL > GPL)
-*   is hosted somewhere in DVCS (Github, Bitbucket, etc.)
-
-Infrastructure
---------------
-
-This section describes the software infrastructure that makes up
-The Platform.  For the meanings of the various card suit symbols, see below.
+This section describes the software infrastructure that makes up The Platform.
+As for _why_ these pieces of software were chosen, and for the meanings of the
+various card suit symbols, see the "Software selection criteria" section below.
 
 Note that, in case this listing is out-of-date or inaccurate, see the
 `Funicularfile` in this directory and the various `*.catalog` files in the
 `skel` directory for more accurate, machine-readable version numbers.
 
 The Platform can be thought of as being constructed in stages, with each
-stage building upon the last.  The first stage ("NetBSD Gondola", although
-this is something of a misnomer now) consists of:
+stage building upon the last.  The first stage (the "NetBSD Gondola" stage,
+although this is something of a misnomer now) consists of:
 
 *   NetBSD 6.1.4 (minimal install + compiler tools) ♡
-*   Lua 5.1.4 (note that this is already a part of NetBSD 6.1.4.)
+*   Lua 5.1.4 (note that this is already a part of NetBSD 6.1.4) ♡
 *   cPython 2.7.6 ♦¹
 *   toolshelf 0.1-2014.0924 ♡
 
@@ -95,6 +84,9 @@ The second stage, "Infrastructure", consists of:
 *   CHICKEN Scheme 4.8.0.5 ♡¹
 *   yasm 1.2.0 ♡
 
+(Nano is not strictly necessary, I just can't stand any of the text editors
+that come with NetBSD.)
+
 The third stage, "Cat's Eye Infrastructure", consists of:
 
 *   catseye-realpath 1.0          (for Pixley and others) ♥
@@ -105,48 +97,33 @@ The third stage, "Cat's Eye Infrastructure", consists of:
 *   Ophis 2.1                     (our mirror, for building 6502 stuff) ♡
 
 The fourth and "final" stage, the "Cat's Eye" stage, consists of the
-remainder of Cat's Eye Technologies' software distributions.  See
-`skel/catseye.catalog` for a list of these and their version numbers.
+remainder of almostr all of Cat's Eye Technologies' software distributions.
+See `skel/catseye.catalog` for a list of these and their version numbers.
 
-### License Legend ###
+What's Not Included?
+--------------------
 
-The symbol following the name of the software indicates the license:
-
-*   ♥ = Public domain
-*   ♡ = BSD/MIT/ISC license
-    *   ♡¹ = BSD license generally but note that some libs are non-BSD
-*   ♢ = GPLv2 (nothing here is GPLv3)
-    *   ♢¹ = note that the OpenZz libs are LGPL; only the driver is GPL
-*   ♦ = more long-winded than BSD but not viral like GPL; specifically,
-    *   ♦¹ = Python Software Foundation license
-    *   ♦² = Artistic license
-    *   ♦³ = Ericsson Public License (like Mozilla Public License except
-        the jurisdiction is Sweden.)
-
-Underrepresented Projects
--------------------------
+You may have noticed we keep saying "almost all"...
 
 Some of Cat's Eye Technologies' projects are not currently (and some
 **may not ever be**) well-represented in The Platform.  These fall into
 a few broad categories.
 
-### not usable. no great loss ###
+### included but of no great use to you ###
 
 Note that sources to these are still included as part of the
 Cat's Eye Stage.  It's just that you can't build or use them.
-
-*   DiskSumo.  No Commodore 64 emulator installed.  Besides, no point.
-*   yoob.  no Java implementation installed.
-
-### included but of no great use to you ###
 
 *   Atari 2600 Skeleton.  No Atari emulator installed.
     **still buildable**
 *   C64 Demo Depot.  No Commodore 64 emulator installed.
     **still buildable**
+*   DiskSumo.  No Commodore 64 emulator installed.  Besides, no point.
 *   The Dipple.  Contains Ruby, Javascript, Icon, etc., and no implementations
-    of these languages are installed.  Well, it's a junk-drawer anyway.
-    **might be split up**
+    of these languages are installed.  Otoh, I'm sure many of the contents that
+    are written in C, Python, etc. will build and run, but there is no
+    automation for this, and no tests.  Well, it's a junk-drawer anyway.
+*   yoob.  no Java implementation installed.
 
 ### just a bit crippled ###
 
@@ -190,8 +167,41 @@ better!  And in fact, all the linked ones below are already there.
 *   [Whothm](http://catseye.tc/node/Whothm_(Applet)).  Reference implementation
     is written in Java, and no Java implementation is installed.
 
-How to make a bootable USB stick of The Platform
-------------------------------------------------
+Software selection criteria
+---------------------------
+
+For inclusion in The Platform, we generally prefer software that:
+
+*   builds under NetBSD (ideally, under any supported architecture)
+*   has a reasonable build system
+*   has few dependencies
+*   is lightweight
+*   has an unrestrictive license (public domain > BSD/MIT/ISC > LGPL > GPL)
+*   is hosted somewhere in DVCS (Github, Bitbucket, etc.)
+
+The symbol following the name of the software indicates the license:
+
+*   ♥ = Public domain
+*   ♡ = BSD/MIT/ISC license
+    *   ♡¹ = BSD license generally but note that some libs are non-BSD
+*   ♢ = GPLv2 (nothing here is GPLv3)
+    *   ♢¹ = note that the OpenZz libs are LGPL; only the driver is GPL
+*   ♦ = more long-winded than BSD but not viral like GPL; specifically,
+    *   ♦¹ = Python Software Foundation license
+    *   ♦² = Artistic license
+    *   ♦³ = Ericsson Public License (like Mozilla Public License except
+        the jurisdiction is Sweden.)
+
+Excepting NetBSD itself, all included software includes source code, from
+which the executables for NetBSD are built.  I mean oh yes we could have
+just plunked down some binary packages from `pkgsrc` but that'd be far too
+easy, wouldn't it.  Or rather, inclusion of source and making sure you can
+build from that source improves "hackability", that is, it lowers barriers
+to customization to individual circumstance.  Yes.  I'm sure that's what we
+were trying to say.
+
+Appendix A.  How to make a bootable USB stick of The Platform
+-------------------------------------------------------------
 
 First,
 
