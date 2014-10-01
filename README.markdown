@@ -22,9 +22,21 @@ that'd be needed to run almost everything from Cat's Eye Technologies?"
 As I said, I *could* come up with a serious rationalization for this.
 But mainly, it's fun.  A certain awful flavour of fun, maybe, but still fun.
 
+Version
+-------
+
 The Cat's Eye Technologies Platform is not yet released.  Its nominal
-version number is 0.1-PRE and will be 0.1 when it is released although I
-don't know if using 0.x version numbers even makes a lot of sense here yet.
+version number is 0.1-PRE.  When 0.1 is released, it will say something
+like this here:
+    
+> The current released version of The Cat's Eye Technologies Platform is
+> version 0.1.
+> 
+> The main virtue of version 0.1 is that, for almost all of Cat's Eye
+> Technologies' software projects, there is a released version number
+> which builds on NetBSD, whose tests (if any) pass on NetBSD, and which
+> interoperates with the included versions of all the other pieces of
+> software in The Cat's Eye Technologies Platform.
 
 Quick Start
 -----------
@@ -58,7 +70,7 @@ What's Included?
 
 This section describes the software infrastructure that makes up The Platform.
 As for _why_ these pieces of software were chosen, and for the meanings of the
-various card suit symbols, see the "Software selection criteria" section below.
+various card suit symbols, see the "Software Selection Criteria" section below.
 
 Note that, in case this listing is out-of-date or inaccurate, see the
 `Funicularfile` in this directory and the various `*.catalog` files in the
@@ -106,51 +118,25 @@ What's Not Included?
 You may have noticed we keep saying "almost all"...
 
 Some of Cat's Eye Technologies' projects are not currently (and some
-**may not ever be**) well-represented in The Platform.  These fall into
+may not ever be) well-represented in The Platform.  These fall into
 a few broad categories.
 
-### included but of no great use to you ###
+Note that sources to these projects are still included as part of the
+Cat's Eye Stage.  It's just that you may not be able to build them, and
+you won't be able to use them even if they do build.
 
-Note that sources to these are still included as part of the
-Cat's Eye Stage.  It's just that you can't build or use them.
+### Available on the Web ###
 
-*   Atari 2600 Skeleton.  No Atari emulator installed.
-    **still buildable**
-*   C64 Demo Depot.  No Commodore 64 emulator installed.
-    **still buildable**
-*   DiskSumo.  No Commodore 64 emulator installed.  Besides, no point.
-*   The Dipple.  Contains Ruby, Javascript, Icon, etc., and no implementations
-    of these languages are installed.  Otoh, I'm sure many of the contents that
-    are written in C, Python, etc. will build and run, but there is no
-    automation for this, and no tests.  Well, it's a junk-drawer anyway.
-*   yoob.  no Java implementation installed.
-
-### just a bit crippled ###
-
-*   **PL-{GOTO}.NET**.  Mono runtime is not installed — it can still interpret
-    PL-{GOTO}, though, and passes the tests.
-
-### a regrettable omission (not on web yet) ###
-
-The more of these that can be run under HTML5 on catseye.tc instead, the
-better!  And in fact, all the linked ones below are already there.
-
-*   Apple Befunge.  No Apple II emulator installed.
-*   Dungeons of Ekileugor.  No VIC-20 emulator / BASIC interpreter installed.
-    **does not quite build, needs petcat**
-*   ILLGOL.  No DOS emulator installed.
-    **still buildable**
-*   Troupe.  Not implemented.  When it will be implemented, it will probably
-    be implemented in Javascript first.
-*   yoob.js.  no Javascript implementation installed.
-
-### available on web ###
+A nominal goal is to have every Cat's Eye Technologies' project available
+*either* in The Platform *or* as an online installation on the `catseye.tc`
+web site.  Thus, if you can already experience it by pointing your web
+browser at `catseye.tc`, we won't worry too much about it not being usable
+in The Platform.
 
 *   [BefOS](http://catseye.tc/node/BefOS_(v86)).  No PC emulator installed.
     **still buildable**
 *   [Bubble Escape](http://catseye.tc/node/Bubble_Escape_(JaC64)).
-    No Commodore 64 emulator installed.
-    **still buildable**
+    No Commodore 64 emulator installed.  **still buildable**
 *   [Etcha](http://catseye.tc/node/Etcha_(HTML5)).  Implemented only in Java
     and Javascript, and no implementations of either of these languages are
     installed.
@@ -158,16 +144,33 @@ better!  And in fact, all the linked ones below are already there.
     Javascript, and no Javascript implementation is installed.
 *   [HTML5-Gewgaws](http://catseye.tc/node/Online_Installation#gewgaws_exhibit).
     Implemented only in Javascript, and no Javascript implementation is
-    installed.  Plus, they assume a web browser.
+    installed.  Plus, these gewgaws generally assume an HTML5 web browser.
 *   [Shelta](http://catseye.tc/node/Shelta_(v86)).  No DOS emulator installed.
     **still buildable**
 *   [Wunnel](http://catseye.tc/node/Wunnel_(HTML5)).  Implemented only in Java
-    and Javascript, and no implementations
-    for either of these languages are installed.
+    and Javascript, and no implementations of either of these languages are
+    installed.
 *   [Whothm](http://catseye.tc/node/Whothm_(Applet)).  Reference implementation
     is written in Java, and no Java implementation is installed.
 
-Software selection criteria
+### No great use to you ###
+
+*   Apple Befunge.  No Apple II emulator installed.
+*   C64 Demo Depot.  No Commodore 64 emulator installed.  **still buildable**
+*   DiskSumo.  No Commodore 64 emulator installed.  Besides, no point.
+*   The Dipple.  Contains Ruby, Javascript, Icon, etc., and no implementations
+    of these languages are installed.  Otoh, I'm sure many of the contents that
+    are written in C, Python, etc. will build and run, but there is no
+    automation for this, and no tests.  Well, it's a junk-drawer anyway.
+*   Dungeons of Ekileugor.  No VIC-20 emulator / BASIC interpreter installed.
+    **does not quite build, needs petcat**
+*   ILLGOL.  No DOS emulator installed.  **still buildable**
+*   Troupe.  Not implemented.  When it will be implemented, it will probably
+    be implemented in Javascript first.
+*   yoob.  no Java implementation installed.
+*   yoob.js.  no Javascript implementation installed.
+
+Software Selection Criteria
 ---------------------------
 
 For inclusion in The Platform, we generally prefer software that:
@@ -199,6 +202,16 @@ easy, wouldn't it.  Or rather, inclusion of source and making sure you can
 build from that source improves "hackability", that is, it lowers barriers
 to customization to individual circumstance.  Yes.  I'm sure that's what we
 were trying to say.
+
+Some of Cat's Eye Technologies' projects were originally written in (or
+otherwise depended on) some language (or other system or tool) which is not
+included in The Platform.  In some of these cases, an additional implementation
+in an included technology was added to the project.
+
+*   **PL-{GOTO}.NET**.  The Mono runtime is not included — it can still
+    interpret PL-{GOTO}, though, and passes the tests.
+*   **Velo**.  No Ruby implementation is included.  An interpreter was
+    implemented in Lua for inclusion in The Platform.
 
 Appendix A.  How to make a bootable USB stick of The Platform
 -------------------------------------------------------------
