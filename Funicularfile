@@ -1,0 +1,159 @@
+return {
+    platform = NetBSD_6,
+    system_image = 'wd0.img',
+    setup_image = 'setup-netbsd.iso',
+
+    distfiles = [[
+      http://www.python.org/ftp/python/2.7.6/Python-2.7.6.tgz
+      https://github.com/catseye/toolshelf/archive/0.1-2014.0930.zip
+      http://ftp.gnu.org/gnu/make/make-3.81.tar.gz
+      http://www.nano-editor.org/dist/v2.2/nano-2.2.6.tar.gz
+      http://mercurial.selenic.com/release/mercurial-1.9.3.tar.gz
+      http://www.cpan.org/src/5.0/perl-5.18.2.tar.gz
+      http://cvs.haskell.org/Hugs/downloads/2006-09/hugs98-plus-Sep2006.tar.gz
+      http://www.erlang.org/download/otp_src_R16B03-1.tar.gz
+      http://code.call-cc.org/releases/4.8.0/chicken-4.8.0.5.tar.gz
+      http://www.tortall.net/projects/yasm/releases/yasm-1.2.0.tar.gz
+    ]],
+
+    toolshelf_inside = true,
+    distrepos_hg = [[
+      https://bitbucket.org/catseye/alpaca
+      https://bitbucket.org/catseye/animals
+      https://bitbucket.org/catseye/apple-befunge
+      https://bitbucket.org/catseye/arboretuum
+      https://bitbucket.org/catseye/befos
+      https://bitbucket.org/catseye/befunge-93
+      https://bitbucket.org/catseye/beta-juliet
+      https://bitbucket.org/catseye/beturing
+      https://bitbucket.org/catseye/bhuna
+      https://bitbucket.org/catseye/braktif
+      https://bitbucket.org/catseye/bubble-escape
+      https://bitbucket.org/catseye/burro
+      https://bitbucket.org/catseye/c64-demo-depot
+      https://bitbucket.org/catseye/cabra
+      https://bitbucket.org/catseye/castile
+      https://bitbucket.org/catseye/cfluviurrh
+      https://bitbucket.org/catseye/chrysoberyl
+      https://bitbucket.org/catseye/circute
+      https://bitbucket.org/catseye/console-virtual
+      https://bitbucket.org/catseye/corona-realm-of-magic
+      https://bitbucket.org/catseye/crone
+      https://bitbucket.org/catseye/deturgenchry
+      https://bitbucket.org/catseye/dieter
+      https://bitbucket.org/catseye/dipple
+      https://bitbucket.org/catseye/disksumo
+      https://bitbucket.org/catseye/dungeons-of-ekileugor
+      https://bitbucket.org/catseye/eightebed
+      https://bitbucket.org/catseye/electronics-projects
+      https://bitbucket.org/catseye/emmental
+      https://bitbucket.org/catseye/etcha
+      https://bitbucket.org/catseye/exanoke
+      https://bitbucket.org/catseye/falderal
+      https://bitbucket.org/catseye/fbbi
+      https://bitbucket.org/catseye/flip
+      https://bitbucket.org/catseye/flobnar
+      https://bitbucket.org/catseye/funge-98
+      https://bitbucket.org/catseye/funicular
+      https://bitbucket.org/catseye/gemooy
+      https://bitbucket.org/catseye/granola-m
+      https://bitbucket.org/catseye/hev
+      https://bitbucket.org/catseye/html5-gewgaws
+      https://bitbucket.org/catseye/hunter
+      https://bitbucket.org/catseye/illgol-grand-mal
+      https://bitbucket.org/catseye/iphigeneia
+      https://bitbucket.org/catseye/jaccia
+      https://bitbucket.org/catseye/jolverine
+      https://bitbucket.org/catseye/kangaroo-iceberg
+      https://bitbucket.org/catseye/kelxquoia
+      https://bitbucket.org/catseye/kosheri
+      https://bitbucket.org/catseye/larabee
+      https://bitbucket.org/catseye/maentwrog
+      https://bitbucket.org/catseye/mascarpone
+      https://bitbucket.org/catseye/muriel
+      https://bitbucket.org/catseye/mzstorkipiwanbotbotbot
+      https://bitbucket.org/catseye/n-dcnc
+      https://bitbucket.org/catseye/netusb
+      https://bitbucket.org/catseye/nhohnhehr
+      https://bitbucket.org/catseye/noit-o-mnain-worb
+      https://bitbucket.org/catseye/pail
+      https://bitbucket.org/catseye/pibfi
+      https://bitbucket.org/catseye/pixley
+      https://bitbucket.org/catseye/pl-goto-.net
+      https://bitbucket.org/catseye/pophery
+      https://bitbucket.org/catseye/quylthulg
+      https://bitbucket.org/catseye/redgreen
+      https://bitbucket.org/catseye/realpath
+      https://bitbucket.org/catseye/robin
+      https://bitbucket.org/catseye/rube
+      https://bitbucket.org/catseye/rube-ii
+      https://bitbucket.org/catseye/sally
+      https://bitbucket.org/catseye/sbeezg
+      https://bitbucket.org/catseye/shelta
+      https://bitbucket.org/catseye/sickbay
+      https://bitbucket.org/catseye/sixtypical
+      https://bitbucket.org/catseye/smetana
+      https://bitbucket.org/catseye/smith
+      https://bitbucket.org/catseye/specs-on-spec
+      https://bitbucket.org/catseye/squishy2k
+      https://bitbucket.org/catseye/strelnokoff
+      https://bitbucket.org/catseye/super-wumpus-land
+      https://bitbucket.org/catseye/tamsin
+      https://bitbucket.org/catseye/the-swallows
+      https://bitbucket.org/catseye/thue
+      https://bitbucket.org/catseye/toolshelf
+      https://bitbucket.org/catseye/tpis
+      https://bitbucket.org/catseye/treacle
+      https://bitbucket.org/catseye/troupe
+      https://bitbucket.org/catseye/unlikely
+      https://bitbucket.org/catseye/velo
+      https://bitbucket.org/catseye/version
+      https://bitbucket.org/catseye/whothm
+      https://bitbucket.org/catseye/wierd
+      https://bitbucket.org/catseye/wunnel
+      https://bitbucket.org/catseye/xigxag
+      https://bitbucket.org/catseye/xoomonk
+      https://bitbucket.org/catseye/yolk
+      https://bitbucket.org/catseye/yoob
+      https://bitbucket.org/catseye/yoob.js
+      https://bitbucket.org/catseye/ypsilax
+      https://bitbucket.org/catseye/yucca
+      https://bitbucket.org/catseye/zowie
+      https://bitbucket.org/catseye/zzrk
+      
+      https://bitbucket.org/catseye/ophis
+      https://bitbucket.org/catseye/openzz
+      https://bitbucket.org/catseye/minischeme
+    ]],
+
+    install_instructions = [[
+* At the boot prompt, select "1. Install NetBSD"
+* After it boots, select a language for installation messages, and a keyboard type.
+* At the next menu, select "Install NetBSD to hard disk".  Then "yes".
+* At the "Select your distribution" menu, select "Custom installation".
+* At the next menu, arrow up to "Compiler Tools" and hit Enter to select it.
+  Then arrow back down and select "Install selected sets".
+* This is the correct geometry.
+* Use the entire disk.
+* Yes, install the NetBSD bootcode.
+* Use existing partition sizes.  Partition sizes ok.  Name is irrelevant.  Yes, proceed.
+* At "Bootblocks selection": Use BIOS console.
+* Install from CD-ROM.
+* When that's done - don't bother configuring anything.
+* When back at the main menu, select "Exit Install System" and type `shutdown -p now`
+    ]],
+
+    setup_instructions = [[
+* Login as root (which will not have a password. You may or may not wish to give it one,
+  depending on your security needs.)
+* As root, run:
+        mount /cdrom
+        cp /cdrom/setup-netbsd.sh .
+        . ./setup-netbsd.sh
+* Follow the instructions in the script.
+* Once it is finished, log out and log in again as `user`. (You may or may not wish to
+  run passwd to give user a password at this point, depending on your security needs.)
+* Then run:
+        th dock @/cdrom/infrastructure.catalog @/cdrom/catseye.catalog
+    ]],
+}

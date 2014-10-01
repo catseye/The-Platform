@@ -1,0 +1,6 @@
+*.iso
+*.img
+*.gz
+distfiles
+distrepos
+staging_area
