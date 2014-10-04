@@ -25,22 +25,18 @@ But mainly, it's fun.  A certain awful flavour of fun, maybe, but still fun.
 Version
 -------
 
-The Cat's Eye Technologies Platform is not yet released.  Its nominal
-version number is 0.1-PRE.  When 0.1 is released, it will say something
-like this here:
+Each version of The Cat's Eye Technologies Platform can be thought of as a
+"versionset" on a collection of software distributions, "frozen" at points
+in their development where they are all mutually compatible.
 
-> The current released version of The Cat's Eye Technologies Platform is
-> version 0.1.  It can be built with Funicular version 0.1 and contains
-> toolshelf version 0.1-2014.0930.
+The current released version of The Cat's Eye Technologies Platform is
+version **0.1**.  It can be built with Funicular version 0.1 and employs
+toolshelf version 0.1 revision 2014.0930 as its "packaging system".
 
 All of the pieces of software that make up The Platform are interoperable;
 that is, every piece builds successfully on NetBSD 6.1.4, and those with
 test suites pass all of their relevant automated tests.  The pieces are
 not, however, thoroughly tested manually.
-
-Each version of The Cat's Eye Technologies Platform can be thought of as a
-"versionset" on a collection of software distributions, "frozen" at points
-in their development where they are all mutually compatible.
 
 Quick Start
 -----------
@@ -50,7 +46,8 @@ download with everything on it, but for now, if you want it, you'll have
 to build it.  The disk image is roughly 3.6G in size, so make sure you have
 some free space.
 
-*   Install [Funicular][] (via [toolshelf][], we would suggest)
+*   Install [Funicular][] 0.1 (via [toolshelf][], we would suggest, although
+    this is not strictly necessary)
 *   Put a copy of (or a symbolic link to) the
     [NetBSD 6.1.4](http://www.netbsd.org/releases/formal-6/NetBSD-6.1.4.html)
     install ISO for i386, called `NetBSD-6.1.4-i386.iso`, in this repo's
@@ -124,7 +121,7 @@ You may have noticed we keep saying "almost all"...
 
 Some of Cat's Eye Technologies' projects are not currently (and some
 may not ever be) well-represented in The Platform.  These fall into
-a few broad categories.
+two broad categories, detailed below.
 
 Note that sources to these projects are still included as part of the
 Cat's Eye Stage.  It's just that you may not be able to build them, and
