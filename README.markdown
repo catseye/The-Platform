@@ -38,6 +38,11 @@ that is, every piece builds successfully on NetBSD 6.1.4, and those with
 test suites pass all of their relevant automated tests.  The pieces are
 not, however, thoroughly tested manually.
 
+The current development version of The Cat's Eye Technologies Platform
+is **0.2-PRE**.  No claims are made about the versions of any of the
+software involved or its interoperability, and no claims will be made
+until such time as the "-PRE" bit is dropped from the version number.
+
 Quick Start
 -----------
 
