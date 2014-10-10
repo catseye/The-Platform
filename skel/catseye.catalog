@@ -1,12 +1,19 @@
+### our infrastructure
+
 /cdrom/bitbucket.org,catseye,realpath-master.tar.gz@1.0
 # to be updated...
 /cdrom/bitbucket.org,catseye,falderal-master.tar.gz
 /cdrom/bitbucket.org,catseye,yucca-master.tar.gz@rel_1_1
+
+### our forks
+
 /cdrom/bitbucket.org,catseye,minischeme-master.tar.gz@0.85ce1
 /cdrom/bitbucket.org,catseye,openzz-master.tar.gz@1.0.4-4ce1
 /cdrom/bitbucket.org,catseye,ophis-master.tar.gz@v2.1
 # to be versioned...
 /cdrom/bitbucket.org,catseye,ee-master.tar.gz
+
+### our projects
 
 # chrysoberyl, dipple, electronics-projects, specs-on-spec are intentionally @tip
 

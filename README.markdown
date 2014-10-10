@@ -39,7 +39,8 @@ test suites pass all of their relevant automated tests.  The pieces are
 not, however, thoroughly tested manually.
 
 The current development version of The Cat's Eye Technologies Platform
-is **0.2-PRE**.  No claims are made about the versions of any of the
+is **0.2-PRE**.  It is this version that the following sections describe;
+however, no claims are made about the versions of any of the
 software involved or its interoperability, and no claims will be made
 until such time as the "-PRE" bit is dropped from the version number.
 
@@ -95,7 +96,6 @@ although this is something of a misnomer now) consists of:
 The second stage, "Infrastructure", consists of:
 
 *   GNU Make 3.81 ♢
-*   GNU Nano 2.2.6 ♢
 *   Mercurial 1.9.3 ♢
 *   Perl 5.18.2 ♦²
 *   Hugs98-plus Sep2006 ♡
@@ -103,17 +103,23 @@ The second stage, "Infrastructure", consists of:
 *   CHICKEN Scheme 4.8.0.5 ♡¹
 *   yasm 1.2.0 ♡
 
-(Nano is not strictly necessary, I just can't stand any of the text editors
-that come with NetBSD.)
-
 The third stage, "Cat's Eye Infrastructure", consists of:
 
 *   catseye-realpath 1.0     (for Pixley and others) ♥
 *   Falderal 0.9-2014.0525   (for tests) ♡
 *   yucca 1.1                (for building Dungeons of Ekileugor) ♡
-*   Mini-Scheme 0.85ce1      (our fork, for Pixley) ♥
-*   OpenZz 1.0.4-4ce1        (our fork, for Zzrk) ♢¹
-*   Ophis 2.1                (our Mercurial mirror, for building 6502 stuff) ♡
+
+The third-and-a-half-th stage, "Cat's Eye Forked Infrastructure", consists of
+others' projects of which Cat's Eye Technologies maintains forks (or just
+mirrors in Mercurial to make things easier.)
+
+*   Mini-Scheme 0.85ce1      (for Pixley) ♥
+*   OpenZz 1.0.4-4ce1        (for Zzrk) ♢¹
+*   Ophis 2.1                (mirror) (for building 6502 stuff) ♡
+*   ee 1.5.2ce1              (for text editing) ♡
+
+(ee is not strictly necessary, I just can't stand any of the text editors
+that come with NetBSD.)
 
 The fourth and "final" stage, the "Cat's Eye" stage, consists of the
 remainder of almost all of Cat's Eye Technologies' software distributions.
