@@ -1,11 +1,11 @@
 return {
-    platform = NetBSD_6,
+    platform = NetBSD_6_1_5,
     system_image = 'wd0.img',
     setup_image = 'setup-netbsd.iso',
 
     distfiles = [[
-      http://www.python.org/ftp/python/2.7.6/Python-2.7.6.tgz
-      https://github.com/catseye/toolshelf/archive/0.1-2014.0930.zip
+      http://www.python.org/ftp/python/2.7.8/Python-2.7.8.tgz
+      https://github.com/catseye/toolshelf/archive/0.1-2014.1229.zip
       http://ftp.gnu.org/gnu/make/make-3.81.tar.gz
       http://mercurial.selenic.com/release/mercurial-1.9.3.tar.gz
       http://www.cpan.org/src/5.0/perl-5.18.2.tar.gz
