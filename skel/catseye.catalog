@@ -82,7 +82,8 @@
 /cdrom/bitbucket.org,catseye,noit-o-mnain-worb-master.tar.gz@rel_1_1_2014_0819
 /cdrom/bitbucket.org,catseye,pail-master.tar.gz@rel_1_0_2014_0819
 /cdrom/bitbucket.org,catseye,pibfi-master.tar.gz@rel_1_0_2012_0826
-/cdrom/bitbucket.org,catseye,pixley-master.tar.gz@rel_2_0_2014_0819
+# to be updated...
+/cdrom/bitbucket.org,catseye,pixley-master.tar.gz
 # to be updated...
 /cdrom/bitbucket.org,catseye,pl-goto-.net-master.tar.gz
 /cdrom/bitbucket.org,catseye,pophery-master.tar.gz@453cbb3dcdb9
@@ -91,14 +92,12 @@
 /cdrom/bitbucket.org,catseye,redgreen-master.tar.gz@rel_1_1_2014_0819
 /cdrom/bitbucket.org,catseye,robin-master.tar.gz@0.2
 /cdrom/bitbucket.org,catseye,rube-ii-master.tar.gz@rel_1_0_2001_0201
-# to be updated...
-/cdrom/bitbucket.org,catseye,rube-master.tar.gz
+/cdrom/bitbucket.org,catseye,rube-master.tar.gz@rel_1_6
 /cdrom/bitbucket.org,catseye,sally-master.tar.gz@rel_1_0_2014_0819
 /cdrom/bitbucket.org,catseye,sbeezg-master.tar.gz@rel_1_0_2014_0819
 /cdrom/bitbucket.org,catseye,shelta-master.tar.gz@rel_1_2_2014_0422
 /cdrom/bitbucket.org,catseye,sickbay-master.tar.gz@1.0
-# to be updated...
-/cdrom/bitbucket.org,catseye,sixtypical-master.tar.gz
+/cdrom/bitbucket.org,catseye,sixtypical-master.tar.gz@0.1-2014.1230
 /cdrom/bitbucket.org,catseye,smetana-master.tar.gz@rel_1_0_2014_0819
 /cdrom/bitbucket.org,catseye,smith-master.tar.gz@rel_2_1_2013_0227
 /cdrom/bitbucket.org,catseye,specs-on-spec-master.tar.gz@tip
@@ -119,8 +118,7 @@
 /cdrom/bitbucket.org,catseye,wierd-master.tar.gz@rel_1_0_2014_0819
 /cdrom/bitbucket.org,catseye,wunnel-master.tar.gz@1.0
 /cdrom/bitbucket.org,catseye,xigxag-master.tar.gz@rel_1_0_2012_1028
-# to be updated...
-/cdrom/bitbucket.org,catseye,xoomonk-master.tar.gz
+/cdrom/bitbucket.org,catseye,xoomonk-master.tar.gz@rel_1_0_2014_1230
 # to be updated...
 /cdrom/bitbucket.org,catseye,yolk-master.tar.gz
 /cdrom/bitbucket.org,catseye,yoob.js-master.tar.gz@rel_0_6
