@@ -233,7 +233,35 @@ in an included technology was added to the project.
 *   **Velo**.  No Ruby implementation is included.  An interpreter was
     implemented in Lua for inclusion in The Platform.
 
-Appendix A.  How to make a bootable USB stick of The Platform
+Appendix A.  How to mount the image in Bochs on Windows
+-------------------------------------------------------
+
+Note that Bochs might have problems sending keystrokes to NetBSD, so this
+isn't really recommended.  But if you really want to try, here's what to do.
+
+Start Bochs.  Select "Disk & Boot" in the list.  Click "Edit".
+Click the "ATA channel 0" tab.  Then click the "First HD/CD on channel 0"
+tab underneath it.
+
+For "Type of ATA device", select "disk".  Click "Browse..." beside the
+"Path or physical device name" field.  Select the `.img` file.
+
+Assuming it was created with `funicular init 3600` as above, fill out
+the fields below as follows:
+
+*   Cylinders: 7314
+*   Heads: 16
+*   Sectors per track: 63
+
+Then click the "Boot Options" tab on the far upper right.
+For "Boot drive #1", select "disk".
+
+Click "OK".  Click "Save" and save this somewhere so you can just
+load it again.
+
+Then click "Start".
+
+Appendix B.  How to make a bootable USB stick of The Platform
 -------------------------------------------------------------
 
 The instructions in this section have not been thoroughly tested.
