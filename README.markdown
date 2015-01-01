@@ -32,6 +32,8 @@ in their development where they are all mutually compatible.
 The current released version of The Cat's Eye Technologies Platform is
 version **0.1**.  It can be built with Funicular version 0.1 and employs
 toolshelf version 0.1 revision 2014.0930 as its "packaging system".
+Its source code can be found at the tag `0.1` in the repository, for
+example [on Github here](https://github.com/catseye/The-Platform/tree/0.1).
 
 All of the pieces of software that make up The Platform are interoperable;
 that is, every piece builds successfully on NetBSD 6.1.4, and those with
@@ -52,12 +54,12 @@ download with everything on it, but for now, if you want it, you'll have
 to build it.  The disk image is roughly 3.6G in size, so make sure you have
 some free space.
 
-*   Install [Funicular][] 0.1 (via [toolshelf][], we would suggest, although
-    this is not strictly necessary)
+*   Install [Funicular][] 0.1-BLAH (via [toolshelf][], we would suggest,
+    although this is not strictly necessary)
 *   Put a copy of (or a symbolic link to) the
-    [NetBSD 6.1.4](http://www.netbsd.org/releases/formal-6/NetBSD-6.1.4.html)
-    install ISO for i386, called `NetBSD-6.1.4-i386.iso`, in this repo's
-    root directory — since it is fairly large (314M) it is not automatically
+    [NetBSD 6.1.5](http://www.netbsd.org/releases/formal-6/NetBSD-6.1.5.html)
+    install ISO for i386, called `NetBSD-6.1.5-i386.iso`, in this repo's
+    root directory — since it is fairly large (~314M) it is not automatically
     downloaded by Funicular, and you may wish to obtain it via a torrent or
     by some other method.
 *   In this repo's directory, run
@@ -88,25 +90,25 @@ The Platform can be thought of as being constructed in stages, with each
 stage building upon the previous.  The first stage (the "NetBSD Gondola" stage,
 although this is something of a misnomer now) consists of:
 
-*   NetBSD 6.1.4 (minimal install + compiler tools) ♡ + ♢
-*   Lua 5.1.4 (note that this is already a part of NetBSD 6.1.4) ♡
-*   cPython 2.7.6 ♦¹
-*   toolshelf 0.1-2014.0924 ♡
+*   NetBSD 6.1.5 (minimal install + compiler tools) ♡ + ♢
+*   Lua 5.1.4 (note that this is already a part of NetBSD 6.1.5) ♡
+*   cPython 2.7.8 ♦¹
+*   toolshelf 0.1-2014.1231 ♡
 
 The second stage, "Infrastructure", consists of:
 
-*   GNU Make 3.81 ♢
+*   GNU Make 3.82 ♢
 *   Mercurial 1.9.3 ♢
-*   Perl 5.18.2 ♦²
+*   Perl 5.20.1 ♦²
 *   Hugs98-plus Sep2006 ♡
 *   Erlang/OTP R16B03-1 (stripped down, e.g. no megaco, etc.) ♦³
-*   CHICKEN Scheme 4.8.0.5 ♡¹
-*   yasm 1.2.0 ♡
+*   CHICKEN Scheme 4.9.0.1 ♡¹
+*   yasm 1.3.0 ♡
 
 The third stage, "Cat's Eye Infrastructure", consists of:
 
 *   catseye-realpath 1.0     (for Pixley and others) ♥
-*   Falderal 0.9-2014.0525   (for tests) ♡
+*   Falderal 0.10            (for tests) ♡
 *   yucca 1.1                (for building Dungeons of Ekileugor) ♡
 
 The third-and-a-half-th stage, "Cat's Eye Forked Infrastructure", consists of
@@ -233,7 +235,30 @@ in an included technology was added to the project.
 *   **Velo**.  No Ruby implementation is included.  An interpreter was
     implemented in Lua for inclusion in The Platform.
 
-Appendix A.  How to mount the image in Bochs on Windows
+Appendix A.  How to boot the image in QEMU for Windows
+------------------------------------------------------
+
+Download the QEMU for 64-bit Windows installer here (~20M):
+
+    http://qemu.weilnetz.de/w64/qemu-w64-setup-20141210.exe
+
+And run it.  Say "OK" to what it wants you to install.
+
+(If you don't have a 64-bit Windows, you'll need a 32-bit version, which
+you can also find on that website.)
+
+After it's installed, run a Command Prompt (you might need to hunt under
+the Start Menu for this.)
+
+In the Command Prompt, type
+
+    "C:\Program Files\qemu\qemu-system-i386" Desktop\wd0.img
+
+This assumes that the Cat's Eye Technologies Platform disk image file is on
+your desktop, and that it's named `wd0.img`; adjust the filename above if
+this is not the case.
+
+Appendix B.  How to boot the image in Bochs for Windows
 -------------------------------------------------------
 
 Note that Bochs might have problems sending keystrokes to NetBSD, so this
@@ -261,7 +286,7 @@ load it again.
 
 Then click "Start".
 
-Appendix B.  How to make a bootable USB stick of The Platform
+Appendix C.  How to make a bootable USB stick of The Platform
 -------------------------------------------------------------
 
 The instructions in this section have not been thoroughly tested.
