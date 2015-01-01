@@ -10,8 +10,7 @@
 /cdrom/bitbucket.org,catseye,minischeme-master.tar.gz@0.85ce1
 /cdrom/bitbucket.org,catseye,openzz-master.tar.gz@1.0.4-4ce1
 /cdrom/bitbucket.org,catseye,ophis-master.tar.gz@v2.1
-# to be versioned...
-/cdrom/bitbucket.org,catseye,ee-master.tar.gz
+/cdrom/bitbucket.org,catseye,ee-master.tar.gz@1.5.2ce1
 
 ### our projects
 
@@ -22,8 +21,7 @@
 /cdrom/bitbucket.org,catseye,apple-befunge-master.tar.gz@rel_1_1_2014_0819
 /cdrom/bitbucket.org,catseye,arboretuum-master.tar.gz@rel_1_0_2014_0819
 /cdrom/bitbucket.org,catseye,befos-master.tar.gz@rel_0_9_2014_0819
-# to be updated...
-/cdrom/bitbucket.org,catseye,befunge-93-master.tar.gz
+/cdrom/bitbucket.org,catseye,befunge-93-master.tar.gz@rel_2_23_2015_0101
 /cdrom/bitbucket.org,catseye,beta-juliet-master.tar.gz@rel_2_0_2014_0819
 /cdrom/bitbucket.org,catseye,beturing-master.tar.gz@rel_1_1_2012_1024
 /cdrom/bitbucket.org,catseye,bhuna-master.tar.gz@rel_0_7_2014_0819
@@ -72,6 +70,7 @@
 /cdrom/bitbucket.org,catseye,muriel-master.tar.gz@rel_1_0_2014_0819
 /cdrom/bitbucket.org,catseye,mzstorkipiwanbotbotbot-master.tar.gz@0.1
 /cdrom/bitbucket.org,catseye,n-dcnc-master.tar.gz@rel_1_0_2000_0808
+/cdrom/bitbucket.org,catseye,nanogenlab-master.tar.gz@nanogenmo-2014-end
 /cdrom/bitbucket.org,catseye,netusb-master.tar.gz@0.1
 /cdrom/bitbucket.org,catseye,nhohnhehr-master.tar.gz@rel_1_0_2014_0819
 /cdrom/bitbucket.org,catseye,noit-o-mnain-worb-master.tar.gz@rel_1_1_2014_0819
