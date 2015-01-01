@@ -17,7 +17,7 @@
 
 # chrysoberyl, dipple, electronics-projects, specs-on-spec are intentionally @tip
 
-/cdrom/bitbucket.org,catseye,alpaca-master.tar.gz@rel_1_0_2014_0518
+/cdrom/bitbucket.org,catseye,alpaca-master.tar.gz@rel_1_0_2015_0101
 /cdrom/bitbucket.org,catseye,animals-master.tar.gz@rel_1_1_2014_0819
 /cdrom/bitbucket.org,catseye,apple-befunge-master.tar.gz@rel_1_1_2014_0819
 /cdrom/bitbucket.org,catseye,arboretuum-master.tar.gz@rel_1_0_2014_0819
@@ -32,8 +32,7 @@
 /cdrom/bitbucket.org,catseye,burro-master.tar.gz@rel_2_0_2014_0819
 /cdrom/bitbucket.org,catseye,c64-demo-depot-master.tar.gz@rel_1_1_2012_0828
 /cdrom/bitbucket.org,catseye,cabra-master.tar.gz@rel_1_0_2014_0819
-# to be updated...
-/cdrom/bitbucket.org,catseye,castile-master.tar.gz
+/cdrom/bitbucket.org,catseye,castile-master.tar.gz@rel_0_3_2015_0101
 /cdrom/bitbucket.org,catseye,cfluviurrh-master.tar.gz@rel_1_0_2014_0819
 /cdrom/bitbucket.org,catseye,chrysoberyl-master.tar.gz@tip
 /cdrom/bitbucket.org,catseye,circute-master.tar.gz@rel_1_0_2014_0819
@@ -47,11 +46,9 @@
 /cdrom/bitbucket.org,catseye,dungeons-of-ekileugor-master.tar.gz@rel_1_0_2013_1021
 /cdrom/bitbucket.org,catseye,eightebed-master.tar.gz@rel_1_1_2014_0819
 /cdrom/bitbucket.org,catseye,electronics-projects-master.tar.gz@tip
-# to be updated...
-/cdrom/bitbucket.org,catseye,emmental-master.tar.gz
+/cdrom/bitbucket.org,catseye,emmental-master.tar.gz@rel_1_0_2015_0101
 /cdrom/bitbucket.org,catseye,etcha-master.tar.gz@rel_1_0_2014_0820
-# to be updated...
-/cdrom/bitbucket.org,catseye,exanoke-master.tar.gz
+/cdrom/bitbucket.org,catseye,exanoke-master.tar.gz@rel_1_0_2015_0101
 /cdrom/bitbucket.org,catseye,fbbi-master.tar.gz@rel_1_0_2014_0820
 /cdrom/bitbucket.org,catseye,flip-master.tar.gz@rel_1_0_2014_0819
 /cdrom/bitbucket.org,catseye,flobnar-master.tar.gz@rel_0_1_2014_0819
@@ -63,8 +60,7 @@
 /cdrom/bitbucket.org,catseye,html5-gewgaws-master.tar.gz@882db2276e83
 /cdrom/bitbucket.org,catseye,hunter-master.tar.gz@rel_1_0_2014_0819
 /cdrom/bitbucket.org,catseye,illgol-grand-mal-master.tar.gz@rel_16_tons_and_what_do_you_get
-# to be updated...
-/cdrom/bitbucket.org,catseye,iphigeneia-master.tar.gz
+/cdrom/bitbucket.org,catseye,iphigeneia-master.tar.gz@rel_1_0_2015_0101
 /cdrom/bitbucket.org,catseye,jaccia-master.tar.gz@rel_1_1_2014_0109
 /cdrom/bitbucket.org,catseye,jolverine-master.tar.gz@rel_1_0_2013_1010
 /cdrom/bitbucket.org,catseye,kangaroo-iceberg-master.tar.gz@rel_0_5_2014_0819
@@ -72,8 +68,7 @@
 /cdrom/bitbucket.org,catseye,kosheri-master.tar.gz@0.1
 /cdrom/bitbucket.org,catseye,larabee-master.tar.gz@rel_1_0_2014_0818
 /cdrom/bitbucket.org,catseye,maentwrog-master.tar.gz@rel_1_1_2014_0923
-# to be updated...
-/cdrom/bitbucket.org,catseye,mascarpone-master.tar.gz
+/cdrom/bitbucket.org,catseye,mascarpone-master.tar.gz@rel_1_0_2015_0101
 /cdrom/bitbucket.org,catseye,muriel-master.tar.gz@rel_1_0_2014_0819
 /cdrom/bitbucket.org,catseye,mzstorkipiwanbotbotbot-master.tar.gz@0.1
 /cdrom/bitbucket.org,catseye,n-dcnc-master.tar.gz@rel_1_0_2000_0808
@@ -84,11 +79,9 @@
 /cdrom/bitbucket.org,catseye,pibfi-master.tar.gz@rel_1_0_2012_0826
 # to be updated...
 /cdrom/bitbucket.org,catseye,pixley-master.tar.gz
-# to be updated...
-/cdrom/bitbucket.org,catseye,pl-goto-.net-master.tar.gz
+/cdrom/bitbucket.org,catseye,pl-goto-.net-master.tar.gz@rel_1_1_2015_0101
 /cdrom/bitbucket.org,catseye,pophery-master.tar.gz@453cbb3dcdb9
-# to be updated...
-/cdrom/bitbucket.org,catseye,quylthulg-master.tar.gz
+/cdrom/bitbucket.org,catseye,quylthulg-master.tar.gz@rel_1_0_2015_0101
 /cdrom/bitbucket.org,catseye,redgreen-master.tar.gz@rel_1_1_2014_0819
 /cdrom/bitbucket.org,catseye,robin-master.tar.gz@0.2
 /cdrom/bitbucket.org,catseye,rube-ii-master.tar.gz@rel_1_0_2001_0201
