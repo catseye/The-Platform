@@ -1,8 +1,7 @@
 ### our infrastructure
 
 /cdrom/bitbucket.org,catseye,realpath-master.tar.gz@1.0
-# to be updated...
-/cdrom/bitbucket.org,catseye,falderal-master.tar.gz
+/cdrom/bitbucket.org,catseye,falderal-master.tar.gz@rel_0_10
 /cdrom/bitbucket.org,catseye,yucca-master.tar.gz@rel_1_1
 
 ### our forks
