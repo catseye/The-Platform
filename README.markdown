@@ -325,10 +325,42 @@ USB drive device, but when NetBSD boots you'll have to run
 
 manually, which is annoying.
 
+History
+-------
+
+This section highlights major changes from release to release.
+
+*   **0.2-PRE**
+    
+    *   Based on a newer, more modular version of toolshelf, with new features
+        which do away with the need of keeping a local cookies file just
+        for The Platform.
+    *   Updated versions of NetBSD, Python, Perl, Chicken, and YASM.
+    *   Includes `ee` (BSD licensed) instead of `nano` (GPL) as the text
+        editor.
+    *   Many projects updated to use the syntax and conventions of
+        Falderal version 0.10.
+    *   ALPACA and Velo actually had failing tests in version 0.1, but they
+        were not propagating the exit code and were mistaken as passing.
+        These cases have been fixed.
+    *   Several more of the Haskell projects (Quylthulg, etc) create a
+        wrapper script which is placed on the executable search path, with
+        which the implementation may be run from the command line.
+    *   Added the NaNoGenLab.
+
+*   **0.1**
+    
+    *   Initial release.
+
 TODO
 ----
 
 The information in this section is likely to be random and outdated.
+
+*   Tag Funicular.
+
+*   Extract petcat from VICE distro and add it here (to build Dungeons of
+    Ekileugor.)  Or write a brand-new public-domain C64 tokenizer, ha ha.
 
 *   If we have git repos, version git clones after docking them.  To do this
     we either need to mess with Dulwich (sigh) or build git on the guest.
