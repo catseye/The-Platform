@@ -1,17 +1,30 @@
 Using The Cat's Eye Technologies Platform
 =========================================
 
-The Cat's Eye Technologies Platform (version 0.2) is a bootable NetBSD-based
-disk image containing almost all of [Cat's Eye Technologies](http://catseye.tc/)'
-software distributions, pre-built and tested, and the infrastructure needed to
-run them.
+The Cat's Eye Technologies Platform (version 0.2) is a bootable [NetBSD][]-based
+disk image containing almost all of [Cat's Eye Technologies][]' software
+distributions, pre-built and tested, and the infrastructure needed to run them.
 
 For more information, and more up-to-date information, on The Platform, see
 
-*   [https://github.com/catseye/The-Platform](https://github.com/catseye/The-Platform)
+*   [https://github.com/catseye/The-Platform][]
+
+[NetBSD]: http://netbsd.org/
+[Cat's Eye Technologies]: http://catseye.tc/
+[https://github.com/catseye/The-Platform]: https://github.com/catseye/The-Platform
 
 ...on Windows
 -------------
+
+### How to extract the disk image ###
+
+The disk image is compressed using 7-zip.  You can download 7-zip here:
+
+    http://www.7-zip.org/
+
+Note that while the compressed archive is "only" ~200M, the uncompressed disk
+image is 3.6 gigabytes.  So make sure you have sufficient space before
+extracting it.
 
 ### How to boot the image in the QEMU PC emulator ###
 
@@ -36,6 +49,9 @@ In the Command Prompt, type
     "C:\Program Files\qemu\qemu-system-i386" Desktop\The-Cats-Eye-Technologies-Platform-0.2.img
 
 ...all on one line, and don't forget the double quotes.
+
+You should see NetBSD boot up in the QEMU window.  Now see
+_Logging in and using The Platform_, below.
 
 ### How to boot the image in the Bochs PC emulator ###
 
@@ -64,6 +80,9 @@ load it again.
 
 Then click "Start".
 
+You should see NetBSD boot up in the Bochs window.  Now see
+_Logging in and using The Platform_, below.
+
 ### How to make a bootable USB stick of The Platform ###
 
 First, get a USB stick that you don't need for anything else, that is at
@@ -86,15 +105,24 @@ this will be maybe `[E:\]` or `[F:\]`; it will almost certainly **NOT** be
 
 When you're sure you've got the drive letter right, click "Write".  And wait.
 
-For using the USB stick after you've written it, see below.
+For using the USB stick after you've written it, see
+_Booting from a created USB stick_ below.
 
 ...on Ubuntu (Linux)
 --------------------
+
+To extract the disk image, use `p7zip`:
+
+    sudo apt-get install p7zip
+    p7zip -d The-Cats-Eye-Technologies-Platform-0.2.img.7z
 
 To boot the disk image under the QEMU emulator,
 
     sudo apt-get install qemu
     qemu-system-i386 The-Cats-Eye-Technologies-Platform-0.2.img
+
+You should see NetBSD boot up in the QEMU window.  Now see
+_Logging in and using The Platform_, below.
 
 To write the disk image to a USB stick,
 
@@ -103,12 +131,13 @@ To write the disk image to a USB stick,
 where `sdX` is the name of your (unmounted) USB device (could be `sdb` or
 `sdc`; check `mount` while the device is still mounted.)
 
-Using the USB stick after you've written it
--------------------------------------------
+For using the USB stick after you've written it, see
+_Booting from a created USB stick_ below.
 
-**Note**: The instructions in this section have not been thoroughly tested.
+Booting from a created USB stick
+--------------------------------
 
-Turn off your computer.  Plug the USB stick into a USB port.  Turn on your
+Shut down your computer.  Plug the USB stick into a USB port.  Turn on your
 computer.
 
 If your computer displays `NetBSD/x86 BIOS Boot` and a numbered menu with
@@ -116,8 +145,8 @@ five items, congratulations, it booted into The Cat's Eye Technologies Platform.
 
 If it didn't, restart your computer and go into its BIOS configuration
 (how you do this differs from computer to computer, but it's usually a
-matter of hitting a key (maybe F1, maybe Escape, maybe something else)
-right after it boots up.
+matter of hitting a key -- maybe F1, maybe Escape, maybe something else --
+right after it boots up.)
 
 Here are some things to check:
 
@@ -140,7 +169,7 @@ Then type the following:
 
     mount /dev/sd0a /
 
-And then
+(note that there is a space before that last `\`.)  And then
 
     /home/user/toolshelf/bitbucket.org/catseye/ee/ee /etc/fstab
 
@@ -155,4 +184,45 @@ Then type
     reboot
 
 and this time, when the system boots into NetBSD, it will not give you
-this error and it will let you log into it normally, as `user`.
+this error and it will let you log into it normally.
+
+Logging in and using The Platform
+---------------------------------
+
+First, note that, when running, The Platform does *not* have access to your
+hard drive (outside of its own disk image file) and does *not* have access
+to your network.  This is intentional; it means that you can muck around
+however you like inside The Platform and it should not affect (or be affected)
+by anything outside.
+
+Second, note that any changes you do make inside The Platform -- for example,
+files you change, or new files you write -- will be saved to the disk image
+file.  If you keep the archived `.7z` file you can always extract a fresh
+copy of the disk image file from that, if you want to start over.
+
+Now.  To log in, log in as `user`.  There is no password.  You will get a
+`$` prompt at which you can type commands.  (This is called the "shell".)
+
+To shut down The Platform, type
+
+    su
+
+(and the prompt will change to a `#` to indicate that you now have Super
+User powers), then type
+
+    shutdown -p now
+
+You can also just close the emulator, or power off the computer, but these
+actions risk corrupting the disk image (but as we said, you can always just
+start over, so this is not a huge deal.)
+
+While logged in, most of Cat's Eye Technologies' programming language
+interpreters and compilers can be started just by typing their name
+(in Unix-speak, these executables are on the search path.)  For example,
+type `maentw` to start the Maentwrog interpreter.  (Type `bye` to exit.)
+
+You can also use `toolshelf` to navigate to the language project directories,
+and run tests.  The short alias is `th`.  So, for example,
+
+    th cd befunge-93
+    th test nhohnhehr
