@@ -169,10 +169,11 @@ Then type the following:
 
     mount /dev/sd0a /
 
-(note that there is a space before that last `\`.)  And then
+(note that there is a space before that last `/`.)  And then
 
     /home/user/toolshelf/bitbucket.org/catseye/ee/ee /etc/fstab
 
+This will start a text editor, and let you edit the mount points of devices.
 Now cursor down to the third line and change `wd0a` to `sd0a`.
 
 Then cursor down to the last line (the `cd0a` one) and delete it (Ctrl+y).
@@ -192,8 +193,8 @@ Logging in and using The Platform
 First, note that, when running, The Platform does *not* have access to your
 hard drive (outside of its own disk image file) and does *not* have access
 to your network.  This is intentional; it means that you can muck around
-however you like inside The Platform and it should not affect (or be affected)
-by anything outside.
+however you like inside The Platform and it should not affect (or be affected
+by) anything outside.
 
 Second, note that any changes you do make inside The Platform -- for example,
 files you change, or new files you write -- will be saved to the disk image
