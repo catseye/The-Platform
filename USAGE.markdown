@@ -1,12 +1,21 @@
 Using The Cat's Eye Technologies Platform
-===================================
+=========================================
 
-On Windows
-----------
+The Cat's Eye Technologies Platform (version 0.2) is a bootable NetBSD-based
+disk image containing almost all of [Cat's Eye Technologies](http://catseye.tc/)'
+software distributions, pre-built and tested, and the infrastructure needed to
+run them.
+
+For more information, and more up-to-date information, on The Platform, see
+
+*   [https://github.com/catseye/The-Platform](https://github.com/catseye/The-Platform)
+
+...on Windows
+-------------
 
 ### How to boot the image in the QEMU PC emulator ###
 
-Make sure the disk image of The Platform is on your Desktop, and make sure
+Make sure the disk image of The Platform is on your desktop, and make sure
 it is named `The-Cats-Eye-Technologies-Platform-0.2.img`.  (This is not a
 strict requirement, but the instructions below assume that this is the case.)
 
@@ -57,8 +66,6 @@ Then click "Start".
 
 ### How to make a bootable USB stick of The Platform ###
 
-**Note**: The instructions in this section have not been thoroughly tested.
-
 First, get a USB stick that you don't need for anything else, that is at
 least 4G in size.  (The written image will be only about 3.6G, so any drive
 larger than 4G will just have wasted space on it.)
@@ -81,8 +88,8 @@ When you're sure you've got the drive letter right, click "Write".  And wait.
 
 For using the USB stick after you've written it, see below.
 
-Ubuntu (Linux)
---------------
+...on Ubuntu (Linux)
+--------------------
 
 To boot the disk image under the QEMU emulator,
 
@@ -99,12 +106,53 @@ where `sdX` is the name of your (unmounted) USB device (could be `sdb` or
 Using the USB stick after you've written it
 -------------------------------------------
 
-TBW make sure your computer can boot from USB, etc...
+**Note**: The instructions in this section have not been thoroughly tested.
 
-When NetBSD boots you'll have to run
+Turn off your computer.  Plug the USB stick into a USB port.  Turn on your
+computer.
 
-    mount / /dev/sd0a
+If your computer displays `NetBSD/x86 BIOS Boot` and a numbered menu with
+five items, congratulations, it booted into The Cat's Eye Technologies Platform.
 
-and then edit `/etc/fstab` etc.
+If it didn't, restart your computer and go into its BIOS configuration
+(how you do this differs from computer to computer, but it's usually a
+matter of hitting a key (maybe F1, maybe Escape, maybe something else)
+right after it boots up.
 
-TBW.
+Here are some things to check:
+
+*   Make sure the USB drive is listed in the boot devices, and make
+    sure it's at the top of the list (i.e. that it boots before the
+    hard drive.)
+*   On systems with EFI, you might have to enable "Legacy Booting".
+*   Similarly, you might have to disable "Secure Boot".
+
+...
+
+When NetBSD does boot, for the first time, you'll get an error message like
+
+    ERROR: ABORTING BOOT (sending SIGTERM to parent)!
+    Enter pathname of shell or RETURN for /bin/sh:
+
+At this point, just hit Enter.
+
+Then type the following:
+
+    mount /dev/sd0a /
+
+And then
+
+    /home/user/toolshelf/bitbucket.org/catseye/ee/ee /etc/fstab
+
+Now cursor down to the third line and change `wd0a` to `sd0a`.
+
+Then cursor down to the last line (the `cd0a` one) and delete it (Ctrl+y).
+
+Then Escape Enter Enter to save the file and leave the editor.
+
+Then type
+
+    reboot
+
+and this time, when the system boots into NetBSD, it will not give you
+this error and it will let you log into it normally, as `user`.
