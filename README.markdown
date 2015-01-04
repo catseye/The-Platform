@@ -7,7 +7,18 @@ The Cat's Eye Technologies Platform is a [NetBSD][]-based,
 [toolshelf][]-powered, [Funicular][]-built "distro" containing almost all of
 [Cat's Eye Technologies][]' software distributions.
 
-In fact, I could come up with a serious rationalization for this.  Picking
+**If you have a copy of The Cat's Eye Technologies Platform disk image**,
+and you want to use it, see this document:
+    
+*   [USAGE.markdown](USAGE.markdown)
+
+**If you wish to build a disk image of The Platform from source files**,
+or if you simply want to know more about its internals, read on.
+
+Motivation
+----------
+
+If pressed, I could come up with a serious rationalization for this.  Picking
 a fixed version of an operating system means that, once the versions of the
 supporting software and the versions of our software have been picked, it
 will all build and work consistently (and, we can only hope, correctly.)
@@ -234,96 +245,6 @@ in an included technology was added to the project.
     interpret PL-{GOTO}, though, and passes the tests.
 *   **Velo**.  No Ruby implementation is included.  An interpreter was
     implemented in Lua for inclusion in The Platform.
-
-Appendix A.  How to boot the image in QEMU for Windows
-------------------------------------------------------
-
-Download the QEMU for 64-bit Windows installer here (~20M):
-
-    http://qemu.weilnetz.de/w64/qemu-w64-setup-20141210.exe
-
-And run it.  Say "OK" to what it wants you to install.
-
-(If you don't have a 64-bit Windows, you'll need a 32-bit version, which
-you can also find on that website.)
-
-After it's installed, run a Command Prompt (you might need to hunt under
-the Start Menu for this.)
-
-In the Command Prompt, type
-
-    "C:\Program Files\qemu\qemu-system-i386" Desktop\wd0.img
-
-This assumes that the Cat's Eye Technologies Platform disk image file is on
-your desktop, and that it's named `wd0.img`; adjust the filename above if
-this is not the case.
-
-Appendix B.  How to boot the image in Bochs for Windows
--------------------------------------------------------
-
-Note that Bochs might have problems sending keystrokes to NetBSD, so this
-isn't really recommended.  But if you really want to try, here's what to do.
-
-Start Bochs.  Select "Disk & Boot" in the list.  Click "Edit".
-Click the "ATA channel 0" tab.  Then click the "First HD/CD on channel 0"
-tab underneath it.
-
-For "Type of ATA device", select "disk".  Click "Browse..." beside the
-"Path or physical device name" field.  Select the `.img` file.
-
-Assuming it was created with `funicular init 3600` as above, fill out
-the fields below as follows:
-
-*   Cylinders: 7314
-*   Heads: 16
-*   Sectors per track: 63
-
-Then click the "Boot Options" tab on the far upper right.
-For "Boot drive #1", select "disk".
-
-Click "OK".  Click "Save" and save this somewhere so you can just
-load it again.
-
-Then click "Start".
-
-Appendix C.  How to make a bootable USB stick of The Platform
--------------------------------------------------------------
-
-The instructions in this section have not been thoroughly tested.
-
-First,
-
-    funicular backup wd0-hdboot
-
-Then
-
-    funicular start
-
-Then log in as root and edit `/etc/fstab`.  Change the line
-
-    /dev/wd0a / ffs rw 1 1
-
-to
-
-    /dev/sd0a / ffs rw 1 1 
-
-and run
-
-    shutdown -p now
-
-Then back on the host,
-
-    dd if=wd0.img of=/dev/sdX bs=1M
-
-where `sdX` is the name of your (unmounted) USB device (could be `sdb` or
-`sdc`; check `mount` while the device is still mounted.)
-
-Actually you can just `dd` the image you use in the emulator to the
-USB drive device, but when NetBSD boots you'll have to run
-
-    mount / /dev/sd0a
-
-manually, which is annoying.
 
 History
 -------
