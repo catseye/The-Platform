@@ -65,7 +65,7 @@ download with everything on it, but for now, if you want it, you'll have
 to build it.  The disk image is roughly 3.6G in size, so make sure you have
 some free space.
 
-*   Install [Funicular][] 0.1-BLAH (via [toolshelf][], we would suggest,
+*   Install [Funicular][] 0.1-2015.0105 (via [toolshelf][], we would suggest,
     although this is not strictly necessary)
 *   Put a copy of (or a symbolic link to) the
     [NetBSD 6.1.5](http://www.netbsd.org/releases/formal-6/NetBSD-6.1.5.html)
@@ -196,11 +196,14 @@ somehow.  But for some of them, neither of those options make sense either.
     automation for this, and no tests.  Well, it's a junk-drawer anyway.
 *   Dungeons of Ekileugor.  No VIC-20 emulator / BASIC interpreter installed.
     **does not quite build, needs petcat**
+*   NaNoGenLab.  The pure Python (and Haskell) programs should work, but many
+    of the experiments have dependencies (like `py-editdist`) which are not
+    installed.
 *   ILLGOL.  No DOS emulator installed to run the executables produced by
     the compiler(s).  **still buildable and runnable**
 *   Troupe.  Not implemented.  When it will be implemented, it will probably
     be implemented in Javascript first.
-*   yoob.js.  no Javascript implementation installed.  and it's a framework,
+*   yoob.js.  No Javascript implementation installed.  and it's a framework,
     really, with nothing of itself per se to run.
 
 Software Selection Criteria
@@ -277,8 +280,6 @@ TODO
 ----
 
 The information in this section is likely to be random and outdated.
-
-*   Tag Funicular.
 
 *   Extract petcat from VICE distro and add it here (to build Dungeons of
     Ekileugor.)  Or write a brand-new public-domain C64 tokenizer, ha ha.
