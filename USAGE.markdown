@@ -1,17 +1,49 @@
-Using The Cat's Eye Technologies Platform
+About The Cat's Eye Technologies Platform
 =========================================
 
 The Cat's Eye Technologies Platform (version 0.2) is a bootable [NetBSD][]-based
 disk image containing almost all of [Cat's Eye Technologies][]' software
-distributions, pre-built and tested, and the infrastructure needed to run them.
+distributions, pre-built and tested, and the open-source infrastructure needed
+to run them.
 
 For more information, and more up-to-date information, on The Platform, see
 
 *   [https://github.com/catseye/The-Platform][]
 
-[NetBSD]: http://netbsd.org/
-[Cat's Eye Technologies]: http://catseye.tc/
-[https://github.com/catseye/The-Platform]: https://github.com/catseye/The-Platform
+Like virtually all software, The Cat's Eye Technologies Platform is provided
+"AS IS" and without warranty of any kind, expressed or implied.  For more
+information, see the section _License Information_ at the bottom of this
+document.
+
+Using The Platform
+==================
+
+The Platform is distributed as a disk image.  There are two general ways to use
+this disk image: either open it in a PC emulator, or write it to a real disk
+(such as a USB stick) and boot from that disk.  (It is not possible to burn this
+sort of disk image onto a CD-ROM or DVD-ROM.)
+
+When running, The Platform does *not* have access to your hard drive (outside
+of its own disk image file) and does *not* have access to your network.  This
+is intentional; it means that you can muck around however you like inside The
+Platform and it should not affect (or be affected by) anything outside.
+
+Therefore, running The Platform under a PC emulator is as safe as running
+anything else under that emulator.
+
+Writing The Platform disk image to a USB stick is less safe, in a couple of
+ways:
+
+*   It's easier to make a mistake while writing the image, and accidentally
+    overwrite something you care about (such as your computer's operating
+    system.)
+*   Once you've booted into The Plaform from this disk, it *does* have
+    access to your whole computer.  It's not configured to *use* your disk
+    and network, but it can be re-configured to do so with a little knowledge
+    and not much effort, and it is possible to do make very low-level and
+    wide-reaching changes to your system this way.
+
+Therefore be careful!
 
 ...on Windows
 -------------
@@ -20,7 +52,7 @@ For more information, and more up-to-date information, on The Platform, see
 
 The disk image is compressed using 7-zip.  You can download 7-zip here:
 
-    http://www.7-zip.org/
+*   [http://www.7-zip.org/][]
 
 Note that while the compressed archive is "only" ~200M, the uncompressed disk
 image is 3.6 gigabytes.  So make sure you have sufficient space before
@@ -53,36 +85,6 @@ In the Command Prompt, type
 You should see NetBSD boot up in the QEMU window.  Now see
 _Logging in and using The Platform_, below.
 
-### How to boot the image in the Bochs PC emulator ###
-
-**Note**: Bochs has problems sending keystrokes to NetBSD, so using it
-isn't really recommended.  But if you really want to try, here's what to do.
-
-Start Bochs.  Select "Disk & Boot" in the list.  Click "Edit".
-Click the "ATA channel 0" tab.  Then click the "First HD/CD on channel 0"
-tab underneath it.
-
-For "Type of ATA device", select "disk".  Click "Browse..." beside the
-"Path or physical device name" field.  Select the `.img` file.
-
-Assuming the disk image was created with `funicular init 3600` (if you don't
-know, you can assume that it was), fill out the fields below as follows:
-
-*   Cylinders: 7314
-*   Heads: 16
-*   Sectors per track: 63
-
-Then click the "Boot Options" tab on the far upper right.
-For "Boot drive #1", select "disk".
-
-Click "OK".  Click "Save" and save this somewhere so you can just
-load it again.
-
-Then click "Start".
-
-You should see NetBSD boot up in the Bochs window.  Now see
-_Logging in and using The Platform_, below.
-
 ### How to make a bootable USB stick of The Platform ###
 
 First, get a USB stick that you don't need for anything else, that is at
@@ -91,7 +93,7 @@ larger than 4G will just have wasted space on it.)
 
 Download Win32 Disk Imager from here:
 
-    http://sourceforge.net/projects/win32diskimager/
+    [http://sourceforge.net/projects/win32diskimager/][]
 
 Run the installer.  Install it as usual and run it.
 
@@ -190,19 +192,13 @@ this error and it will let you log into it normally.
 Logging in and using The Platform
 ---------------------------------
 
-First, note that, when running, The Platform does *not* have access to your
-hard drive (outside of its own disk image file) and does *not* have access
-to your network.  This is intentional; it means that you can muck around
-however you like inside The Platform and it should not affect (or be affected
-by) anything outside.
+Once it has booted, log in as `user`.  There is no password.  You will get a
+`$` prompt at which you can type commands.  (This is called the "shell".)
 
-Second, note that any changes you do make inside The Platform -- for example,
+Note that any changes you make inside The Platform -- for example,
 files you change, or new files you write -- will be saved to the disk image
 file.  If you keep the archived `.7z` file you can always extract a fresh
 copy of the disk image file from that, if you want to start over.
-
-Now.  To log in, log in as `user`.  There is no password.  You will get a
-`$` prompt at which you can type commands.  (This is called the "shell".)
 
 To shut down The Platform, type
 
@@ -214,8 +210,7 @@ User powers), then type
     shutdown -p now
 
 You can also just close the emulator, or power off the computer, but these
-actions risk corrupting the disk image (but as we said, you can always just
-start over, so this is not a huge deal.)
+actions risk corrupting the disk image.
 
 While logged in, most of Cat's Eye Technologies' programming language
 interpreters and compilers can be started just by typing their name
@@ -227,3 +222,51 @@ and run tests.  The short alias is `th`.  So, for example,
 
     th cd befunge-93
     th test nhohnhehr
+
+License Information
+-------------------
+
+The Cat's Eye Technologies Platform is based on NetBSD, and the NetBSD
+licensing terms are essentially as follows -- although do note that this is an
+approximation.  For more precise information, please see NetBSD's page on
+[NetBSD Licensing and Redistribution][].
+
+    Copyright (c) The NetBSD Foundation, Inc and contributors.
+    All rights reserved.
+        
+    Redistribution and use in source and binary forms, with or without
+    modification, are permitted provided that the following conditions
+    are met:
+    1. Redistributions of source code must retain the above copyright
+       notice, this list of conditions and the following disclaimer.
+    2. Redistributions in binary form must reproduce the above copyright
+       notice, this list of conditions and the following disclaimer in the
+       documentation and/or other materials provided with the distribution.
+    
+    THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+    ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+    TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+    PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+    BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+    CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+    SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+    INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+    CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+    ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+    POSSIBILITY OF SUCH DAMAGE.
+
+On top of NetBSD are various pieces of software with various licensing terms
+(all of which allow for redistribution, but not necessarily commercial
+redistribution.)  The source code, and the license documentation, for each of
+these pieces of software is included in The Platform disk image.  For details,
+please consult the documentation of the specific software package in question.
+
+- - - -
+
+[Cat's Eye Technologies]: http://catseye.tc/
+[https://github.com/catseye/The-Platform]: https://github.com/catseye/The-Platform
+[http://www.7-zip.org/]: http://www.7-zip.org/
+[http://qemu.weilnetz.de/]: http://qemu.weilnetz.de/
+[http://sourceforge.net/projects/win32diskimager/]: http://sourceforge.net/projects/win32diskimager/
+[NetBSD]: http://netbsd.org/
+[NetBSD Licensing and Redistribution]: http://www.netbsd.org/about/redistribution.html
