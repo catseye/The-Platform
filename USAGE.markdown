@@ -82,7 +82,7 @@ If you are running 64-bit Windows (and you probably are if your Windows and
 computer are relatively modern), you can download a recent QEMU for 64-bit
 Windows installer here (~20M):
 
-    [http://qemu.weilnetz.de/w64/qemu-w64-setup-20141210.exe][]
+*   [http://qemu.weilnetz.de/w64/qemu-w64-setup-20141210.exe][]
 
 And run it.  Say "OK" to what it wants you to install.
 
@@ -109,7 +109,7 @@ larger than 4G will just have wasted space on it.)
 
 Download Win32 Disk Imager from here:
 
-    [http://sourceforge.net/projects/win32diskimager/][]
+*   [http://sourceforge.net/projects/win32diskimager/][]
 
 Run the installer.  Install it as usual and run it.
 
