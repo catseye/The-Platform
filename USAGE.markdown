@@ -28,8 +28,8 @@ of its own disk image file) and does *not* have access to your network.  This
 is intentional; it means that you can muck around however you like inside The
 Platform and it should not affect (or be affected by) anything outside.
 
-Therefore, running The Platform under a PC emulator is as safe as running
-anything else under that emulator.
+In other words, running The Platform under a PC emulator is at least as safe
+as running anything else under that emulator.
 
 Writing The Platform disk image to a USB stick is less safe, in a couple of
 ways:
@@ -60,13 +60,29 @@ extracting it.
 
 ### How to boot the image in the QEMU PC emulator ###
 
-Make sure the disk image of The Platform is on your desktop, and make sure
-it is named `The-Cats-Eye-Technologies-Platform-0.2.img`.  (This is not a
+First, make sure the disk image of The Platform is on your desktop, and make
+sure it is named `The-Cats-Eye-Technologies-Platform-0.2.img`.  (This is not a
 strict requirement, but the instructions below assume that this is the case.)
 
-Download the QEMU for 64-bit Windows installer here (~20M):
+QEMU is a versatile PC emulator, originally written by Fabrice Bellard, and
+now maintained by a large number of developers.  It was originally written
+for Unix-like operating systems, but it is possible to build it on Windows,
+and several people have done so, so you have several options for which
+distribution to use (as a web search for "qemu for windows" will reveal.)
 
-    http://qemu.weilnetz.de/w64/qemu-w64-setup-20141210.exe
+The easiest to use that I've found, as of this writing, are the builds of
+QEMU for Windows on [http://qemu.weilnetz.de/][].  Note that builder
+disclaims on that page that this is experimental software, and you use it
+at your own risk.  However, I've found it to be reliable and, if there are
+bugs in this version of QEMU, they're IMO far more likely to affect the
+emulated system "inside" the emulator, rather than your Windows installation
+"outside" the emulator.  (Still, always a good idea to keep backups, right?)
+
+If you are running 64-bit Windows (and you probably are if your Windows and
+computer are relatively modern), you can download a recent QEMU for 64-bit
+Windows installer here (~20M):
+
+    [http://qemu.weilnetz.de/w64/qemu-w64-setup-20141210.exe][]
 
 And run it.  Say "OK" to what it wants you to install.
 
@@ -110,8 +126,13 @@ When you're sure you've got the drive letter right, click "Write".  And wait.
 For using the USB stick after you've written it, see
 _Booting from a created USB stick_ below.
 
-...on Ubuntu (Linux)
---------------------
+...on Ubuntu
+------------
+
+These instructions should be fairly easy to adapt to other Linux distributions,
+and even the *BSD operating systems; the main things that will differ will be
+how to install the packages (and what their names are) and the names of device
+nodes.
 
 To extract the disk image, use `p7zip`:
 
@@ -176,7 +197,7 @@ Then type the following:
     /home/user/toolshelf/bitbucket.org/catseye/ee/ee /etc/fstab
 
 This will start a text editor, and let you edit the mount points of devices.
-Now cursor down to the third line and change `wd0a` to `sd0a`.
+Now cursor down to the third line and change `wd0a` to `sd0a`.  (See footnote.)
 
 Then cursor down to the last line (the `cd0a` one) and delete it (Ctrl+y).
 
@@ -189,11 +210,17 @@ Then type
 and this time, when the system boots into NetBSD, it will not give you
 this error and it will let you log into it normally.
 
+Footnote: NetBSD read this `fstab` file when it boots up to see what disks it
+should try to mount.  The disk image is normally treated as a hard drive image,
+so `fstab` contains a record telling it to try to mount the first hard disk
+(`wd0a`.)  All we are doing here is telling it to try to mount the first USB
+drive (`sd0a`) instead.
+
 Logging in and using The Platform
 ---------------------------------
 
 Once it has booted, log in as `user`.  There is no password.  You will get a
-`$` prompt at which you can type commands.  (This is called the "shell".)
+so-called "shell" prompt, which looks like `$`, at which you can type commands.
 
 Note that any changes you make inside The Platform -- for example,
 files you change, or new files you write -- will be saved to the disk image
@@ -204,8 +231,8 @@ To shut down The Platform, type
 
     su
 
-(and the prompt will change to a `#` to indicate that you now have Super
-User powers), then type
+(and the prompt will change to a `#` to indicate that you now have awesome
+Super User powers), then type
 
     shutdown -p now
 
@@ -267,6 +294,7 @@ please consult the documentation of the specific software package in question.
 [https://github.com/catseye/The-Platform]: https://github.com/catseye/The-Platform
 [http://www.7-zip.org/]: http://www.7-zip.org/
 [http://qemu.weilnetz.de/]: http://qemu.weilnetz.de/
+[http://qemu.weilnetz.de/w64/qemu-w64-setup-20141210.exe]: http://qemu.weilnetz.de/w64/qemu-w64-setup-20141210.exe
 [http://sourceforge.net/projects/win32diskimager/]: http://sourceforge.net/projects/win32diskimager/
 [NetBSD]: http://netbsd.org/
 [NetBSD Licensing and Redistribution]: http://www.netbsd.org/about/redistribution.html
