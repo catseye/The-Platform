@@ -7,8 +7,13 @@ The Cat's Eye Technologies Platform is a [NetBSD][]-based,
 [toolshelf][]-powered, [Funicular][]-built "distro" containing almost all of
 [Cat's Eye Technologies][]' software distributions.
 
-**If you have a copy of The Cat's Eye Technologies Platform disk image**,
-and you want to use it, see this document:
+**If you want to download a pre-built disk image of The Cat's Eye Technologies Platform**,
+open this torrent in your torrent client:
+    
+*   [The-Cats-Eye-Technologies-Platform-0.2.torrent](https://raw.githubusercontent.com/catseye/The-Platform/master/torrent/The-Cats-Eye-Technologies-Platform-0.2.torrent)
+
+**If you already have a copy of The Cat's Eye Technologies Platform disk image**,
+and you want to know how to use it, see this document:
     
 *   [USAGE.markdown](USAGE.markdown)
 
@@ -41,28 +46,23 @@ Each version of The Cat's Eye Technologies Platform can be thought of as a
 in their development where they are all mutually compatible.
 
 The current released version of The Cat's Eye Technologies Platform is
-version **0.1**.  It can be built with Funicular version 0.1 and employs
-toolshelf version 0.1 revision 2014.0930 as its "packaging system".
-Its source code can be found at the tag `0.1` in the repository, for
-example [on Github here](https://github.com/catseye/The-Platform/tree/0.1).
+version **0.2**.  It can be built with Funicular version 0.1-2015.0105 and
+employs toolshelf version 0.1 revision 2014.1231 as its "packaging system".
+Its source code can be found at the tag `0.2` in the repository, for
+example [on Github here](https://github.com/catseye/The-Platform/tree/0.2).
 
 All of the pieces of software that make up The Platform are interoperable;
 that is, every piece builds successfully on NetBSD 6.1.4, and those with
 test suites pass all of their relevant automated tests.  The pieces are
 not, however, thoroughly tested manually.
 
-The current development version of The Cat's Eye Technologies Platform
-is **0.2-PRE**.  It is this version that the following sections describe;
-however, no claims are made about the versions of any of the
-software involved or its interoperability, and no claims will be made
-until such time as the "-PRE" bit is dropped from the version number.
-
 Quick Start
 -----------
 
-Eventually, there will probably be a NetBSD disk image or ISO that you can
-download with everything on it, but for now, if you want it, you'll have
-to build it.  The disk image is roughly 3.6G in size, so make sure you have
+You can download a pre-built disk image of The Platform via the torrent
+link given above.  Or, if you are on a Unix-like operating system, you
+can build your own image from source by following the following steps.
+Either way, the disk image is roughly 3.6G in size, so make sure you have
 some free space.
 
 *   Install [Funicular][] 0.1-2015.0105 (via [toolshelf][], we would suggest,
@@ -254,7 +254,7 @@ History
 
 This section highlights major changes from release to release.
 
-*   **0.2-PRE**
+*   **0.2**
     
     *   Based on a newer, more modular version of toolshelf, with new features
         which do away with the need of keeping a local cookies file just
@@ -271,6 +271,8 @@ This section highlights major changes from release to release.
         wrapper script which is placed on the executable search path, with
         which the implementation may be run from the command line.
     *   Added the NaNoGenLab.
+    *   Created a torrent by which a pre-built disk image (and instructions
+        for using it) are distributed.
 
 *   **0.1**
     
