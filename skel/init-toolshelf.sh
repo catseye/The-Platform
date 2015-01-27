@@ -1,7 +1,7 @@
 #!/bin/sh
 
 PYTHON_VERSION=2.7.8
-TOOLSHELF_VERSION=0.1-2014.1231
+TOOLSHELF_VERSION=0.1-2015.0127
 
 cd /home/user
 mkdir -p toolshelf
