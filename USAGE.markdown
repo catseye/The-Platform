@@ -101,6 +101,17 @@ In the Command Prompt, type
 You should see NetBSD boot up in the QEMU window.  Now see
 _Logging in and using The Platform_, below.
 
+### Using other PC emulators ###
+
+You are of course free to try booting The Platform under a PC emulator that
+isn't QEMU.  However, I haven't had a lot of luck with other emulators.
+The last time I tried:
+
+*   *Bochs*, it boots NetBSD just fine, but has major problems sending
+    keystrokes to it; it sends far far far too many.  Making it unusable.
+*   *VirtualBox*, it couldn't boot NetBSD.  (Apparently, "Of *course* it runs
+    NetBSD" [does not apply to emulators](http://gnats.netbsd.org/44694).)
+
 ### How to make a bootable USB stick of The Platform ###
 
 First, get a USB stick that you don't need for anything else, that is at
@@ -117,7 +128,7 @@ Click the folder icon and select `The-Cats-Eye-Technologies-Platform-0.2.img`
 from your file system.
 
 Select your USB stick's drive letter in the "Device" dropdown.  (If unsure,
-start a file explorer and look at what "Devices and drives" says.  Generally
+start a File Explorer and look at what "Devices and drives" says.  Generally
 this will be maybe `[E:\]` or `[F:\]`; it will almost certainly **NOT** be
 `[C:\]` or `[D:\]`!)
 

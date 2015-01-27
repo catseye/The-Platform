@@ -9,8 +9,8 @@ The Cat's Eye Technologies Platform is a [NetBSD][]-based,
 
 **If you want to download a pre-built disk image of The Cat's Eye Technologies Platform**,
 open this torrent in your torrent client:
-    
-*   [The-Cats-Eye-Technologies-Platform-0.2.torrent](https://raw.githubusercontent.com/catseye/The-Platform/master/torrent/The-Cats-Eye-Technologies-Platform-0.2.torrent)
+
+*   [The-Cats-Eye-Technologies-Platform-0.2.torrent][]
 
 **If you already have a copy of The Cat's Eye Technologies Platform disk image**,
 and you want to know how to use it, see this document:
@@ -19,6 +19,8 @@ and you want to know how to use it, see this document:
 
 **If you wish to build a disk image of The Platform from source files**,
 or if you simply want to know more about its internals, read on.
+
+[The-Cats-Eye-Technologies-Platform-0.2.torrent]: https://raw.githubusercontent.com/catseye/The-Platform/master/torrent/The-Cats-Eye-Technologies-Platform-0.2.torrent
 
 Motivation
 ----------
@@ -52,7 +54,7 @@ Its source code can be found at the tag `0.2` in the repository, for
 example [on Github here](https://github.com/catseye/The-Platform/tree/0.2).
 
 All of the pieces of software that make up The Platform are interoperable;
-that is, every piece builds successfully on NetBSD 6.1.4, and those with
+that is, every piece builds successfully on NetBSD 6.1.5, and those with
 test suites pass all of their relevant automated tests.  The pieces are
 not, however, thoroughly tested manually.
 
