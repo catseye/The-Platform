@@ -1,6 +1,7 @@
 bb:catseye/realpath@1.0
 bb:catseye/falderal@rel_0_10
 bb:catseye/yucca@rel_1_1
+bb:catseye/hatoucan@0.1
 
 bb:catseye/minischeme@0.85ce1
 bb:catseye/openzz@1.0.4-4ce1
@@ -48,7 +49,6 @@ bb:catseye/funicular@0.2
 bb:catseye/gemooy@0.1-2015.0828
 bb:catseye/granola-m@rel_1_0_2014_0819
 bb:catseye/guten-gutter@0.2
-bb:catseye/hatoucan@0.1
 bb:catseye/hev@rel_1_0_2016_0304
 bb:catseye/html5-gewgaws@0.1
 bb:catseye/hunter@rel_1_0_2014_0819

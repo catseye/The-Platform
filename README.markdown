@@ -73,7 +73,7 @@ can build your own image from source by following the following steps.
 Either way, the disk image is roughly 3.6G in size, so make sure you have
 some free space.
 
-*   Install [Funicular][] 0.1-2015.0105 (via [toolshelf][], we would suggest,
+*   Install [Funicular][] 0.2 (via [toolshelf][], we would suggest,
     although this is not strictly necessary)
 *   Put a copy of (or a symbolic link to) the
     [NetBSD 6.1.5](http://www.netbsd.org/releases/formal-6/NetBSD-6.1.5.html)
@@ -112,7 +112,7 @@ although this is something of a misnomer now) consists of:
 *   NetBSD 6.1.5 (minimal install + compiler tools) ♡ + ♢
 *   Lua 5.1.4 (note that this is already a part of NetBSD 6.1.5) ♡
 *   cPython 2.7.8 ♦¹
-*   toolshelf 0.1-2014.1231 ♡
+*   toolshelf 0.1-2015.1203 ♡
 
 The second stage, "Infrastructure", consists of:
 
@@ -129,6 +129,7 @@ The third stage, "Cat's Eye Infrastructure", consists of:
 *   catseye-realpath 1.0     (for Pixley and others) ♥
 *   Falderal 0.10            (for tests) ♡
 *   yucca 1.1                (for building Dungeons of Ekileugor) ♡
+*   hatoucan 0.1             (for tokenizing Commodore BASIC 2.0 sources) ♥
 
 The third-and-a-half-th stage, "Cat's Eye Forked Infrastructure", consists of
 others' projects of which Cat's Eye Technologies maintains forks (or just
@@ -167,6 +168,8 @@ web site.  Thus, if you can already experience it by pointing your web
 browser at `catseye.tc`, we won't worry too much about it not being usable
 in The Platform.
 
+*TODO: update this section for 0.3-PRE*
+
 *   [BefOS](http://catseye.tc/node/BefOS_(v86)).  No PC emulator installed.
     **still buildable**
 *   [Bubble Escape](http://catseye.tc/node/Bubble_Escape_(JaC64)).
@@ -194,6 +197,8 @@ in The Platform.
 This is the list we want to minimize, either by allowing these to run in
 The Platform somehow, or allowing them to run on the web, in an HTML5 browser,
 somehow.  But for some of them, neither of those options make sense either.
+
+*TODO: update this section for 0.3-PRE*
 
 *   Apple Befunge.  No Apple II emulator installed.
 *   C64 Demo Depot.  No Commodore 64 emulator installed.  **still buildable**
@@ -254,7 +259,7 @@ in an included technology was added to the project.
 
 *   **PL-{GOTO}.NET**.  The Mono runtime is not included — it can still
     interpret PL-{GOTO}, though, and passes the tests.
-*   **Velo**.  No Ruby implementation is included.  An interpreter was
+*   **Velo**.  No implementation of Ruby is included.  An interpreter was
     implemented in Lua for inclusion in The Platform.
 
 History
@@ -293,6 +298,8 @@ The information in this section is likely to be random and outdated.
 
 *   Extract petcat from VICE distro and add it here (to build Dungeons of
     Ekileugor.)  Or write a brand-new public-domain C64 tokenizer, ha ha.
+
+*   py-editdist, perhaps?  For NaNoGenLab.
 
 *   If we have git repos, version git clones after docking them.  To do this
     we either need to mess with Dulwich (sigh) or build git on the guest.
