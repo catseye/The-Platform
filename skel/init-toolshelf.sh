@@ -1,7 +1,7 @@
 #!/bin/sh
 
 PYTHON_VERSION=2.7.8
-TOOLSHELF_VERSION=0.1-2015.0127
+TOOLSHELF_VERSION=0.1-2015.1203
 
 cd /home/user
 mkdir -p toolshelf
@@ -9,7 +9,7 @@ mkdir -p toolshelf/.bin
 mkdir -p toolshelf/localhost/distfile
 
 if [ ! -d toolshelf/.toolshelf ]; then
-  unzip /cdrom/$TOOLSHELF_VERSION.zip || exit 1
+  unzip /cdrom/toolshelf-$TOOLSHELF_VERSION.zip || exit 1
   mv toolshelf-$TOOLSHELF_VERSION toolshelf/.toolshelf || exit 1
 fi
 
