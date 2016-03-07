@@ -73,7 +73,7 @@ can build your own image from source by following the following steps.
 Either way, the disk image is roughly 3.6G in size, so make sure you have
 some free space.
 
-*   Install [Funicular][] 0.2 (via [toolshelf][], we would suggest,
+*   Install [Funicular][] 0.3 (via [toolshelf][], we would suggest,
     although this is not strictly necessary)
 *   Put a copy of (or a symbolic link to) the
     [NetBSD 6.1.5](http://www.netbsd.org/releases/formal-6/NetBSD-6.1.5.html)
