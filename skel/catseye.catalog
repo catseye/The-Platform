@@ -84,10 +84,10 @@ bb:catseye/rube@rel_1_6
 bb:catseye/sally@rel_1_0_2014_0819
 bb:catseye/sbeezg@rel_1_0_2014_0819
 bb:catseye/schroedingers-game-of-life@1.0
-bb:catseye/seedbank@1.0
+bb:catseye/seedbank@1.1
 bb:catseye/shelta@rel_1_2_2014_0422
 bb:catseye/sickbay@1.0
-bb:catseye/situ-sol@tip
+bb:catseye/situ-sol@0.1-2015.0731
 bb:catseye/sixtypical@0.6
 bb:catseye/smetana@rel_1_0_2014_0819
 bb:catseye/smith@rel_2_1_2013_0227
