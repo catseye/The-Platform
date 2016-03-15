@@ -5,7 +5,7 @@ return {
 
     distfiles = [[
       http://www.python.org/ftp/python/2.7.8/Python-2.7.8.tgz
-      http://catseye.tc/distfiles/toolshelf-0.1-2015.1203.zip
+      http://catseye.tc/distfiles/toolshelf-0.1-2016.0315.zip
       http://ftpmirror.gnu.org/make/make-3.82.tar.gz
       http://mercurial.selenic.com/release/mercurial-1.9.3.tar.gz
       http://www.cpan.org/src/5.0/perl-5.20.1.tar.gz

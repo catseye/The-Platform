@@ -112,7 +112,7 @@ although this is something of a misnomer now) consists of:
 *   NetBSD 6.1.5 (minimal install + compiler tools) ♡ + ♢
 *   Lua 5.1.4 (note that this is already a part of NetBSD 6.1.5) ♡
 *   cPython 2.7.8 ♦¹
-*   toolshelf 0.1-2015.1203 ♡
+*   toolshelf 0.1-2016.0315 ♡
 
 The second stage, "Infrastructure", consists of:
 
