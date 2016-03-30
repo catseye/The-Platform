@@ -1,7 +1,7 @@
 About The Cat's Eye Technologies Platform
 =========================================
 
-The Cat's Eye Technologies Platform (version 0.2) is a bootable [NetBSD][]-based
+The Cat's Eye Technologies Platform (version 0.3) is a bootable [NetBSD][]-based
 disk image containing almost all of [Cat's Eye Technologies][]' software
 distributions, pre-built and tested, and the open-source infrastructure needed
 to run them.
@@ -11,7 +11,7 @@ For more information, and more up-to-date information, on The Platform, see
 *   [https://github.com/catseye/The-Platform][]
 
 Like virtually all software, The Cat's Eye Technologies Platform is provided
-"AS IS" and without warranty of any kind, expressed or implied.  For more
+"AS IS" and without warranty of any kind, express or implied.  For more
 information, see the section _License Information_ at the bottom of this
 document.
 
@@ -19,14 +19,17 @@ Using The Platform
 ==================
 
 The Platform is distributed as a disk image.  There are two general ways to use
-this disk image: either open it in a PC emulator, or write it to a real disk
-(such as a USB stick) and boot from that disk.  (It is not possible to burn this
-sort of disk image onto a CD-ROM or DVD-ROM.)
+this disk image: either
+
+*   run a PC emulator such as QEMU and tell it to boot from this image, or
+*   write it to a real disk drive (or USB stick) and boot from that device.
+
+(It is not possible to burn this sort of disk image onto a CD-ROM or DVD-ROM.)
 
 When running, The Platform does *not* have access to your hard drive (outside
 of its own disk image file) and does *not* have access to your network.  This
 is intentional; it means that you can muck around however you like inside The
-Platform and it should not affect (or be affected by) anything outside.
+Platform and it should not affect (or be affected by) anything outside it.
 
 In other words, running The Platform under a PC emulator is at least as safe
 as running anything else under that emulator.
@@ -40,10 +43,11 @@ ways:
 *   Once you've booted into The Plaform from this disk, it *does* have
     access to your whole computer.  It's not configured to *use* your disk
     and network, but it can be re-configured to do so with a little knowledge
-    and not much effort, and it is possible to do make very low-level and
+    and not much effort, and it is possible to make very low-level and
     wide-reaching changes to your system this way.
 
-Therefore be careful!
+Therefore, be careful!  Make backups.  Or use an old computer you don't care
+much about.  Or use a PC emulator (one with a good reputation) instead.
 
 ...on Windows
 -------------
@@ -61,11 +65,11 @@ extracting it.
 ### How to boot the image in the QEMU PC emulator ###
 
 First, make sure the disk image of The Platform is on your desktop, and make
-sure it is named `The-Cats-Eye-Technologies-Platform-0.2.img`.  (This is not a
+sure it is named `The-Cats-Eye-Technologies-Platform-0.3.img`.  (This is not a
 strict requirement, but the instructions below assume that this is the case.)
 
-QEMU is a versatile PC emulator, originally written by Fabrice Bellard, and
-now maintained by a large number of developers.  It was originally written
+**QEMU** is a versatile PC emulator, originally written by Fabrice Bellard,
+and now maintained by a large number of developers.  It was originally written
 for Unix-like operating systems, but it is possible to build it on Windows,
 and several people have done so, so you have several options for which
 distribution to use (as a web search for "qemu for windows" will reveal.)
@@ -94,7 +98,7 @@ the Start Menu for this.)
 
 In the Command Prompt, type
 
-    "C:\Program Files\qemu\qemu-system-i386" Desktop\The-Cats-Eye-Technologies-Platform-0.2.img
+    "C:\Program Files\qemu\qemu-system-i386" Desktop\The-Cats-Eye-Technologies-Platform-0.3.img
 
 ...all on one line, and don't forget the double quotes.
 
@@ -107,9 +111,9 @@ You are of course free to try booting The Platform under a PC emulator that
 isn't QEMU.  However, I haven't had a lot of luck with other emulators.
 The last time I tried:
 
-*   *Bochs*, it boots NetBSD just fine, but has major problems sending
+*   **Bochs**, it boots NetBSD just fine, but has major problems sending
     keystrokes to it; it sends far far far too many.  Making it unusable.
-*   *VirtualBox*, it couldn't boot NetBSD.  (Apparently, "Of *course* it runs
+*   **VirtualBox**, it couldn't boot NetBSD.  (Apparently, "Of *course* it runs
     NetBSD" [does not apply to emulators](http://gnats.netbsd.org/44694).)
 
 ### How to make a bootable USB stick of The Platform ###
@@ -124,11 +128,11 @@ Download Win32 Disk Imager from here:
 
 Run the installer.  Install it as usual and run it.
 
-Click the folder icon and select `The-Cats-Eye-Technologies-Platform-0.2.img`
+Click the folder icon and select `The-Cats-Eye-Technologies-Platform-0.3.img`
 from your file system.
 
 Select your USB stick's drive letter in the "Device" dropdown.  (If unsure,
-start a File Explorer and look at what "Devices and drives" says.  Generally
+start Windows Explorer and look at what "Devices and drives" says.  Generally
 this will be maybe `[E:\]` or `[F:\]`; it will almost certainly **NOT** be
 `[C:\]` or `[D:\]`!)
 
@@ -148,19 +152,19 @@ nodes.
 To extract the disk image, use `p7zip`:
 
     sudo apt-get install p7zip
-    p7zip -d The-Cats-Eye-Technologies-Platform-0.2.img.7z
+    p7zip -d The-Cats-Eye-Technologies-Platform-0.3.img.7z
 
 To boot the disk image under the QEMU emulator,
 
     sudo apt-get install qemu
-    qemu-system-i386 The-Cats-Eye-Technologies-Platform-0.2.img
+    qemu-system-i386 The-Cats-Eye-Technologies-Platform-0.3.img
 
 You should see NetBSD boot up in the QEMU window.  Now see
 _Logging in and using The Platform_, below.
 
 To write the disk image to a USB stick,
 
-    dd if=The-Cats-Eye-Technologies-Platform-0.2.img of=/dev/sdX bs=1M
+    dd if=The-Cats-Eye-Technologies-Platform-0.3.img of=/dev/sdX bs=1M
 
 where `sdX` is the name of your (unmounted) USB device (could be `sdb` or
 `sdc`; check `mount` while the device is still mounted.)
@@ -190,6 +194,14 @@ Here are some things to check:
 *   On systems with EFI, you might have to enable "Legacy Booting".
 *   Similarly, you might have to disable "Secure Boot".
 
+You might also have a key you can hold down during boot to get a "boot menu"
+which lets you select the device to boot from (for me, it's F9.)
+
+But systems vary so much at this level that I don't know how much more I can
+say on the topic of coaxing your computer to boot from a USB stick.  Search
+the web for more information, and especially for information specifically for
+your model of computer.
+
 ...
 
 When NetBSD does boot, for the first time, you'll get an error message like
@@ -203,9 +215,9 @@ Then type the following:
 
     mount /dev/sd0a /
 
-(note that there is a space before that last `/`.)  And then
+(note that there is a space between the `a` and the last `/`.)  And then
 
-    /home/user/toolshelf/bitbucket.org/catseye/ee/ee /etc/fstab
+    /home/user/toolshelf/.bin/ee /etc/fstab
 
 This will start a text editor, and let you edit the mount points of devices.
 Now cursor down to the third line and change `wd0a` to `sd0a`.  (See footnote.)
@@ -221,7 +233,7 @@ Then type
 and this time, when the system boots into NetBSD, it will not give you
 this error and it will let you log into it normally.
 
-Footnote: NetBSD read this `fstab` file when it boots up to see what disks it
+Footnote: NetBSD reads this `fstab` file when it boots up to see what disks it
 should try to mount.  The disk image is normally treated as a hard drive image,
 so `fstab` contains a record telling it to try to mount the first hard disk
 (`wd0a`.)  All we are doing here is telling it to try to mount the first USB
