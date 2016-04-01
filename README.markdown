@@ -208,7 +208,7 @@ somehow.  But for some of them, neither of those options make sense either.
     are written in C, Python, etc. will build and run, but there is no
     automation for this, and no tests.  Well, it's a junk-drawer anyway.
 *   Dungeons of Ekileugor.  No VIC-20 emulator / BASIC interpreter installed.
-    **does not quite build, needs petcat**
+    **still buildable**
 *   NaNoGenLab.  The pure Python (and Haskell) programs should work, but many
     of the experiments have dependencies (like `py-editdist`) which are not
     installed.
@@ -249,8 +249,8 @@ which the executables for NetBSD are built.  I mean oh yes we could have
 just plunked down some binary packages from `pkgsrc` but that'd be far too
 easy, wouldn't it.  Or rather, inclusion of source and making sure you can
 build from that source improves "hackability", that is, it lowers barriers
-to customization to individual circumstance.  Yes.  I'm sure that's what we
-were trying to say.
+to customization for individual circumstances.  Yes.  I'm sure that's what
+we were trying to say.
 
 Some of Cat's Eye Technologies' projects were originally written in (or
 otherwise depended on) some language (or other system or tool) which is not
@@ -266,6 +266,17 @@ History
 -------
 
 This section highlights major changes from release to release.
+
+*   **0.3-PRE**
+    
+    *   Updated versions of many Cat's Eye Technologies' distributions,
+        and added several new distributions, including hatoucan, Matchbox,
+        MARYSUE, Lexeduct, Schroedinger's Game of Life, etc.
+    *   hatoucan is now used to build (tokenize) the `.bas` files for
+        Bubble Escape and Dungeons of Ekileugor. 
+    *   Kosheri actually had failing tests in version 0.2, but they
+        were not propagating the exit code and were mistaken as passing.
+        These cases have been fixed.
 
 *   **0.2**
     
@@ -291,13 +302,31 @@ This section highlights major changes from release to release.
     
     *   Initial release.
 
+Notes for making the Torrent
+----------------------------
+
+*   Build the image per the instructions in the Funicularfile.
+*   Run `script`.
+*   Run `toolshelf.py test --verbose catseye/all`.
+*   `exit` and review the `typescript` for errors.
+*   If no errors, delete the `typescript` and exit the emulator.
+*   Copy the image to `The-Cats-Eye-Technologies-Platform-0.x.img`
+    on a FAT32 or NTFS partition.
+*   Run `pandoc --from=markdown --to=html5 <USAGE.md >USAGE.html`.
+*   Copy `USAGE.html` to the FAT32 or NTFS partition too.
+*   Reboot into Windows.  Use `7zip` to compress the image to
+    `The-Cats-Eye-Technologies-Platform-0.x.img.7z` at the highest
+    level of compression.
+*   Create a directory in `webseeds` directory of the static
+    website data and copy Copy the 7zip'ed image and USAGE.html there.
+*   rsync the static data to the live website.
+*   Run `uTorrent` to create the torrent file.  Select the directory
+    as the webseed.  (TODO add more detail here.)
+
 TODO
 ----
 
 The information in this section is likely to be random and outdated.
-
-*   Extract petcat from VICE distro and add it here (to build Dungeons of
-    Ekileugor.)  Or write a brand-new public-domain C64 tokenizer, ha ha.
 
 *   py-editdist, perhaps?  For NaNoGenLab.
 
