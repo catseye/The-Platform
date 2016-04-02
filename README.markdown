@@ -310,18 +310,28 @@ Notes for making the Torrent
 *   Run `toolshelf.py test --verbose catseye/all`.
 *   `exit` and review the `typescript` for errors.
 *   If no errors, delete the `typescript` and exit the emulator.
-*   Copy the image to `The-Cats-Eye-Technologies-Platform-0.x.img`
-    on a FAT32 or NTFS partition.
+*   Create a directory on a FAT32 or NTFS partition called
+    `The-Cats-Eye-Technologies-Platform-0.x`.  We'll call this the
+    torrent directory.
+*   Copy the `wd0.img` to `The-Cats-Eye-Technologies-Platform-0.x.img`
+    in the torrent directory.
 *   Run `pandoc --from=markdown --to=html5 <USAGE.md >USAGE.html`.
-*   Copy `USAGE.html` to the FAT32 or NTFS partition too.
-*   Reboot into Windows.  Use `7zip` to compress the image to
+*   Copy `USAGE.html` to the torrent directory too.
+*   Reboot into Windows.
+*   Use **7-Zip** to compress the image to
     `The-Cats-Eye-Technologies-Platform-0.x.img.7z` at the highest
     level of compression.
-*   Create a directory in `webseeds` directory of the static
-    website data and copy Copy the 7zip'ed image and USAGE.html there.
-*   rsync the static data to the live website.
-*   Run `uTorrent` to create the torrent file.  Select the directory
-    as the webseed.  (TODO add more detail here.)
+*   Copy the torrent directory into the `webseeds` directory of the
+    static website data.
+*   rsync the static website data to the live website.
+*   Run **μTorrent**.  Select "Create new torrent".
+*   Select "Add directory" and select the torrent directory.
+*   In the "Webseeds" text box, enter `http://static.catseye.tc/webseeds/`
+    (note: there have been issues with webseeds not being 100%
+    downloaded; I'm not sure if the cause is the torrent software,
+    or the web server configuration, or something else.)
+*   In the "Related website" text box, enter `http://catseye.tc/`
+*   Click "Create torrent".
 
 TODO
 ----
