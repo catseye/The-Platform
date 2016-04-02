@@ -5,14 +5,15 @@ Hey, if Haskell can have a Platform, why can't we?  It's only fair.
 
 The Cat's Eye Technologies Platform is a [NetBSD][]-based,
 [toolshelf][]-powered, [Funicular][]-built "distro" containing almost all of
-[Cat's Eye Technologies][]' software distributions.
+[Cat's Eye Technologies][]' software distributions.  It is an anthology of
+our work in a "stand-alone" format, a bootable disk image.
 
-**If you want to download a pre-built disk image of The Cat's Eye Technologies Platform**,
+**If you want to download a pre-built disk image of The Platform**,
 open this torrent in your torrent client:
 
-*   [The-Cats-Eye-Technologies-Platform-0.2.torrent][]
+*   [The-Cats-Eye-Technologies-Platform-0.3.torrent][]
 
-**If you already have a copy of The Cat's Eye Technologies Platform disk image**,
+**If you already have a copy of the pre-built disk image**,
 and you want to know how to use it, see this document:
     
 *   [USAGE.markdown](USAGE.markdown)
@@ -20,7 +21,7 @@ and you want to know how to use it, see this document:
 **If you wish to build a disk image of The Platform from source files**,
 or if you simply want to know more about its internals, read on.
 
-[The-Cats-Eye-Technologies-Platform-0.2.torrent]: https://raw.githubusercontent.com/catseye/The-Platform/master/torrent/The-Cats-Eye-Technologies-Platform-0.2.torrent
+[The-Cats-Eye-Technologies-Platform-0.3.torrent]: https://raw.githubusercontent.com/catseye/The-Platform/master/torrent/The-Cats-Eye-Technologies-Platform-0.3.torrent
 
 Motivation
 ----------
@@ -48,21 +49,15 @@ Each version of The Cat's Eye Technologies Platform can be thought of as a
 in their development where they are all mutually compatible.
 
 The current released version of The Cat's Eye Technologies Platform is
-version **0.2**.  It can be built with Funicular version 0.1-2015.0105 and
-employs toolshelf version 0.1 revision 2014.1231 as its "packaging system".
-Its source code can be found at the tag `0.2` in the repository, for
-example [on Github here](https://github.com/catseye/The-Platform/tree/0.2).
+version **0.3**.  It can be built with Funicular version 0.3 and
+employs toolshelf version 0.1-2016.0315 as its "packaging system".
+Its source code can be found at the tag `0.3` in the repository, for
+example [on Github here](https://github.com/catseye/The-Platform/tree/0.3).
 
 All of the pieces of software that make up The Platform are interoperable;
 that is, every piece builds successfully on NetBSD 6.1.5, and those with
 test suites pass all of their relevant automated tests.  The pieces are
 not, however, thoroughly tested manually.
-
-The current development version of The Cat's Eye Technologies Platform
-is **0.3-PRE**.  It is this version that the following sections describe;
-however, no claims are made about the versions of any of the
-software involved or its interoperability, and no claims will be made
-until such time as the "-PRE" is dropped from the version number.
 
 Quick Start
 -----------
@@ -78,7 +73,7 @@ some free space.
 *   Put a copy of (or a symbolic link to) the
     [NetBSD 6.1.5](http://www.netbsd.org/releases/formal-6/NetBSD-6.1.5.html)
     install ISO for i386, called `NetBSD-6.1.5-i386.iso`, in this repo's
-    root directory — since it is fairly large (~314M) it is not automatically
+    root directory.  Since it is fairly large (~314M) it is not automatically
     downloaded by Funicular, and you may wish to obtain it via a torrent or
     by some other method.
 *   In this repo's directory, run
@@ -168,28 +163,31 @@ web site.  Thus, if you can already experience it by pointing your web
 browser at `catseye.tc`, we won't worry too much about it not being usable
 in The Platform.
 
-*TODO: update this section for 0.3-PRE*
-
-*   [BefOS](http://catseye.tc/node/BefOS_(v86)).  No PC emulator installed.
+*   [BefOS](http://catseye.tc/installation/BefOS).  No PC emulator installed.
     **still buildable**
-*   [Bubble Escape](http://catseye.tc/node/Bubble_Escape_(JaC64)).
+*   [Bubble Escape](http://catseye.tc/installation/Bubble Escape).
     No Commodore 64 emulator installed.  **still buildable**
-*   [Etcha](http://catseye.tc/node/Etcha_(HTML5)).  Implemented only in Java
+*   [Canvas Feedback](http://catseye.tc/installation/Canvas Feedback)
+*   [Etcha](http://catseye.tc/installation/Etcha).  Implemented only in Java
     and Javascript, and no implementations of either of these languages are
     installed.
-*   [Gemooy](http://catseye.tc/node/Gemooy_(HTML5)).  Implemented only in
+*   [Gemooy](http://catseye.tc/installation/Gemooy).  Implemented only in
     Javascript, and no Javascript implementation is installed.
-*   [HTML5-Gewgaws](http://catseye.tc/node/Online_Installation#gewgaws_exhibit).
+*   [HTML5-Gewgaws](http://catseye.tc/node/Gewgaw).
     Implemented only in Javascript, and no Javascript implementation is
     installed.  Plus, these gewgaws generally assume an HTML5 web browser.
-*   [Shelta](http://catseye.tc/node/Shelta_(v86)).  No DOS emulator installed.
+*   [Matchbox](http://catseye.tc/installation/Matchbox)
+*   [Lexeduct](http://catseye.tc/installation/Lexeduct)
+*   [Shelta](http://catseye.tc/installation/Shelta).  No DOS emulator installed.
     **still buildable**
-*   [Wunnel](http://catseye.tc/node/Wunnel_(HTML5)).  Implemented only in Java
+*   [The New Gamerly Realism](http://catseye.tc/installation/The New Gamerly Realism)
+*   [Wang Tilers](http://catseye.tc/installation/Wang Tilers)
+*   [Wunnel](http://catseye.tc/installation/Wunnel).  Implemented only in Java
     and Javascript, and no implementations of either of these languages are
     installed.
-*   [Whothm](http://catseye.tc/node/Whothm_(Applet)).  Reference implementation
+*   [Whothm](http://catseye.tc/installation/Whothm).  Reference implementation
     is written in Java, and no Java implementation is installed.
-*   [yoob](http://catseye.tc/node/yoob_(Applet)).  Reference implementation
+*   [yoob](http://catseye.tc/installation/yoob).  Reference implementation
     is written in Java, and no Java implementation is installed.
 
 ### Of no great use to you ###
@@ -197,8 +195,6 @@ in The Platform.
 This is the list we want to minimize, either by allowing these to run in
 The Platform somehow, or allowing them to run on the web, in an HTML5 browser,
 somehow.  But for some of them, neither of those options make sense either.
-
-*TODO: update this section for 0.3-PRE*
 
 *   Apple Befunge.  No Apple II emulator installed.
 *   C64 Demo Depot.  No Commodore 64 emulator installed.  **still buildable**
@@ -214,6 +210,11 @@ somehow.  But for some of them, neither of those options make sense either.
     installed.
 *   ILLGOL.  No DOS emulator installed to run the executables produced by
     the compiler(s).  **still buildable and runnable**
+*   SITU-SOL.  No Commodore 64 emulator installed.  **still buildable**
+*   The Platform.  While there is a version of The Platform (that is,
+    the Funicularfile and scripts in this repository...) included *inside*
+    The Platform, it lags behind the current version of The Platform by
+    one revision (because doing otherwise would be quite tricky.)
 *   Troupe.  Not implemented.  When it will be implemented, it will probably
     be implemented in Javascript first.
 *   yoob.js.  No Javascript implementation installed.  and it's a framework,
@@ -267,11 +268,11 @@ History
 
 This section highlights major changes from release to release.
 
-*   **0.3-PRE**
+*   **0.3**
     
     *   Updated versions of many Cat's Eye Technologies' distributions,
-        and added several new distributions, including hatoucan, Matchbox,
-        MARYSUE, Lexeduct, Schroedinger's Game of Life, etc.
+        and added several new distributions, including hatoucan, MARYSUE,
+        Schroedinger's Game of Life, etc.
     *   hatoucan is now used to build (tokenize) the `.bas` files for
         Bubble Escape and Dungeons of Ekileugor. 
     *   Kosheri actually had failing tests in version 0.2, but they
