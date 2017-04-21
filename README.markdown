@@ -58,7 +58,7 @@ you have some free space.
     by some other method.
 *   In this repo's directory, run
     
-        IMAGE_SIZE=3686400 funicular init system
+        IMAGE_SIZE=3600 funicular init system
         funicular install
         funicular init setup
         funicular setup
@@ -99,6 +99,7 @@ The second stage, "Infrastructure", consists of:
 *   Erlang/OTP R16B03-1 (stripped down, e.g. no megaco, etc.) ♦³
 *   CHICKEN Scheme 4.9.0.1 ♡¹
 *   yasm 1.3.0 ♡
+*   Ophis 2.1 ♡
 
 The third stage, "Cat's Eye Infrastructure", consists of:
 
@@ -113,7 +114,6 @@ mirrors in Mercurial to make things easier.)
 
 *   Mini-Scheme 0.85ce1      (for Pixley) ♥
 *   OpenZz 1.0.4-4ce1        (for Zzrk) ♢¹
-*   Ophis 2.1                (mirror) (for building 6502 stuff) ♡
 *   ee 1.5.2ce1              (for text editing) ♡
 
 (ee is not strictly necessary, I just can't stand any of the text editors
