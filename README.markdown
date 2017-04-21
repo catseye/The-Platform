@@ -3,50 +3,14 @@ The Cat's Eye Technologies Platform
 
 Hey, if Haskell can have a Platform, why can't we?  It's only fair.
 
-The Cat's Eye Technologies Platform is a [NetBSD][]-based,
-[toolshelf][]-powered, [Funicular][]-built "distro" containing almost all of
-[Cat's Eye Technologies][]' software distributions.  It is an anthology of
-our work in a "stand-alone" format, a bootable disk image.
+This is version 0.4 of _The Cat's Eye Technologies Platform_, a
+[NetBSD][]-based, [shelf][]-powered, [Funicular][]-built "distro"
+containing almost all of [Cat's Eye Technologies][]' software
+distributions.  It is an anthology of our work in a "stand-alone"
+format, a bootable disk image.
 
-**If you want to download a pre-built disk image of The Platform**,
-open this torrent in your torrent client:
-
-*   [The-Cats-Eye-Technologies-Platform-0.3.torrent][]
-
-**If you already have a copy of the pre-built disk image**,
-and you want to know how to use it, see this document:
-    
-*   [USAGE.markdown](USAGE.markdown)
-
-**If you wish to build a disk image of The Platform from source files**,
-or if you simply want to know more about its internals, read on.
-
-[The-Cats-Eye-Technologies-Platform-0.3.torrent]: https://raw.githubusercontent.com/catseye/The-Platform/master/torrent/The-Cats-Eye-Technologies-Platform-0.3.torrent
-
-Motivation
-----------
-
-If pressed, I could come up with a serious rationalization for this.  Picking
-a fixed version of an operating system means that, once the versions of the
-supporting software and the versions of our software have been picked, it
-will all build and work consistently (and, we can only hope, correctly.)
-Since it is not intended to be connected to a network, the need for upgrades
-due to security, hardware support, and "new hawtness" is diminished.
-
-Or: establishing a platform is to bitrot what canning food is to spoilage.
-
-It also provides answers to the question "What is a minimal set of software
-that'd be needed to run almost everything from Cat's Eye Technologies?"
-
-As I said, I *could* come up with a serious rationalization for this.
-But mainly, it's fun.  A certain awful flavour of fun, maybe, but still fun.
-
-Version
--------
-
-Each version of The Cat's Eye Technologies Platform can be thought of as a
-"versionset" on a collection of software distributions, "frozen" at points
-in their development where they are all mutually compatible.
+Version 0.4 is currently under development; no binary distribution
+is available yet.
 
 The current released version of The Cat's Eye Technologies Platform is
 version **0.3**.  It can be built with Funicular version 0.3 and
@@ -54,21 +18,37 @@ employs toolshelf version 0.1-2016.0315 as its "packaging system".
 Its source code can be found at the tag `0.3` in the repository, for
 example [on Github here](https://github.com/catseye/The-Platform/tree/0.3).
 
+Background
+----------
+
+Each version of The Cat's Eye Technologies Platform can be thought of as a
+"versionset" on a collection of software distributions, "frozen" at points
+in their development where they are all mutually compatible.
+
+Picking a fixed version of an operating system means that, once the
+versions of the supporting software and the versions of our software
+have been picked, it will all build and work consistently (and, we
+can only hope, correctly.)
+
+Since it is not intended to be connected to a network, the need for upgrades
+due to security, hardware support, and "new hawtness" is diminished.
+Establishing a platform in this way is to bitrot what canning food is to
+spoilage.  It also answers the question "What is a minimal set of software
+that'd be needed to run almost everything from Cat's Eye Technologies?"
+
 All of the pieces of software that make up The Platform are interoperable;
 that is, every piece builds successfully on NetBSD 6.1.5, and those with
 test suites pass all of their relevant automated tests.  The pieces are
 not, however, thoroughly tested manually.
 
-Quick Start
------------
+Building
+--------
 
-You can download a pre-built disk image of The Platform via the torrent
-link given above.  Or, if you are on a Unix-like operating system, you
-can build your own image from source by following the following steps.
-Either way, the disk image is roughly 3.6G in size, so make sure you have
-some free space.
+If you are on a Unix-like operating system, you can build your own disk
+image with the following steps.  It is roughly 3.6G in size, so make sure
+you have some free space.
 
-*   Install [Funicular][] 0.3 (via [toolshelf][], we would suggest,
+*   Install [Funicular][] 0.4 (via [shelf][], we would suggest,
     although this is not strictly necessary)
 *   Put a copy of (or a symbolic link to) the
     [NetBSD 6.1.5](http://www.netbsd.org/releases/formal-6/NetBSD-6.1.5.html)
@@ -78,16 +58,19 @@ some free space.
     by some other method.
 *   In this repo's directory, run
     
-        funicular init 3600
+        IMAGE_SIZE=3686400 funicular init system
         funicular install
+        funicular init setup
         funicular setup
     
     and follow the instructions given to you at each step.
 
 [NetBSD]: http://netbsd.org/
-[toolshelf]: https://github.com/catseye/toolshelf/
+[shelf]: https://github.com/catseye/shelf/
 [Funicular]: https://github.com/catseye/Funicular/
 [Cat's Eye Technologies]: http://catseye.tc/
+
+*things below this line need review*
 
 What's Included?
 ----------------
@@ -101,18 +84,16 @@ Note that, in case this listing is out-of-date or inaccurate, see the
 `skel` directory for more accurate, machine-readable version numbers.
 
 The Platform can be thought of as being constructed in stages, with each
-stage building upon the previous.  The first stage (the "NetBSD Gondola" stage,
-although this is something of a misnomer now) consists of:
+stage building upon the previous.  The first stage consists of:
 
 *   NetBSD 6.1.5 (minimal install + compiler tools) ♡ + ♢
 *   Lua 5.1.4 (note that this is already a part of NetBSD 6.1.5) ♡
-*   cPython 2.7.8 ♦¹
 *   toolshelf 0.1-2016.0315 ♡
 
 The second stage, "Infrastructure", consists of:
 
 *   GNU Make 3.82 ♢
-*   Mercurial 1.9.3 ♢
+*   cPython 2.7.8 ♦¹
 *   Perl 5.20.1 ♦²
 *   Hugs98-plus Sep2006 ♡
 *   Erlang/OTP R16B03-1 (stripped down, e.g. no megaco, etc.) ♦³
