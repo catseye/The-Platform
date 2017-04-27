@@ -21,5 +21,4 @@ cd /home/user
 mkdir -p catseye
 cd catseye
 
-shelf_populate /cdrom/ < /cdrom/infrastructure.catalog || exit 1
 shelf_populate /cdrom/ < /cdrom/catseye.catalog || exit 1
