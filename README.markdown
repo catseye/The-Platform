@@ -356,3 +356,63 @@ The information in this section is likely to be random and outdated.
         stuff from the Esoteric Files Archive.
     
     *   and/or whatever else...
+
+TODO: for 0.4
+-----------------------------
+
+*   shelf_build needs to break the build script when it fails
+*   shelf_test needs to be written
+*   ...
+
+### Things that have been released
+
+*   Falderal 0.11
+*   Quylthulg rel_1_0_2016_0504
+
+### Things that will need to be released
+
+#### Have actual due releases
+
+*    Tamsin -- probably 0.5-2017.05xx
+*    SixtyPical -- probably 0.5-2017.05xx -- but maybe not, not sure how stable
+*    SITU-SOL -- blogs are part of it now.  probably 0.1-2017.05xx
+*    yoob.js - 0.12
+*    Maxixe - 0.1 - and add to catalog
+*    kinoje - 0.1 - and add to catalog - and what will we do about yaml and jinja?
+*    Funicular - 0.4
+*    shelf - 0.1
+*    Wang Tilers - needs initial tag!
+
+#### Build things
+
+*   Lexeduct -- node build thing -- probably 0.1-2017.05xx
+*   Guten-gutter -- tests under netbsd -- probably 0.2-2017.05xx
+
+#### Falderal 0.11 syntax change
+
+*   PL-GOTO.NET -- probably rel_1_1_2017_05xx
+*   Iphigeneia  -- probably rel_1_0_2017_05xx
+*   Exanoke     -- rel_1_0_2017_05xx
+*   Etcha       -- rel_1_0_2017_05xx
+*   Kosheri     -- 0.1-2017.05xx
+
+#### Not known yet
+
+    https://github.com/catseye/Troupe
+    https://github.com/catseye/toolshelf
+    https://github.com/catseye/Gemooy
+    https://github.com/catseye/Chrysoberyl
+    https://github.com/catseye/crone
+    https://github.com/catseye/Samovar
+    https://github.com/catseye/HTML5-Gewgaws
+    https://github.com/catseye/The-Dossier
+    https://github.com/catseye/The-Platform
+
+#### Things we can punt on
+
+*   Dipple -- probably 0.2 -- not that you lose much if it's 0.1
+*   Canvas Feedback -- supports querystring args now, poorly -- should release 1.1 I guess, not that we lose much here
+*   Castile -- 0_3_2017_05xx -- it's a generated Ruby thing, inconsequential for here
+*   Maentwrog -- just changes for building on AmigaDOS 1.3
+*   Befunge-93 - same
+*   Braktif -- updates to yoob.js 0.7
