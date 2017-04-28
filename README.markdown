@@ -373,28 +373,16 @@ TODO: for 0.4
 
 #### Have actual due releases
 
-*    Tamsin -- probably 0.5-2017.05xx
-*    SixtyPical -- probably 0.5-2017.05xx -- but maybe not, not sure how stable
-*    SITU-SOL -- blogs are part of it now.  probably 0.1-2017.05xx
-*    yoob.js - 0.12
-*    Maxixe - 0.1 - and add to catalog
-*    kinoje - 0.1 - and add to catalog - and what will we do about yaml and jinja?
-*    Funicular - 0.4
-*    shelf - 0.1
-*    Wang Tilers - needs initial tag!
-
-#### Build things
-
-*   Lexeduct -- node build thing -- probably 0.1-2017.05xx
-*   Guten-gutter -- tests under netbsd -- probably 0.2-2017.05xx
-
-#### Falderal 0.11 syntax change
-
-*   PL-GOTO.NET -- probably rel_1_1_2017_05xx
-*   Iphigeneia  -- probably rel_1_0_2017_05xx
-*   Exanoke     -- rel_1_0_2017_05xx
-*   Etcha       -- rel_1_0_2017_05xx
-*   Kosheri     -- 0.1-2017.05xx
+*   Tamsin -- probably 0.5-2017.05xx
+*   SixtyPical -- probably 0.5-2017.05xx -- but maybe not, not sure how stable
+*   SITU-SOL -- blogs are part of it now.  probably 0.1-2017.05xx
+*   yoob.js - 0.12
+*   Maxixe - 0.1 - and add to catalog
+*   kinoje - 0.1 - and add to catalog - and what will we do about yaml and jinja?
+*   Funicular - 0.4
+*   shelf - 0.1
+*   Wang Tilers - needs initial tag!
+*   Samovar - needs initial tag
 
 #### Not known yet
 
@@ -402,8 +390,6 @@ TODO: for 0.4
     https://github.com/catseye/toolshelf
     https://github.com/catseye/Gemooy
     https://github.com/catseye/Chrysoberyl
-    https://github.com/catseye/crone
-    https://github.com/catseye/Samovar
     https://github.com/catseye/HTML5-Gewgaws
     https://github.com/catseye/The-Dossier
     https://github.com/catseye/The-Platform
