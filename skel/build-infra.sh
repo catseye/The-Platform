@@ -27,9 +27,9 @@ chmod 755 otp_src_R16B03-1/build.sh
 
 for p in `cat /cdrom/infrastructure.catalog`; do
   echo "*** shelf_build $p ***"
-  shelf_build $p
+  shelf_build $p || exit 1
   echo "*** shelf_link $p ***"
-  shelf_link $p
+  shelf_link $p || exit 1
 done
 
 ln -s ${SHELF_FARMBASE}/bin/python2.7 ${SHELF_FARMBASE}/bin/python

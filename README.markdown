@@ -374,8 +374,6 @@ TODO: for 0.4
 
 #### Have actual due releases
 
-*   Tamsin -- probably 0.5-2017.05xx
-*   SixtyPical -- probably 0.5-2017.05xx -- but maybe not, not sure how stable
 *   SITU-SOL -- blogs are part of it now.  probably 0.1-2017.05xx
 *   Maxixe - 0.1 - and add to catalog
 *   kinoje - 0.1 - and add to catalog - and what will we do about yaml and jinja?
@@ -400,3 +398,5 @@ TODO: for 0.4
 *   Maentwrog -- just changes for building on AmigaDOS 1.3
 *   Befunge-93 - same
 *   Braktif -- updates to yoob.js 0.7
+*   Tamsin -- next version will be 0.6, but included version will be 0.5
+*   SixtyPical -- next version will be 0.6, but included version will be 0.5
