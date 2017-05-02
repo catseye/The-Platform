@@ -370,7 +370,6 @@ The information in this section is likely to be random and outdated.
 TODO: for 0.4
 -----------------------------
 
-*   lexeduct has failing test
 *   better shelf_test, don't abort on a single failed test
 
 ### Things that have been released
