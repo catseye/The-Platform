@@ -25,11 +25,13 @@ find . -name dirname -exec rm {} \;
 EOF
 chmod 755 otp_src_R16B03-1/build.sh
 
-for p in `cat /cdrom/infrastructure.catalog`; do
-  echo "*** shelf_build $p ***"
-  shelf_build $p || exit 1
-  echo "*** shelf_link $p ***"
-  shelf_link $p || exit 1
+for line in `cat /cdrom/infrastructure.catalog`; do
+  project=`echo $line | awk '{split($0,a,"@"); print a[1]}'`
+  tag=`echo $line | awk '{split($0,a,"@"); print a[2]}'`
+  echo "*** shelf_build $project ***"
+  shelf_build $project || exit 1
+  echo "*** shelf_link $project ***"
+  shelf_link $project || exit 1
 done
 
 ln -s ${SHELF_FARMBASE}/bin/python2.7 ${SHELF_FARMBASE}/bin/python
