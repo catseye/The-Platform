@@ -249,6 +249,16 @@ History
 
 This section highlights major changes from release to release.
 
+*   **0.4** (in progress)
+    
+    *   Now based on shelf instead of toolshelf.  shelf is written in
+        pure Bourne shell, so Python no longer needs to be built before
+        sources can be docked.
+    *   Now built with version 0.4 of Funicular, which is also written
+        in Bourne shell now, instead of Lua.
+    *   Updated versions of Falderal and Quylthulg.
+    *   Several new distributions, including Samovar, etc.
+
 *   **0.3**
     
     *   Updated versions of many Cat's Eye Technologies' distributions,
@@ -360,9 +370,8 @@ The information in this section is likely to be random and outdated.
 TODO: for 0.4
 -----------------------------
 
-*   shelf_build needs to break the build script when it fails
-*   shelf_test needs to be written
-*   ...
+*   lexeduct has failing test
+*   better shelf_test, don't abort on a single failed test
 
 ### Things that have been released
 
@@ -375,18 +384,16 @@ TODO: for 0.4
 #### Have actual due releases
 
 *   SITU-SOL -- blogs are part of it now.  probably 0.1-2017.05xx
-*   Maxixe - 0.1 - and add to catalog
-*   kinoje - 0.1 - and add to catalog - and what will we do about yaml and jinja?
+*   Maxixe - needs initial tag 0.1 - and add to catalog
+*   kinoje - needs initial tag 0.1 - and add to catalog - and what will we do about yaml and jinja?
+
 *   Funicular - 0.4
-*   shelf - 0.1
-*   Wang Tilers - needs initial tag!
-*   Samovar - needs initial tag
+*   shelf - needs initial tag 0.1
 
 #### Not known yet
 
     https://github.com/catseye/toolshelf
     https://github.com/catseye/Chrysoberyl
-    https://github.com/catseye/HTML5-Gewgaws
     https://github.com/catseye/The-Dossier
     https://github.com/catseye/The-Platform
 
