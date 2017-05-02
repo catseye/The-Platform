@@ -377,6 +377,7 @@ TODO: for 0.4
 *   Falderal 0.11
 *   Quylthulg rel_1_0_2016_0504
 *   yoob.js 0.12
+*   Tamsin 0.5-2017.0502
 
 ### Things that will need to be released
 
@@ -404,5 +405,4 @@ TODO: for 0.4
 *   Maentwrog -- just changes for building on AmigaDOS 1.3
 *   Befunge-93 - same
 *   Braktif -- updates to yoob.js 0.7
-*   Tamsin -- next version will be 0.6, but included version will be 0.5
 *   SixtyPical -- next version will be 0.6, but included version will be 0.5
