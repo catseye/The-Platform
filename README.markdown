@@ -191,6 +191,7 @@ somehow.  But for some of them, neither of those options make sense either.
     installed.
 *   ILLGOL.  No DOS emulator installed to run the executables produced by
     the compiler(s).  **still buildable and runnable**
+*   kinoje.  PyYaml and Jinja2 are not installed.
 *   SITU-SOL.  No Commodore 64 emulator installed.  **still buildable**
 *   The Platform.  While there is a version of The Platform (that is,
     the Funicularfile and scripts in this repository...) included *inside*
@@ -251,13 +252,14 @@ This section highlights major changes from release to release.
 
 *   **0.4** (in progress)
     
-    *   Now based on shelf instead of toolshelf.  shelf is written in
+    *   Now based on `shelf` instead of toolshelf.  `shelf` is written in
         pure Bourne shell, so Python no longer needs to be built before
         sources can be docked.
     *   Now built with version 0.4 of Funicular, which is also written
-        in Bourne shell now, instead of Lua.
-    *   Updated versions of Falderal and Quylthulg.
-    *   Several new distributions, including Samovar, etc.
+        in Bourne shell now, instead of Lua.  (But this has much less
+        impact on The Platform than the `shelf` change.)
+    *   Updated versions of Falderal, Quylthulg, SITU-SOL, and Tamsin.
+    *   Several new distributions, including kinoje, Maxixe, and Samovar.
 
 *   **0.3**
     
@@ -368,9 +370,10 @@ The information in this section is likely to be random and outdated.
     *   and/or whatever else...
 
 TODO: for 0.4
------------------------------
+-------------
 
-*   better shelf_test, don't abort on a single failed test
+Note that the version of The Platform included in The Platform is always
+one version number behind.
 
 ### Things that have been released
 
@@ -378,24 +381,17 @@ TODO: for 0.4
 *   Quylthulg rel_1_0_2016_0504
 *   yoob.js 0.12
 *   Tamsin 0.5-2017.0502
+*   Samovar 0.1
+*   Maxixe 0.1
+*   kinoje 0.1
 
 ### Things that will need to be released
 
-#### Have actual due releases
-
-*   SITU-SOL -- blogs are part of it now.  probably 0.1-2017.05xx
-*   Maxixe - needs initial tag 0.1 - and add to catalog
-*   kinoje - needs initial tag 0.1 - and add to catalog - and what will we do about yaml and jinja?
-
 *   Funicular - 0.4
 *   shelf - needs initial tag 0.1
-
-#### Not known yet
-
-    https://github.com/catseye/toolshelf
-    https://github.com/catseye/Chrysoberyl
-    https://github.com/catseye/The-Dossier
-    https://github.com/catseye/The-Platform
+*   https://github.com/catseye/toolshelf
+*   https://github.com/catseye/Chrysoberyl
+*   https://github.com/catseye/The-Dossier
 
 #### Things we can punt on
 
@@ -406,3 +402,8 @@ TODO: for 0.4
 *   Befunge-93 - same
 *   Braktif -- updates to yoob.js 0.7
 *   SixtyPical -- next version will be 0.6, but included version will be 0.5
+
+TODO: for 0.5
+-------------
+
+*   better shelf_test, don't abort on a single failed test
