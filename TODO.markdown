@@ -29,7 +29,6 @@ Held back to latest tag, even though there are commits after it.
 ### Things that will need to be released
 
 *   shelf - needs initial tag 0.1
-*   https://github.com/catseye/toolshelf
 *   https://github.com/catseye/Chrysoberyl
 *   https://github.com/catseye/The-Dossier
 

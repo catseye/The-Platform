@@ -104,7 +104,7 @@ The second stage, "Infrastructure", consists of:
 The third stage, "Cat's Eye Infrastructure", consists of:
 
 *   catseye-realpath 1.0     (for Pixley and others) ♥
-*   Falderal 0.10            (for tests) ♡
+*   Falderal 0.11            (for tests) ♡
 *   yucca 1.1                (for building Dungeons of Ekileugor) ♡
 *   hatoucan 0.1             (for tokenizing Commodore BASIC 2.0 sources) ♥
 
@@ -197,6 +197,8 @@ somehow.  But for some of them, neither of those options make sense either.
     the Funicularfile and scripts in this repository...) included *inside*
     The Platform, it lags behind the current version of The Platform by
     one revision (because doing otherwise would be quite tricky.)
+*   toolshelf.  The Platform is based on shelf now, so toolshelf isn't
+    activated.  While the scripts are there, it is not recommend you run them.
 *   Troupe.  Not implemented.  When it will be implemented, it will probably
     be implemented in Javascript first.
 *   yoob.js.  No Javascript implementation installed.  and it's a framework,
