@@ -11,9 +11,20 @@ This section highlights major changes from release to release.
     *   Now built with version 0.4 of Funicular, which is also written
         in Bourne shell now, instead of Lua.  (But this has much less
         impact on The Platform than the `shelf` change.)
-    *   Updated versions of Falderal, Quylthulg, SITU-SOL, and Tamsin.
+    *   Incorporates updated versions of Falderal, Quylthulg, SITU-SOL,
+        Tamsin, yoob.js, and Funicular.
     *   Several new distributions, including kinoje, Maxixe, Samovar,
-        and The Dossier.
+        and The Dossier.  And shelf.
+    *   Things we have punted on (held back to latest tag, even though
+        there are commits after it):
+        *   Canvas Feedback
+        *   Castile
+        *   Maentwrog
+        *   Befunge-93
+        *   Braktif
+        *   SixtyPical
+        *   Chrysoberyl — actually, it's stale and needs updating but
+            I don't want that to block releasing The Platform 0.4.
 
 *   **0.3**
     

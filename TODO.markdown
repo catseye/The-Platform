@@ -1,36 +1,6 @@
 TODO
 ====
 
-for 0.4
--------
-
-### Things that have been released
-
-*   Falderal 0.11
-*   Quylthulg rel_1_0_2016_0504
-*   yoob.js 0.12
-*   Tamsin 0.5-2017.0502
-*   Samovar 0.1
-*   Maxixe 0.1
-*   kinoje 0.1
-*   Funicular 0.4
-
-#### Things we have punted on
-
-Held back to latest tag, even though there are commits after it.
-
-*   Canvas Feedback
-*   Castile
-*   Maentwrog
-*   Befunge-93
-*   Braktif
-*   SixtyPical
-
-### Things that will need to be released
-
-*   shelf - needs initial tag 0.1
-*   https://github.com/catseye/Chrysoberyl
-
 for 0.5
 -------
 
