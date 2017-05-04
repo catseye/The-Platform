@@ -1,6 +1,8 @@
 TODO
 ====
 
+*   make torrent
+
 for 0.5
 -------
 

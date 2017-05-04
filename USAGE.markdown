@@ -1,7 +1,7 @@
 About The Cat's Eye Technologies Platform
 =========================================
 
-The Cat's Eye Technologies Platform (version 0.3) is a bootable [NetBSD][]-based
+The Cat's Eye Technologies Platform (version 0.4) is a bootable [NetBSD][]-based
 disk image containing almost all of [Cat's Eye Technologies][]' software
 distributions, pre-built and tested, and the open-source infrastructure needed
 to run them.
@@ -21,13 +21,13 @@ Using The Platform
 The Platform is distributed as a disk image.  There are two general ways to use
 this disk image: either
 
-*   run a PC emulator such as QEMU and tell it to boot from this image, or
+*   run a PC emulator such as QEMU and make it boot from this image, or
 *   write it to a real disk drive (or USB stick) and boot from that device.
 
 (It is not possible to burn this sort of disk image onto a CD-ROM or DVD-ROM.)
 
 When running, The Platform does *not* have access to your hard drive (outside
-of its own disk image file) and does *not* have access to your network.  This
+of its own disk image) and does *not* have access to your network.  This
 is intentional; it means that you can muck around however you like inside The
 Platform and it should not affect (or be affected by) anything outside it.
 
@@ -65,7 +65,7 @@ extracting it.
 ### How to boot the image in the QEMU PC emulator ###
 
 First, make sure the disk image of The Platform is on your desktop, and make
-sure it is named `The-Cats-Eye-Technologies-Platform-0.3.img`.  (This is not a
+sure it is named `The-Cats-Eye-Technologies-Platform-0.4.img`.  (This is not a
 strict requirement, but the instructions below assume that this is the case.)
 
 **QEMU** is a versatile PC emulator, originally written by Fabrice Bellard,
@@ -98,7 +98,7 @@ the Start Menu for this.)
 
 In the Command Prompt, type
 
-    "C:\Program Files\qemu\qemu-system-i386" Desktop\The-Cats-Eye-Technologies-Platform-0.3.img
+    "C:\Program Files\qemu\qemu-system-i386" Desktop\The-Cats-Eye-Technologies-Platform-0.4.img
 
 ...all on one line, and don't forget the double quotes.
 
@@ -128,7 +128,7 @@ Download Win32 Disk Imager from here:
 
 Run the installer.  Install it as usual and run it.
 
-Click the folder icon and select `The-Cats-Eye-Technologies-Platform-0.3.img`
+Click the folder icon and select `The-Cats-Eye-Technologies-Platform-0.4.img`
 from your file system.
 
 Select your USB stick's drive letter in the "Device" dropdown.  (If unsure,
@@ -152,19 +152,19 @@ nodes.
 To extract the disk image, use `p7zip`:
 
     sudo apt-get install p7zip
-    p7zip -d The-Cats-Eye-Technologies-Platform-0.3.img.7z
+    p7zip -d The-Cats-Eye-Technologies-Platform-0.4.img.7z
 
 To boot the disk image under the QEMU emulator,
 
     sudo apt-get install qemu
-    qemu-system-i386 The-Cats-Eye-Technologies-Platform-0.3.img
+    qemu-system-i386 The-Cats-Eye-Technologies-Platform-0.4.img
 
 You should see NetBSD boot up in the QEMU window.  Now see
 _Logging in and using The Platform_, below.
 
 To write the disk image to a USB stick,
 
-    dd if=The-Cats-Eye-Technologies-Platform-0.3.img of=/dev/sdX bs=1M
+    dd if=The-Cats-Eye-Technologies-Platform-0.4.img of=/dev/sdX bs=1M
 
 where `sdX` is the name of your (unmounted) USB device (could be `sdb` or
 `sdc`; check `mount` while the device is still mounted.)
@@ -217,7 +217,9 @@ Then type the following:
 
 (note that there is a space between the `a` and the last `/`.)  And then
 
-    /home/user/toolshelf/.bin/ee /etc/fstab
+    /home/user/.local/bin/ee /etc/fstab
+
+(again, note there is a space between `ee` and the `/` following it.)
 
 This will start a text editor, and let you edit the mount points of devices.
 Now cursor down to the third line and change `wd0a` to `sd0a`.  (See footnote.)
@@ -265,13 +267,25 @@ actions risk corrupting the disk image.
 While logged in, most of Cat's Eye Technologies' programming language
 interpreters and compilers can be started just by typing their name
 (in Unix-speak, these executables are on the search path.)  For example,
-type `maentw` to start the Maentwrog interpreter.  (Type `bye` to exit.)
 
-You can also use `toolshelf` to navigate to the language project directories,
-and run tests.  The short alias is `th`.  So, for example,
+    bef ~/catseye/befunge-93/eg/robot.bf
 
-    th cd befunge-93
-    th test nhohnhehr
+(Type `n`, `s`, `e`, or `w` to walk around the maze.  Run into a wall
+to end the game and return to the shell.)  Or, run
+
+    maentw
+
+to start the Maentwrog interpreter.  (Type `bye` to exit.)
+
+You can also use `shelf` to navigate to the language project directories,
+and run tests.  So, for example,
+
+    shelf_cd befunge-93
+
+There is also a script to run all the tests for all the projects:
+
+    cd ~
+    ./test-shelf.sh
 
 License Information
 -------------------
