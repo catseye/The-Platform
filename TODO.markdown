@@ -7,19 +7,25 @@ for 0.5
 -------
 
 *   better shelf_test, don't abort on a single failed test
+*   restructure The Platform to consist of multiple sub-platforms
 
 Older Notes
 -----------
 
 The information in this section is likely to be random and outdated.
 
-*   py-editdist, perhaps?  For NaNoGenLab.
-
 *   If we have git repos, version git clones after docking them.  To do this
     we either need to mess with Dulwich (sigh) or build git on the guest.
     Somehow.  (also sigh.)
     
     *   Dulwich 0.9.5 ♢
+
+*   PyYaml and Jinja2, for kinoje and Chrysoberyl.  Also, build HTML files
+    from Chrysoberyl and let them be viewed with Links?  Also build
+    The Dossier this way?  It would be really cool if Links could browse
+    Markdown files directly.
+
+*   py-editdist, perhaps?  For NaNoGenLab.
 
 *   Devtools stage.  Not docked anymore, but maybe bring it back:
     

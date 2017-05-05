@@ -72,7 +72,7 @@ stage building upon the previous.  The first stage consists of:
 
 *   NetBSD 6.1.5 (minimal install + compiler tools) ♡ + ♢
 *   Lua 5.1.4 (note that this is already a part of NetBSD 6.1.5) ♡
-*   toolshelf 0.1-2016.0315 ♡
+*   shelf 0.1 ♥
 
 The second stage, "Infrastructure", consists of:
 
@@ -93,8 +93,7 @@ The third stage, "Cat's Eye Infrastructure", consists of:
 *   hatoucan 0.1             (for tokenizing Commodore BASIC 2.0 sources) ♥
 
 The third-and-a-half-th stage, "Cat's Eye Forked Infrastructure", consists of
-others' projects of which Cat's Eye Technologies maintains forks (or just
-mirrors in Mercurial to make things easier.)
+others' projects of which Cat's Eye Technologies maintains forks:
 
 *   Mini-Scheme 0.85ce1      (for Pixley) ♥
 *   OpenZz 1.0.4-4ce1        (for Zzrk) ♢¹
@@ -105,7 +104,8 @@ that come with NetBSD.)
 
 The fourth and "final" stage, the "Cat's Eye" stage, consists of the
 remainder of almost all of Cat's Eye Technologies' software distributions.
-See `skel/catseye.catalog` for a list of these and their version numbers.
+See [`skel/catseye.catalog`](skel/catseye.catalog) for a list of these
+distributions and the versions at which they are pinned.
 
 What's Not Included?
 --------------------
@@ -170,6 +170,7 @@ somehow.  But for some of them, neither of those options make sense either.
     automation for this, and no tests.  Well, it's a junk-drawer anyway.
 *   Dungeons of Ekileugor.  No VIC-20 emulator / BASIC interpreter installed.
     **still buildable**
+*   Funicular.  No emulators installed.
 *   NaNoGenLab.  The pure Python (and Haskell) programs should work, but many
     of the experiments have dependencies (like `py-editdist`) which are not
     installed.
