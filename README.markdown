@@ -54,8 +54,6 @@ Further Reading
 *   [HISTORY](HISTORY.markdown) — log of major changes to The Platform over time
 *   [TODO](TODO.markdown) — notes for further development
 
-*things below this line need review*
-
 What's Included?
 ----------------
 
