@@ -146,9 +146,9 @@ in The Platform.
 
 *   [BefOS](http://catseye.tc/installation/BefOS).  No PC emulator installed.
     **still buildable**
-*   [Bubble Escape](http://catseye.tc/installation/Bubble Escape).
+*   [Bubble Escape](http://catseye.tc/installation/Bubble_Escape).
     No Commodore 64 emulator installed.  **still buildable**
-*   [Canvas Feedback](http://catseye.tc/installation/Canvas Feedback)
+*   [Canvas Feedback](http://catseye.tc/installation/Canvas_Feedback)
 *   [Etcha](http://catseye.tc/installation/Etcha).  Implemented only in Java
     and Javascript, and no implementations of either of these languages are
     installed.
@@ -161,8 +161,8 @@ in The Platform.
 *   [Lexeduct](http://catseye.tc/installation/Lexeduct)
 *   [Shelta](http://catseye.tc/installation/Shelta).  No DOS emulator installed.
     **still buildable**
-*   [The New Gamerly Realism](http://catseye.tc/installation/The New Gamerly Realism)
-*   [Wang Tilers](http://catseye.tc/installation/Wang Tilers)
+*   [The New Gamerly Realism](http://catseye.tc/installation/The_New_Gamerly_Realism)
+*   [Wang Tilers](http://catseye.tc/installation/Wang_Tilers)
 *   [Wunnel](http://catseye.tc/installation/Wunnel).  Implemented only in Java
     and Javascript, and no implementations of either of these languages are
     installed.
