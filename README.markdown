@@ -6,17 +6,35 @@ Hey, if Haskell can have a Platform, why can't we?  It's only fair.
 This is version 0.4 of _The Cat's Eye Technologies Platform_, a
 [NetBSD][]-based, [shelf][]-powered, [Funicular][]-built "distro"
 containing almost all of [Cat's Eye Technologies][]' software
-distributions.  It is an anthology of our work in a "stand-alone"
-format, a bootable disk image.
-
-Version 0.4 is currently under development; no binary distribution
-is available yet.
+distributions.  It is an "executable anthology" of our work in a
+stand-alone format: a bootable disk image.
 
 The current released version of The Cat's Eye Technologies Platform is
-version **0.3**.  It can be built with Funicular version 0.3 and
-employs toolshelf version 0.1-2016.0315 as its "packaging system".
-Its source code can be found at the tag `0.3` in the repository, for
-example [on Github here](https://github.com/catseye/The-Platform/tree/0.3).
+version **0.4**.  It can be built with Funicular version 0.4 and uses
+shelf version 0.1 as its "packaging system". Its source can be found
+at the tag `0.4` in the repository, for example
+[on Github here](https://github.com/catseye/The-Platform/tree/0.4).
+
+**If you want to download a pre-built disk image of The Platform**,
+open this torrent in your torrent client:
+
+*   [The-Cats-Eye-Technologies-Platform-0.4.torrent][]
+
+**If there are no seeders and your torrent client has problems
+downloading the webseed**, download it directly (and then seed!):
+
+*   [The-Cats-Eye-Technologies-Platform-0.4.img.7z][]
+
+**If you already have a copy of the pre-built disk image**,
+and you want to know how to use it, see this document:
+
+*   [USAGE.markdown](USAGE.markdown)
+
+**If you wish to build a disk image of The Platform from source files**,
+or if you simply want to know more about its internals, read on.
+
+[The-Cats-Eye-Technologies-Platform-0.4.torrent]: https://raw.githubusercontent.com/catseye/The-Platform/master/torrent/The-Cats-Eye-Technologies-Platform-0.4.torrent
+[The-Cats-Eye-Technologies-Platform-0.4.img.7z]: http://static.catseye.tc/webseeds/The-Cats-Eye-Technologies-Platform-0.4/The-Cats-Eye-Technologies-Platform-0.4.img.7z
 
 [NetBSD]: http://netbsd.org/
 [shelf]: https://github.com/catseye/shelf/
