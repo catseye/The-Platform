@@ -3,7 +3,7 @@ History
 
 This section highlights major changes from release to release.
 
-*   **0.4** (in progress)
+*   **0.4**
     
     *   Now based on `shelf` 0.1 instead of toolshelf.  `shelf` is written
         in pure Bourne shell, so Python no longer needs to be built before
