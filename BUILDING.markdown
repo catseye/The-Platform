@@ -33,7 +33,7 @@ Notes for making the Torrent
 
 *   Build the image per the instructions in the Funicularfile.
 *   Run `script`.
-*   Run `toolshelf.py test --verbose catseye/all`.
+*   Run `/cdrom/test-shelf.sh`.
 *   `exit` and review the `typescript` for errors.
 *   If no errors, delete the `typescript` and exit the emulator.
 *   Create a directory on a FAT32 or NTFS partition called
