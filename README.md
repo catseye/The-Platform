@@ -28,7 +28,7 @@ downloading the webseed**, download it directly (and then seed!):
 **If you already have a copy of the pre-built disk image**,
 and you want to know how to use it, see this document:
 
-*   [USAGE.markdown](USAGE.markdown)
+*   [USAGE.md](USAGE.md)
 
 **If you wish to build a disk image of The Platform from source files**,
 or if you simply want to know more about its internals, read on.
@@ -67,10 +67,10 @@ not, however, thoroughly tested manually.
 Further Reading
 ---------------
 
-*   [BUILDING](BUILDING.markdown) — how to build The Platform from parts
-*   [USAGE](USAGE.markdown) — how to use a built copy of The Platform
-*   [HISTORY](HISTORY.markdown) — log of major changes to The Platform over time
-*   [TODO](TODO.markdown) — notes for further development
+*   [BUILDING](BUILDING.md) — how to build The Platform from parts
+*   [USAGE](USAGE.md) — how to use a built copy of The Platform
+*   [HISTORY](HISTORY.md) — log of major changes to The Platform over time
+*   [TODO](TODO.md) — notes for further development
 
 What's Included?
 ----------------
