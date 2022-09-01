@@ -1,8 +1,5 @@
-Python-2.7.8
+Python-3.9.13
 make-3.82
-perl-5.20.1
+perl-5.37.3
 hugs98-plus-Sep2006
-otp_src_R16B03-1
-chicken-4.9.0.1
-yasm-1.3.0
-Ophis-2.1
+chicken-4.13.0

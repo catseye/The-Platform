@@ -7,20 +7,20 @@ SYSTEM_IMAGE='wd0.img'
 DIST_IMAGE='floppy.img'
 
 DISTFILES="
-  http://www.python.org/ftp/python/2.7.8/Python-2.7.8.tgz
-  http://ftpmirror.gnu.org/make/make-3.82.tar.gz
-  http://www.cpan.org/src/5.0/perl-5.20.1.tar.gz
-  http://www.haskell.org/hugs/downloads/2006-09/hugs98-plus-Sep2006.tar.gz
-  http://www.erlang.org/download/otp_src_R16B03-1.tar.gz
-  http://code.call-cc.org/releases/4.9.0/chicken-4.9.0.1.tar.gz
-  http://www.tortall.net/projects/yasm/releases/yasm-1.3.0.tar.gz
-  https://github.com/michaelcmartin/Ophis/archive/v2.1.tar.gz@Ophis-2.1.tar.gz
+  https://www.python.org/ftp/python/3.9.13/Python-3.9.13.tgz
+  https://ftpmirror.gnu.org/make/make-3.82.tar.gz
+  https://www.cpan.org/src/5.0/perl-5.37.3.tar.gz
+  https://www.haskell.org/hugs/downloads/2006-09/hugs98-plus-Sep2006.tar.gz
+  https://code.call-cc.org/releases/4.13.0/chicken-4.13.0.tar.gz
 "
 
 if [ "x$DISTREPO_ROOT" = "x" ]; then
     DISTREPO_ROOT="https://github.com/catseye/"
 fi
 DISTREPOS=`cat skel/catseye.catalog`
+
+# minischeme@0.85ce1
+# ee@1.5.2ce1
 
 install_instructions() {
     cat <<EOF
