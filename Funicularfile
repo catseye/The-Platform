@@ -9,7 +9,7 @@ DIST_IMAGE='floppy.img'
 DISTFILES="
   https://www.python.org/ftp/python/3.9.13/Python-3.9.13.tgz
   https://ftpmirror.gnu.org/make/make-3.82.tar.gz
-  https://www.cpan.org/src/5.0/perl-5.37.3.tar.gz
+  https://www.cpan.org/src/5.0/perl-5.36.0.tar.gz
   https://www.haskell.org/hugs/downloads/2006-09/hugs98-plus-Sep2006.tar.gz
   https://code.call-cc.org/releases/4.13.0/chicken-4.13.0.tar.gz
 "

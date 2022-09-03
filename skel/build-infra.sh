@@ -4,7 +4,7 @@
 
 cd /home/user/catseye
 
-PERL=perl-5.37.3
+PERL=perl-5.36.0
 CHICKEN=chicken-4.13.0
 
 # write out cookies
