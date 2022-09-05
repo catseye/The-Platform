@@ -13,6 +13,8 @@ DISTFILES="
   https://www.haskell.org/hugs/downloads/2006-09/hugs98-plus-Sep2006.tar.gz
   https://www.erlang.org/download/otp_src_R16B03-1.tar.gz
   https://code.call-cc.org/releases/4.13.0/chicken-4.13.0.tar.gz
+  http://www.tortall.net/projects/yasm/releases/yasm-1.3.0.tar.gz
+  https://github.com/michaelcmartin/Ophis/archive/v2.1.tar.gz@Ophis-2.1.tar.gz
 "
 
 if [ "x$DISTREPO_ROOT" = "x" ]; then
