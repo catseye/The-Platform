@@ -38,4 +38,4 @@ for line in `cat /cdrom/infrastructure.catalog`; do
   shelf_link $project || exit 1
 done
 
-ln -s ${SHELF_FARMBASE}/bin/python3.9 ${SHELF_FARMBASE}/bin/python
+ln -s ${SHELF_FARMBASE}/bin/python3.9 ${SHELF_FARMBASE}/bin/python3
