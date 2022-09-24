@@ -53,8 +53,10 @@ setup_instructions() {
         cp /cdrom/setup-netbsd.sh .
         . ./setup-netbsd.sh
 * Follow the instructions in the script.
-* Once it is finished, log out and log in again as 'user'. (You may or may not wish to
-  run passwd to give user a password at this point, depending on your security needs.)
+* Once it is finished, log out and log in again as 'user'.  Do not just 'su root' as
+  you do need to be really logged in as 'user'.
+* You might wish to run passwd to give user a password at this point (again, this is
+  depending on your security needs.)
 * Then run:
         sh /cdrom/populate-infra.sh
         sh /cdrom/build-infra.sh 2>&1 | tee build-log.txt
