@@ -2,6 +2,7 @@
 
 cd /home/user
 mkdir -p .local/bin
+mkdir -p .local/lib
 mkdir -p catseye
 
 if [ ! -d shelf ]; then
