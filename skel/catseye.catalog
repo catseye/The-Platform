@@ -15,10 +15,10 @@ Beturing@rel_1_1_2012_1024
 Bhuna@rel_0_7_2014_0819
 Braktif@rel_1_0_2018_0222
 Bubble-Escape@rel_1_0_2016_0304
-Burro@rel_2_0_2018_0620
+Burro@rel_2_0_2023_0225
 Cabra@rel_1_0_2018_0620
 Canvas-Feedback@1.1-2018.0223
-Cardboard-Prolog@c94d588
+Cardboard-Prolog@1.0
 Carriage@0.1-2021.1018
 Castile@rel_0_5_2022_0912
 Cfluviurrh@rel_1_0_2014_0819
@@ -43,7 +43,7 @@ Erratic-Turtle-Graphics@0.1
 Etcha@rel_1_0_2021_0604
 Exanoke@rel_1_0_2021_0919
 FBBI@rel_1_0_2015_0729
-Feedmark@0.13
+Feedmark@0.14
 Flip@rel_1_0_2014_0819
 Flobnar@rel_0_1_2019_0328
 Funge-98@rel_1_0_2018_0522
@@ -81,7 +81,7 @@ Nhohnhehr@rel_1_0_2021_0729
 Oxcart@1.0-2022.0912
 PL-GOTO.NET@rel_1_2_2021_1031
 Pail@rel_1_0_2021_1206
-Philomath@1.0
+Philomath@1.0-2022.0905
 Pixley@rel_2_0_2018_0622
 Pophery@40b940f
 Quylthulg@rel_1_0_2021_1023
@@ -93,7 +93,7 @@ SITU-SOL@1.0-2019.0222
 SMETANA@rel_1_0_2014_0819
 SMITH@rel_2_1_2013_0227
 Sally@rel_1_0_2014_0819
-Samovar@0.4
+Samovar@0.5
 Sbeezg@rel_1_0_2014_0819
 Schroedingers-Game-of-Life@1.0-2021.0728
 Shelta@rel_1_2_2014_0422
@@ -106,7 +106,7 @@ T-Rext@0.3
 TPiS@rel_1_0_2014_0819
 Tamsin@0.5-2017.0502
 Tandem@0.1-2021.1206
-The-Cannery@55fe814
+The-Cannery@284414a
 The-Dossier@master
 The-New-Gamerly-Realism@1.0
 The-Platform@0.4
