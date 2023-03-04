@@ -22,6 +22,11 @@ if [ "x$DISTREPO_ROOT" = "x" ]; then
 fi
 DISTREPOS=`cat skel/catseye.catalog`
 
+# Ophis - no Python 3.x supporting version has been released.
+# Could use:
+# https://github.com/michaelcmartin/Ophis/archive/99f074da278d4ec80689c0e22e20c5552ea12512.zip
+# Or could wait until Python 2 is on the image.
+
 # minischeme@0.85ce1
 # ee@1.5.2ce1
 
