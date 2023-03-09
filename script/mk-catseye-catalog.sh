@@ -15,4 +15,9 @@ else
   exit 1
 fi
 
+for P in realpath Falderal yucca hatoucan OpenZz The-Cannery; do
+  grep -v "$P" /tmp/Chrysoberyl.catalog > /tmp/Chrysoberyl1.catalog
+  mv /tmp/Chrysoberyl1.catalog /tmp/Chrysoberyl.catalog
+done
+
 cat /tmp/preliminaries.catalog /tmp/Chrysoberyl.catalog > skel/catseye.catalog
