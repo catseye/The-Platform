@@ -59,10 +59,11 @@ setup_instructions() {
   depending on your security needs.)
 * Then run:
         sh /cdrom/populate-infra.sh
-        sh /cdrom/build-infra.sh 2>&1 | tee build-log.txt
-        rm .local/bin/ophis
-        ln -s catseye/Ophis-<tab>/bin/ophis .local/bin/ophis
+        sh /cdrom/build-infra.sh 2>&1 | tee build-infra-log.txt
+        rm -f .local/bin/ophis
+        ln -s /home/user/catseye/Ophis-99f074da278d4ec80689c0e22e20c5552ea12512/bin/ophis .local/bin/ophis
+        (cd catseye/dcc6502-dcc6502_v2.1/ && shelf_build . && shelf_link .)
         sh /cdrom/populate-catseye.sh
-        sh /cdrom/build-catseye.sh 2>&1 | tee build-log.txt
+        sh /cdrom/build-catseye.sh 2>&1 | tee build-catseye-log.txt
 EOF
 }
