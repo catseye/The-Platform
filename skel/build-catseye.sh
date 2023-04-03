@@ -18,6 +18,18 @@ echo "No javac. Does not build here."
 EOF
 chmod 755 yoob/build.sh
 
+cat >Tamsin/test.sh <<'EOF'
+#!/bin/sh
+echo "No python2.7. Cannot run tests here."
+EOF
+chmod 755 Tamsin/test.sh
+
+cat >ellsync/test.sh <<'EOF'
+#!/bin/sh
+echo "No rsync. Cannot run tests here."
+EOF
+chmod 755 ellsync/test.sh
+
 for line in `cat /cdrom/catseye.catalog`; do
   project=`echo $line | awk '{split($0,a,"@"); print a[1]}'`
   tag=`echo $line | awk '{split($0,a,"@"); print a[2]}'`
