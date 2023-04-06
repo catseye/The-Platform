@@ -60,10 +60,8 @@ setup_instructions() {
 * Then run:
         sh /cdrom/populate-infra.sh
         sh /cdrom/build-infra.sh 2>&1 | tee build-infra-log.txt
-        rm -f .local/bin/ophis
-        ln -s /home/user/catseye/Ophis-2.1-2019.0413/bin/ophis .local/bin/ophis
-        (cd catseye/dcc6502-v2.1-2018.0902 && shelf_build . && shelf_link .)
         sh /cdrom/populate-catseye.sh
         sh /cdrom/build-catseye.sh 2>&1 | tee build-catseye-log.txt
+        shelf_test catseye/* 2>&1 | tee test-catseye-log.txt
 EOF
 }
