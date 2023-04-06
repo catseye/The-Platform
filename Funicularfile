@@ -18,6 +18,9 @@ DISTFILES="
   https://github.com/tcarmelveilleux/dcc6502/archive/680c21299241133449056c2ddfbc0dd087dc3807.tar.gz@dcc6502-2.1-2018.0902.tar.gz
   https://github.com/catseye/minischeme/archive/refs/tags/0.85ce1.tar.gz@minischeme-0.85ce1.tar.gz
   https://github.com/catseye/ee/archive/refs/tags/1.5.2ce1.tar.gz@ee-1.5.2ce1.tar.gz
+  https://files.pythonhosted.org/packages/e3/8a/60c7dbcca21c51dff6df932a10c4b2d453ea474428c64021dd5ba609f8d5/atomize-0.2.0.tar.gz
+  https://files.pythonhosted.org/packages/1d/25/3f6d2cb31ec42ca5bd3bfbea99b63892b735d76e26f20dd2dcc34ffe4f0d/Markdown-2.6.8.tar.gz
+  https://files.pythonhosted.org/packages/4e/2f/63c252850ca79759810a988c0555cdfb67a89750743ae3943a1de106a5d2/beautifulsoup4-4.12.1.tar.gz
 "
 
 if [ "x$DISTREPO_ROOT" = "x" ]; then
@@ -60,6 +63,7 @@ setup_instructions() {
 * Then run:
         sh /cdrom/populate-infra.sh
         sh /cdrom/build-infra.sh 2>&1 | tee build-infra-log.txt
+        sh /cdrom/install-python-packages.sh
         sh /cdrom/populate-catseye.sh
         sh /cdrom/build-catseye.sh 2>&1 | tee build-catseye-log.txt
         shelf_test catseye/* 2>&1 | tee test-catseye-log.txt
