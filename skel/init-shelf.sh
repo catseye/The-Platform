@@ -3,6 +3,7 @@
 cd /home/user
 mkdir -p .local/bin
 mkdir -p .local/lib
+mkdir -p infra
 mkdir -p catseye
 
 if [ ! -d shelf ]; then
@@ -13,6 +14,6 @@ fi
 cat >>.profile <<EOF
 . $HOME/.shelf/shelf.sh
 export SHELF_FARMBASE=$HOME/.local
-export SHELF_PATH=$HOME/catseye
+export SHELF_PATH=$HOME/infra:$HOME/catseye
 shelf_init
 EOF

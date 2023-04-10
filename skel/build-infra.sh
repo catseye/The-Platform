@@ -2,7 +2,7 @@
 
 . /home/user/.shelf/shelf.sh
 
-cd /home/user/catseye
+cd /home/user/infra
 
 PERL=perl-5.18.4
 CHICKEN=chicken-4.13.0
