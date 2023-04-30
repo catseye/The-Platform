@@ -1,10 +1,10 @@
 About The Cat's Eye Technologies Platform
 =========================================
 
-The Cat's Eye Technologies Platform (version 0.4) is a bootable [NetBSD][]-based
+The Cat's Eye Technologies Platform (version 0.5) is a bootable [NetBSD][]-based
 disk image containing almost all of [Cat's Eye Technologies][]' software
-distributions, pre-built and tested, and the open-source infrastructure needed
-to run them.
+distributions, pre-built and tested, along with the open-source infrastructure
+needed to run them.
 
 For more information, and more up-to-date information, on The Platform, see
 
@@ -21,10 +21,12 @@ Using The Platform
 The Platform is distributed as a disk image.  There are two general ways to use
 this disk image: either
 
-*   run a PC emulator such as QEMU and make it boot from this image, or
-*   write it to a real disk drive (or USB stick) and boot from that device.
+*   run a PC emulator such as QEMU and make it boot from this image
+    (**recommended**); or
+*   write it to a real disk drive (or USB stick) and boot from that device
+    (**not** recommended, but possible).
 
-(It is not possible to burn this sort of disk image onto a CD-ROM or DVD-ROM.)
+It is not possible to burn this sort of disk image onto a CD-ROM or DVD-ROM.
 
 When running, The Platform does *not* have access to your hard drive (outside
 of its own disk image) and does *not* have access to your network.  This
@@ -47,7 +49,7 @@ ways:
     wide-reaching changes to your system this way.
 
 Therefore, be careful!  Make backups.  Or use an old computer you don't care
-much about.  Or use a PC emulator (one with a good reputation) instead.
+much about.  Or use an emulator -- one with a good reputation, such as QEMU.
 
 ...on Windows
 -------------
@@ -56,16 +58,16 @@ much about.  Or use a PC emulator (one with a good reputation) instead.
 
 The disk image is compressed using 7-zip.  You can download 7-zip here:
 
-*   [http://www.7-zip.org/][]
+*   [https://7-zip.org/][]
 
-Note that while the compressed archive is "only" ~200M, the uncompressed disk
-image is 3.6 gigabytes.  So make sure you have sufficient space before
-extracting it.
+Note that while the compressed archive is "only" ~280 megabytes, the
+uncompressed disk image is 3.6 **giga**bytes.  So, make sure you have
+sufficient free disk space before extracting it.
 
 ### How to boot the image in the QEMU PC emulator ###
 
 First, make sure the disk image of The Platform is on your desktop, and make
-sure it is named `The-Cats-Eye-Technologies-Platform-0.4.img`.  (This is not a
+sure it is named `The-Cats-Eye-Technologies-Platform-0.5.img`.  (This is not a
 strict requirement, but the instructions below assume that this is the case.)
 
 **QEMU** is a versatile PC emulator, originally written by Fabrice Bellard,
@@ -75,20 +77,23 @@ and several people have done so, so you have several options for which
 distribution to use (as a web search for "qemu for windows" will reveal.)
 
 The easiest to use that I've found, as of this writing, are the builds of
-QEMU for Windows on [http://qemu.weilnetz.de/][].  Note that builder
-disclaims on that page that this is experimental software, and you use it
+QEMU for Windows by Stefan Weil.  These are available from 
+[https://qemu.weilnetz.de/][], and also from the QEMU Download page,
+[https://www.qemu.org/download/][].  Note that there is a
+disclaimer on that page that this is experimental software, and you use it
 at your own risk.  However, I've found it to be reliable and, if there are
 bugs in this version of QEMU, they're IMO far more likely to affect the
 emulated system "inside" the emulator, rather than your Windows installation
 "outside" the emulator.  (Still, always a good idea to keep backups, right?)
 
-If you are running 64-bit Windows (and you probably are if your Windows and
-computer are relatively modern), you can download a recent QEMU for 64-bit
-Windows installer here (~20M):
+If you are running 64-bit Windows (and you probably are if your computer is
+relatively modern), you can find the most recent QEMU for 64-bit Windows
+installer in this folder -- it'll be the one that starts with `qemu-64-setup`
+and ends in `.exe`:
 
-*   [http://qemu.weilnetz.de/w64/qemu-w64-setup-20141210.exe][]
+*   [https://qemu.weilnetz.de/w64/][]
 
-And run it.  Say "OK" to what it wants you to install.
+Download it and run it.  Say "OK" to what it wants you to install.
 
 (If you don't have a 64-bit Windows, you'll need a 32-bit version, which
 you can also find on that website.)
@@ -98,7 +103,7 @@ the Start Menu for this.)
 
 In the Command Prompt, type
 
-    "C:\Program Files\qemu\qemu-system-i386" Desktop\The-Cats-Eye-Technologies-Platform-0.4.img
+    "C:\Program Files\qemu\qemu-system-i386" Desktop\The-Cats-Eye-Technologies-Platform-0.5.img
 
 ...all on one line, and don't forget the double quotes.
 
@@ -116,6 +121,10 @@ The last time I tried:
 *   **VirtualBox**, it couldn't boot NetBSD.  (Apparently, "Of *course* it runs
     NetBSD" [does not apply to emulators](http://gnats.netbsd.org/44694).)
 
+Granted, these attempts were a long time ago, and I haven't tried these
+again since then.  And there are probably a number of other options now
+as well.  Good luck and have fun.
+
 ### How to make a bootable USB stick of The Platform ###
 
 First, get a USB stick that you don't need for anything else, that is at
@@ -124,11 +133,11 @@ larger than 4G will just have wasted space on it.)
 
 Download Win32 Disk Imager from here:
 
-*   [http://sourceforge.net/projects/win32diskimager/][]
+*   [https://sourceforge.net/projects/win32diskimager/][]
 
 Run the installer.  Install it as usual and run it.
 
-Click the folder icon and select `The-Cats-Eye-Technologies-Platform-0.4.img`
+Click the folder icon and select `The-Cats-Eye-Technologies-Platform-0.5.img`
 from your file system.
 
 Select your USB stick's drive letter in the "Device" dropdown.  (If unsure,
@@ -152,19 +161,19 @@ nodes.
 To extract the disk image, use `p7zip`:
 
     sudo apt-get install p7zip
-    p7zip -d The-Cats-Eye-Technologies-Platform-0.4.img.7z
+    p7zip -d The-Cats-Eye-Technologies-Platform-0.5.img.7z
 
 To boot the disk image under the QEMU emulator,
 
     sudo apt-get install qemu
-    qemu-system-i386 The-Cats-Eye-Technologies-Platform-0.4.img
+    qemu-system-i386 The-Cats-Eye-Technologies-Platform-0.5.img
 
 You should see NetBSD boot up in the QEMU window.  Now see
 _Logging in and using The Platform_, below.
 
 To write the disk image to a USB stick,
 
-    dd if=The-Cats-Eye-Technologies-Platform-0.4.img of=/dev/sdX bs=1M
+    dd if=The-Cats-Eye-Technologies-Platform-0.5.img of=/dev/sdX bs=1M
 
 where `sdX` is the name of your (unmounted) USB device (could be `sdb` or
 `sdc`; check `mount` while the device is still mounted.)
@@ -249,7 +258,7 @@ so-called "shell" prompt, which looks like `$`, at which you can type commands.
 
 Note that any changes you make inside The Platform -- for example,
 files you change, or new files you write -- will be saved to the disk image
-file.  If you keep the archived `.7z` file you can always extract a fresh
+file.  If you keep the `.7z` archive file you can always extract a fresh
 copy of the disk image file from that, if you want to start over.
 
 To shut down The Platform, type
@@ -282,10 +291,9 @@ and run tests.  So, for example,
 
     shelf_cd befunge-93
 
-There is also a script to run all the tests for all the projects:
+There is also a `shelf` command to run all the tests for all the projects:
 
-    cd ~
-    ./test-shelf.sh
+    shelf_test catseye/*
 
 License Information
 -------------------
@@ -327,11 +335,12 @@ please consult the documentation of the specific software package in question.
 
 - - - -
 
-[Cat's Eye Technologies]: http://catseye.tc/
+[Cat's Eye Technologies]: https://catseye.tc/
 [https://github.com/catseye/The-Platform]: https://github.com/catseye/The-Platform
-[http://www.7-zip.org/]: http://www.7-zip.org/
-[http://qemu.weilnetz.de/]: http://qemu.weilnetz.de/
-[http://qemu.weilnetz.de/w64/qemu-w64-setup-20141210.exe]: http://qemu.weilnetz.de/w64/qemu-w64-setup-20141210.exe
-[http://sourceforge.net/projects/win32diskimager/]: http://sourceforge.net/projects/win32diskimager/
-[NetBSD]: http://netbsd.org/
-[NetBSD Licensing and Redistribution]: http://www.netbsd.org/about/redistribution.html
+[https://7-zip.org/]: https://7-zip.org/
+[https://www.qemu.org/download/]: https://www.qemu.org/download/
+[https://qemu.weilnetz.de/]: https://qemu.weilnetz.de/
+[https://qemu.weilnetz.de/w64/]: https://qemu.weilnetz.de/w64/
+[https://sourceforge.net/projects/win32diskimager/]: https://sourceforge.net/projects/win32diskimager/
+[NetBSD]: https://netbsd.org/
+[NetBSD Licensing and Redistribution]: https://www.netbsd.org/about/redistribution.html
