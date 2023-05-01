@@ -36,3 +36,19 @@ display NetBSD console in your host system's terminal, you can
 
 [shelf]: https://github.com/catseye/shelf/
 [Funicular]: https://github.com/catseye/Funicular/
+
+Notes for making the distribution
+---------------------------------
+
+*   Build the image per the instructions in the Funicularfile.
+*   Create a directory on a FAT32 or NTFS partition called
+    `The-Cats-Eye-Technologies-Platform-0.x`.  We'll call this the
+    distribution directory.
+*   Copy the `wd0.img` to `The-Cats-Eye-Technologies-Platform-0.x.img`
+    in the distribution directory.
+*   Run `pandoc --from=markdown --to=html5 <USAGE.md >USAGE.html`.
+*   Copy `USAGE.html` to the distribution directory too.
+*   Use **7-Zip** to compress the image to
+    `The-Cats-Eye-Technologies-Platform-0.x.img.7z` at the highest
+    level of compression.
+*   Upload both files as per need.
