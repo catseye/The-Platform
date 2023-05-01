@@ -10,7 +10,7 @@ Language Haskell 98" license:
 
 -----------------------------------------------------------------------------
 
-  Copyright (c)2014 Chris Pressey, Cat's Eye Technologies.
+  Copyright (c)2014-2023 Chris Pressey, Cat's Eye Technologies.
 
   The authors intend this Funicular to belong to the entire Esolang
   community, and so we grant permission to copy and distribute it for
@@ -28,6 +28,6 @@ of software under various licenses.  These are primarily, but not
 exclusively, open-source licenses, so do be aware of the details if you
 intend to re-distribute The Cat's Eye Technologies Platform.  For a
 non-normative guide to which pieces of software are covered under which
-licenses, see the file `README.markdown` in this directory; for specific
+licenses, see the file `CONTENTS.md` in this directory; for specific
 information on each piece of software, please consult that software's
 own license documentation.
