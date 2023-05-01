@@ -1,39 +1,26 @@
 TODO
 ====
 
-*   make torrent
+These are mostly just aspirational.  I don't realistically expect most
+of them to happen.
 
-for 0.5
--------
+*   The Platform includes git repos, but no git tooling to manipulate
+    them with.  Last time I tried, git is written in C++ and difficult
+    to build; Dulwich exists, but was not very mature and couldn't
+    really support a command-line tool to do the things git does.
 
-*   better shelf_test, don't abort on a single failed test
-
-*   restructure The Platform to consist of multiple sub-platforms
-
-*   Update and release the things we punted on for 0.4:
-    *   SixtyPical
-    *   Chrysoberyl — actually, it's stale and needs updating
-    *   Castile
-    *   Maentwrog
-    *   Befunge-93
-    *   Braktif
-    *   Canvas Feedback
-
-*   If we have git repos, version git clones after docking them.  To do this
-    we either need to mess with Dulwich (sigh) or build git on the guest.
-    Somehow.  (also sigh.)
-    
-    *   Dulwich 0.9.5 ♢
-
-*   PyYaml and Jinja2, for kinoje and Chrysoberyl.  Also, build HTML files
-    from Chrysoberyl and let them be viewed with Links?  Also build
-    The Dossier this way?  It would be really cool if Links could browse
-    Markdown files directly.
+*   Restructure The Platform to consist of multiple sub-platforms.
 
 *   py-editdist, perhaps?  For NaNoGenLab.
 
-Older Notes
------------
+*   Build HTML files from Chrysoberyl, The Dossier, etc., and let them be
+    viewed with Links?  Or include a console Markdown viewer?  It would be
+    really cool if Links could browse Markdown files directly, but I'm
+    pretty sure it doesn't.
+
+*   External documents linked to from The Dossier aren't included.
+    Where it makes sense, it would be good if they could be pulled in.
+    Actually, this is an issue with the website too.
 
 *   Devtools stage.  Not docked anymore, but maybe bring it back:
     
