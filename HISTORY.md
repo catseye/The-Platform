@@ -1,19 +1,27 @@
 History
 -------
 
-This section highlights major changes from release to release.
+This section highlights major changes to The Cat's Eye Technologies Platform
+from release to release.
 
 *   **0.5**
     *   Probably the most major change is that most of Cat's Eye
         Technologies' Python projects were upgraded to run under Python 3,
         and the version of Python incorporated into The Platform is now
-        Python 3.9.13.  Python 2.x is no longer included.
+        Python 3.9.13.  Python 2.x is no longer included.  The unfortunate
+        consequence is that the Tamsin interpreter is no longer executable,
+        as updating it from Python 2 to 3 is a thorny proposition.
     *   Many upgraded versions, including being based on `shelf` 0.7 and
         being built with Funicular 0.6.
     *   Many new distributions, including Tandem, Vinegar, Fountain, and
         many others.
     *   Infrastructure is now placed in its own shelf (`infra`) apart
         from Cat's Eye Technologies' projects (`catseye`).
+    *   To support Feedmark, some Python packages (atomize, Markdown,
+        and Beautiful Soup 4) are installed as infrastructure, although
+        sadly not in a very shelf-like way.
+    *   Added script to update the `catseye.catalog` from Chrysoberyl,
+        to facilitate including the most recent distributions.
 
 *   **0.4**
     *   Now based on `shelf` 0.1 instead of toolshelf.  `shelf` is written

@@ -66,7 +66,7 @@ not, however, thoroughly tested manually.
 Further Reading
 ---------------
 
-*   [CONTENTS](CONTENTS.md) -- what's included?
+*   [CONTENTS](CONTENTS.md) — what's included?
 *   [BUILDING](BUILDING.md) — how to build The Platform from parts
 *   [USAGE](USAGE.md) — how to use a built copy of The Platform
 *   [HISTORY](HISTORY.md) — log of major changes to The Platform over time
