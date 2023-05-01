@@ -1,55 +1,56 @@
 What's Included?
 ----------------
 
-_NOTE: This document has not yet been updated for 0.5_
-
 This document describes the software infrastructure that makes up The Platform.
 As for _why_ these pieces of software were chosen, and for the meanings of the
 various card suit symbols, see the "Software Selection Criteria" section below.
 
-Note that, in case this listing is out-of-date or inaccurate, see the
-`Funicularfile` in this directory and the various `*.catalog` files in the
-`skel` directory for more accurate, machine-readable version numbers.
+Note that, in case this listing is out-of-date or inaccurate, one can examine
+the `Funicularfile` in this directory and the various `*.catalog` files in the
+`skel` directory to obtain more accurate, machine-readable version numbers.
+
+### Stages
 
 The Platform can be thought of as being constructed in stages, with each
 stage building upon the previous.  The first stage consists of:
 
 *   NetBSD 6.1.5 (minimal install + compiler tools) ♡ + ♢
 *   Lua 5.1.4 (note that this is already a part of NetBSD 6.1.5) ♡
-*   shelf 0.1 ♥
+*   shelf 0.7 ♥
+
+(See below for the meanings of the symbols.)
 
 The second stage, "Infrastructure", consists of:
 
 *   GNU Make 3.82 ♢
-*   cPython 2.7.8 ♦¹
-*   Perl 5.20.1 ♦²
+*   cPython 3.9.13 ♦¹
+*   Perl 5.18.4 ♦²
 *   Hugs98-plus Sep2006 ♡
 *   Erlang/OTP R16B03-1 (stripped down, e.g. no megaco, etc.) ♦³
-*   CHICKEN Scheme 4.9.0.1 ♡¹
+*   CHICKEN Scheme 4.13.0 ♡¹
 *   yasm 1.3.0 ♡
-*   Ophis 2.1 ♡
+*   Ophis 2.1-2019.0413 ♡
+*   dcc6502 2.1-2018.0902 ♡
+*   Mini-Scheme 0.85ce1 ♥
+*   ee 1.5.2ce1 (solely for convenient text editing) ♡
 
 The third stage, "Cat's Eye Infrastructure", consists of:
 
-*   catseye-realpath 1.0     (for Pixley and others) ♥
-*   Falderal 0.11            (for tests) ♡
-*   yucca 1.1                (for building Dungeons of Ekileugor) ♡
-*   hatoucan 0.1             (for tokenizing Commodore BASIC 2.0 sources) ♥
+*   catseye-realpath 1.0-2022.0908 (for Pixley and others) ♥
+*   Falderal 0.14                  (for tests) ♡
+*   yucca 1.2-2022.0909            (for building Dungeons of Ekileugor) ♡
+*   hatoucan 0.2-2022.0908         (for tokenizing Commodore BASIC 2.0 sources) ♥
+*   OpenZz 1.0.4-4ce1              (for Zzrk) ♢¹
 
-The third-and-a-half-th stage, "Cat's Eye Forked Infrastructure", consists of
-others' projects of which Cat's Eye Technologies maintains forks:
-
-*   Mini-Scheme 0.85ce1      (for Pixley) ♥
-*   OpenZz 1.0.4-4ce1        (for Zzrk) ♢¹
-*   ee 1.5.2ce1              (for text editing) ♡
-
-(ee is not strictly necessary, I just can't stand any of the text editors
-that come with NetBSD.)
+Note that Mini-Scheme, ee, and OpenZz are forks maintained by
+Cat's Eye Technologies (as indicated by the `ce1` suffix).
 
 The fourth and "final" stage, the "Cat's Eye" stage, consists of the
 remainder of almost all of Cat's Eye Technologies' software distributions.
 See [`skel/catseye.catalog`](skel/catseye.catalog) for a list of these
 distributions and the versions at which they are pinned.
+
+_NOTE: The remainder of this document has not yet been updated for 0.5_
 
 What's Not Included?
 --------------------
