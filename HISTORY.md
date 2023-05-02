@@ -8,9 +8,9 @@ from release to release.
     *   Probably the most major change is that most of Cat's Eye
         Technologies' Python projects were upgraded to run under Python 3,
         and the version of Python incorporated into The Platform is now
-        Python 3.9.13.  Python 2.x is no longer included.  The unfortunate
-        consequence is that the Tamsin interpreter is no longer executable,
-        as updating it from Python 2 to 3 is a thorny proposition.
+        Python 3.9.13.  Python 2.x is no longer included.  This means that
+        a few projects (Tamsin, NaNoGenLab) which were not upgraded from
+        Python 2 to 3 are no longer executable on The Platform.
     *   Many upgraded versions, including being based on `shelf` 0.7 and
         being built with Funicular 0.6.
     *   Many new distributions, including Tandem, Vinegar, Fountain, and

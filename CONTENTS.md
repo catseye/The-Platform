@@ -1,24 +1,57 @@
-What's Included?
-----------------
+Contents of The Platform
+========================
 
-This document describes the software infrastructure that makes up The Platform.
-As for _why_ these pieces of software were chosen, and for the meanings of the
-various card suit symbols, see the "Software Selection Criteria" section below.
+This document describes the software that makes up The Platform.
+But before we get into that in detail, it's probably worth explaining _why_
+these pieces of software were chosen.
+
+Software Selection Criteria
+---------------------------
+
+The purpose of The Platform is to curate Cat's Eye Technologies' software
+projects in an executable form.
+
+For this we need some supporting software.  And for many of those cases,
+we have choices for what software we could use.  And so we have to choose
+that software somehow.
+
+For inclusion in The Platform, we generally prefer software that:
+
+*   builds under NetBSD (ideally, under any supported architecture)
+*   has a reasonable build system
+*   has few dependencies
+*   is lightweight
+*   has an unrestrictive license (public domain > BSD/MIT/ISC > LGPL > GPL)
+*   is hosted somewhere in DVCS (Github, Bitbucket, etc.)
+
+Also, there are limits to how much support can be provided.
+
+Some of Cat's Eye Technologies' projects are not currently (and some
+may not ever be) well-represented in The Platform.  These fall into
+two broad categories: "Available on the Web" and "Of no great use to you".
+These are described in more detail in their own sections below.
+Note that source code of these projects is still included in The Platform.
+It's just that you may not be able to build them, and you might not be
+able to use them for any particular purpose, even if they do build.
+
+Infrastructure Software
+-----------------------
+
+Now that we've covered the principles, we can get into the specifics.
+We'll start with the infrastructure software.
 
 Note that, in case this listing is out-of-date or inaccurate, one can examine
 the `Funicularfile` in this directory and the various `*.catalog` files in the
 `skel` directory to obtain more accurate, machine-readable version numbers.
 
-### Stages
+For the meanings of the various card-suit symbols, see [Appendix A](#appendix-a).
 
 The Platform can be thought of as being constructed in stages, with each
-stage building upon the previous.  The first stage consists of:
+stage building upon the previous.  The first stage, "Base", consists of:
 
 *   NetBSD 6.1.5 (minimal install + compiler tools) ♡ + ♢
 *   Lua 5.1.4 (note that this is already a part of NetBSD 6.1.5) ♡
 *   shelf 0.7 ♥
-
-(See below for the meanings of the symbols.)
 
 The second stage, "Infrastructure", consists of:
 
@@ -31,8 +64,12 @@ The second stage, "Infrastructure", consists of:
 *   yasm 1.3.0 ♡
 *   Ophis 2.1-2019.0413 ♡
 *   dcc6502 2.1-2018.0902 ♡
+
+The two-and-a-half-th stage, "Cat's Eye Forks", consists of:
+
 *   Mini-Scheme 0.85ce1 ♥
 *   ee 1.5.2ce1 (solely for convenient text editing) ♡
+*   OpenZz 1.0.4-4ce1              (for Zzrk) ♢¹
 
 The third stage, "Cat's Eye Infrastructure", consists of:
 
@@ -40,32 +77,12 @@ The third stage, "Cat's Eye Infrastructure", consists of:
 *   Falderal 0.14                  (for tests) ♡
 *   yucca 1.2-2022.0909            (for building Dungeons of Ekileugor) ♡
 *   hatoucan 0.2-2022.0908         (for tokenizing Commodore BASIC 2.0 sources) ♥
-*   OpenZz 1.0.4-4ce1              (for Zzrk) ♢¹
-
-Note that Mini-Scheme, ee, and OpenZz are forks maintained by
-Cat's Eye Technologies (as indicated by the `ce1` suffix).
 
 The fourth and "final" stage, the "Cat's Eye" stage, consists of the
 remainder of almost all of Cat's Eye Technologies' software distributions.
-See [`skel/catseye.catalog`](skel/catseye.catalog) for a list of these
-distributions and the versions at which they are pinned.
 
-_NOTE: The remainder of this document has not yet been updated for 0.5_
-
-What's Not Included?
+Available on the Web
 --------------------
-
-You may have noticed we keep saying "almost all"...
-
-Some of Cat's Eye Technologies' projects are not currently (and some
-may not ever be) well-represented in The Platform.  These fall into
-two broad categories, detailed below.
-
-Note that sources to these projects are still included as part of the
-Cat's Eye Stage.  It's just that you may not be able to build them, and
-you won't be able to use them even if they do build.
-
-### Available on the Web ###
 
 A nominal goal is to have every Cat's Eye Technologies' project available
 *either* in The Platform *or* as an online installation on the `catseye.tc`
@@ -73,42 +90,52 @@ web site.  Thus, if you can already experience it by pointing your web
 browser at `catseye.tc`, we won't worry too much about it not being usable
 in The Platform.
 
-*   [BefOS](http://catseye.tc/installation/BefOS).  No PC emulator installed.
+*   [Apple Befunge](https://archive.org/details/apple-befunge-1.1-2014.0819/).
+    No Apple II emulator installed.
+*   [Backtracking Wang Tiler](https://catseye.tc/installation/Backtracking_Wang_Tiler)
+*   [BefOS](https://catseye.tc/installation/BefOS).  No PC emulator installed.
     **still buildable**
-*   [Bubble Escape](http://catseye.tc/installation/Bubble_Escape).
+*   [Bubble Escape](https://catseye.tc/installation/Bubble_Escape).
     No Commodore 64 emulator installed.  **still buildable**
-*   [Canvas Feedback](http://catseye.tc/installation/Canvas_Feedback)
-*   [Etcha](http://catseye.tc/installation/Etcha).  Implemented only in Java
+*   [Canvas Feedback](https://catseye.tc/installation/Canvas_Feedback)
+*   [Chzrxl](https://catseye.tc/installation/Chzrxl)
+*   [Cosmos Boulders](https://catseye.tc/installation/Cosmos_Boulders)
+*   [Cyclobots](https://catseye.tc/installation/Cyclobots)
+*   [Etcha](https://catseye.tc/installation/Etcha).  Implemented only in Java
     and Javascript, and no implementations of either of these languages are
     installed.
-*   [Gemooy](http://catseye.tc/installation/Gemooy).  Implemented only in
+*   [Gemooy](https://catseye.tc/installation/Gemooy).  Implemented only in
     Javascript, and no Javascript implementation is installed.
-*   [HTML5-Gewgaws](http://catseye.tc/node/Gewgaw).
+*   [HTML5-Gewgaws](https://catseye.tc/node/Gewgaw).
     Implemented only in Javascript, and no Javascript implementation is
     installed.  Plus, these gewgaws generally assume an HTML5 web browser.
-*   [Matchbox](http://catseye.tc/installation/Matchbox)
-*   [Lexeduct](http://catseye.tc/installation/Lexeduct)
-*   [Shelta](http://catseye.tc/installation/Shelta).  No DOS emulator installed.
+*   [Kolakoski Kurve](https://catseye.tc/installation/Kolakoski_Kurve)
+*   [Matchbox](https://catseye.tc/installation/Matchbox)
+*   [Latcarf](https://catseye.tc/installation/Latcarf)
+*   [Lexeduct](https://catseye.tc/installation/Lexeduct)
+*   [Maze Clouds](https://catseye.tc/installation/Maze_Clouds)
+*   [Shelta](https://catseye.tc/installation/Shelta).  No DOS emulator installed.
     **still buildable**
-*   [The New Gamerly Realism](http://catseye.tc/installation/The_New_Gamerly_Realism)
-*   [Wang Tilers](http://catseye.tc/installation/Wang_Tilers)
-*   [Wunnel](http://catseye.tc/installation/Wunnel).  Implemented only in Java
+*   [The New Gamerly Realism](https://catseye.tc/installation/The_New_Gamerly_Realism)
+*   [Wunnel](https://catseye.tc/installation/Wunnel).  Implemented only in Java
     and Javascript, and no implementations of either of these languages are
     installed.
-*   [Whothm](http://catseye.tc/installation/Whothm).  Reference implementation
+*   [Whothm](https://catseye.tc/installation/Whothm).  Reference implementation
     is written in Java, and no Java implementation is installed.
-*   [yoob](http://catseye.tc/installation/yoob).  Reference implementation
+*   [yoob](https://catseye.tc/installation/yoob).  Reference implementation
     is written in Java, and no Java implementation is installed.
 
-### Of no great use to you ###
+Of no great use to you
+----------------------
 
 This is the list we want to minimize, either by allowing these to run in
 The Platform somehow, or allowing them to run on the web, in an HTML5 browser,
 somehow.  But for some of them, neither of those options make sense either.
 
-*   Apple Befunge.  No Apple II emulator installed.
-*   C64 Demo Depot.  No Commodore 64 emulator installed.  **still buildable**
+*   DAM.  No Javascript implementation installed.  and it's a framework,
+    really, with nothing of itself per se to run.
 *   DiskSumo.  No Commodore 64 emulator installed.  Besides, no point.
+*   ellsync.  It's a wrapper for `rsync`, which is not included.
 *   The Dipple.  Contains Ruby, Javascript, Icon, etc., and no implementations
     of these languages are installed.  Otoh, I'm sure many of the contents that
     are written in C, Python, etc. will build and run, but there is no
@@ -116,13 +143,14 @@ somehow.  But for some of them, neither of those options make sense either.
 *   Dungeons of Ekileugor.  No VIC-20 emulator / BASIC interpreter installed.
     **still buildable**
 *   Funicular.  No emulators installed.
-*   NaNoGenLab.  The pure Python (and Haskell) programs should work, but many
-    of the experiments have dependencies (like `py-editdist`) which are not
-    installed.
+*   NaNoGenLab.  Some programs may work, but many are written in Python 2.7
+    and may have dependencies (like `py-editdist`) which are not installed.
 *   ILLGOL.  No DOS emulator installed to run the executables produced by
     the compiler(s).  **still buildable and runnable**
 *   kinoje.  PyYaml and Jinja2 are not installed.
 *   SITU-SOL.  No Commodore 64 emulator installed.  **still buildable**
+*   Tamsin.  Only Python 3.9 is included in The Platform, but Tamsin is written
+    in Python 2.7 using techniques that are difficult to upgrade to 3.x.
 *   The Platform.  While there is a version of The Platform (that is,
     the Funicularfile and scripts in this repository...) included *inside*
     The Platform, it lags behind the current version of The Platform by
@@ -133,18 +161,20 @@ somehow.  But for some of them, neither of those options make sense either.
     be implemented in Javascript first.
 *   yoob.js.  No Javascript implementation installed.  and it's a framework,
     really, with nothing of itself per se to run.
+*   yastasoti.  Python Requests library is not installed.  Besides, no point.
 
-Software Selection Criteria
----------------------------
+Also, many of the older NaNoGenMo entries are written in Python 2.7 and have
+not been tested under Python 3.9 and will almost certainly not run.
 
-For inclusion in The Platform, we generally prefer software that:
+Also also, some projects may be executable, but in a diminished form.  For
+example, the Mono runtime is not included, so the compiler option of
+PL-{GOTO}.NET is of little use.  The PL-{GOTO} interpreter is still usable
+however.
 
-*   builds under NetBSD (ideally, under any supported architecture)
-*   has a reasonable build system
-*   has few dependencies
-*   is lightweight
-*   has an unrestrictive license (public domain > BSD/MIT/ISC > LGPL > GPL)
-*   is hosted somewhere in DVCS (Github, Bitbucket, etc.)
+Appendix A
+----------
+
+#### License Symbols
 
 The symbol following the name of the software indicates the license:
 
@@ -158,21 +188,3 @@ The symbol following the name of the software indicates the license:
     *   ♦² = Artistic license
     *   ♦³ = Ericsson Public License (like Mozilla Public License except
         the jurisdiction is Sweden.)
-
-Excepting NetBSD itself, all included software includes source code, from
-which the executables for NetBSD are built.  I mean oh yes we could have
-just plunked down some binary packages from `pkgsrc` but that'd be far too
-easy, wouldn't it.  Or rather, inclusion of source and making sure you can
-build from that source improves "hackability", that is, it lowers barriers
-to customization for individual circumstances.  Yes.  I'm sure that's what
-we were trying to say.
-
-Some of Cat's Eye Technologies' projects were originally written in (or
-otherwise depended on) some language (or other system or tool) which is not
-included in The Platform.  In some of these cases, an additional implementation
-in an included technology was added to the project.
-
-*   **PL-{GOTO}.NET**.  The Mono runtime is not included — it can still
-    interpret PL-{GOTO}, though, and passes the tests.
-*   **Velo**.  No implementation of Ruby is included.  An interpreter was
-    implemented in Lua for inclusion in The Platform.

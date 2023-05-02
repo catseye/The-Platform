@@ -22,6 +22,8 @@ of them to happen.
 *   External documents linked to from The Dossier aren't included.
     Where it makes sense, it would be good if they could be pulled in.
     Actually, this is an issue with the website too.
+    And actually, it might make sense for the NaNoGenMo entries too
+    (pull in the novel that was generated).
 *   Devtools stage.  Not docked anymore, but maybe bring it back:
     
     The second-and-a-half-th stage, "Devtools", consists of some projects
