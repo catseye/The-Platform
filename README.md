@@ -10,7 +10,7 @@ distributions.  It is an "executable anthology" of our work in a
 stand-alone format: a bootable disk image.
 
 The current released version of The Cat's Eye Technologies Platform is
-version **0.5**.  It can be built with Funicular version 0.5 and uses
+version **0.5**.  It can be built with Funicular version 0.6 and uses
 shelf version 0.7 as its "packaging system". Its source can be found
 at the tag `0.5` in the repository, for example
 [on Github here](https://github.com/catseye/The-Platform/tree/0.5).
