@@ -7,14 +7,20 @@ SYSTEM_IMAGE='wd0.img'
 DIST_IMAGE='floppy.img'
 
 DISTFILES="
-  http://www.python.org/ftp/python/2.7.8/Python-2.7.8.tgz
-  http://ftpmirror.gnu.org/make/make-3.82.tar.gz
-  http://www.cpan.org/src/5.0/perl-5.20.1.tar.gz
-  http://www.haskell.org/hugs/downloads/2006-09/hugs98-plus-Sep2006.tar.gz
-  http://www.erlang.org/download/otp_src_R16B03-1.tar.gz
-  http://code.call-cc.org/releases/4.9.0/chicken-4.9.0.1.tar.gz
+  https://www.python.org/ftp/python/3.9.13/Python-3.9.13.tgz
+  https://ftpmirror.gnu.org/make/make-3.82.tar.gz
+  https://www.cpan.org/src/5.0/perl-5.18.4.tar.gz
+  https://www.haskell.org/hugs/downloads/2006-09/hugs98-plus-Sep2006.tar.gz
+  https://www.erlang.org/download/otp_src_R16B03-1.tar.gz
+  https://code.call-cc.org/releases/4.13.0/chicken-4.13.0.tar.gz
   http://www.tortall.net/projects/yasm/releases/yasm-1.3.0.tar.gz
-  https://github.com/michaelcmartin/Ophis/archive/v2.1.tar.gz@Ophis-2.1.tar.gz
+  https://github.com/michaelcmartin/Ophis/archive/99f074da278d4ec80689c0e22e20c5552ea12512.tar.gz@Ophis-2.1-2019.0413.tar.gz
+  https://github.com/tcarmelveilleux/dcc6502/archive/680c21299241133449056c2ddfbc0dd087dc3807.tar.gz@dcc6502-2.1-2018.0902.tar.gz
+  https://github.com/catseye/minischeme/archive/refs/tags/0.85ce1.tar.gz@minischeme-0.85ce1.tar.gz
+  https://github.com/catseye/ee/archive/refs/tags/1.5.2ce1.tar.gz@ee-1.5.2ce1.tar.gz
+  https://files.pythonhosted.org/packages/e3/8a/60c7dbcca21c51dff6df932a10c4b2d453ea474428c64021dd5ba609f8d5/atomize-0.2.0.tar.gz
+  https://files.pythonhosted.org/packages/1d/25/3f6d2cb31ec42ca5bd3bfbea99b63892b735d76e26f20dd2dcc34ffe4f0d/Markdown-2.6.8.tar.gz
+  https://files.pythonhosted.org/packages/4e/2f/63c252850ca79759810a988c0555cdfb67a89750743ae3943a1de106a5d2/beautifulsoup4-4.12.1.tar.gz
 "
 
 if [ "x$DISTREPO_ROOT" = "x" ]; then
@@ -50,12 +56,16 @@ setup_instructions() {
         cp /cdrom/setup-netbsd.sh .
         . ./setup-netbsd.sh
 * Follow the instructions in the script.
-* Once it is finished, log out and log in again as 'user'. (You may or may not wish to
-  run passwd to give user a password at this point, depending on your security needs.)
+* Once it is finished, log out and log in again as 'user'.  Do not just 'su user' as
+  you do need to be really logged in as 'user'.
+* You might wish to run passwd to give user a password at this point (again, this is
+  depending on your security needs.)
 * Then run:
         sh /cdrom/populate-infra.sh
-        sh /cdrom/build-infra.sh 2>&1 | tee build-log.txt
+        sh /cdrom/build-infra.sh 2>&1 | tee build-infra-log.txt
+        sh /cdrom/install-python-packages.sh
         sh /cdrom/populate-catseye.sh
-        sh /cdrom/build-catseye.sh 2>&1 | tee build-log.txt
+        sh /cdrom/build-catseye.sh 2>&1 | tee build-catseye-log.txt
+        shelf_test catseye/* 2>&1 | tee test-catseye-log.txt
 EOF
 }

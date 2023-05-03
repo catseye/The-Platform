@@ -2,23 +2,10 @@
 
 . /home/user/.shelf/shelf.sh
 
-shelf_populate() {
-    src_dir="$1"
-    while read -r line; do
-        project=`echo $line | awk '{split($0,a,"@"); print a[1]}'`
-        tag=`echo $line | awk '{split($0,a,"@"); print a[2]}'`
-        if [ -e "$src_dir/$project.tar.gz" ]; then
-            tar zxvf $src_dir/$project.tar.gz
-        elif [ -e "$src_dir/$project.tgz" ]; then
-            tar zxvf $src_dir/$project.tgz
-        fi
-        #shelf_build $project
-        #shelf_link $project
-    done
-}
-
 cd /home/user
-mkdir -p catseye
-cd catseye
+mkdir -p infra
+cd infra
 
-shelf_populate /cdrom/ < /cdrom/infrastructure.catalog || exit 1
+shelf_populate_from_distfiles /cdrom/ < /cdrom/infrastructure.catalog || exit 1
+mv Ophis-99f074da278d4ec80689c0e22e20c5552ea12512 Ophis-2.1-2019.0413
+mv dcc6502-680c21299241133449056c2ddfbc0dd087dc3807 dcc6502-2.1-2018.0902
