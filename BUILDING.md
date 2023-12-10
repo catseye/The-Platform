@@ -34,8 +34,8 @@ display NetBSD console in your host system's terminal, you can
 
     export QEMU_SYSTEM_I386_FLAGS="-display curses"
 
-[shelf]: https://github.com/catseye/shelf/
-[Funicular]: https://github.com/catseye/Funicular/
+[shelf]: https://codeberg.org/catseye/shelf/
+[Funicular]: https://codeberg.org/catseye/Funicular/
 
 Notes for making the distribution
 ---------------------------------

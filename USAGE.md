@@ -8,7 +8,7 @@ needed to run them.
 
 For more information, and more up-to-date information, on The Platform, see
 
-*   [https://github.com/catseye/The-Platform][]
+*   [https://codeberg.org/catseye/The-Platform][]
 
 Like virtually all software, The Cat's Eye Technologies Platform is provided
 "AS IS" and without warranty of any kind, express or implied.  For more
@@ -336,7 +336,7 @@ please consult the documentation of the specific software package in question.
 - - - -
 
 [Cat's Eye Technologies]: https://catseye.tc/
-[https://github.com/catseye/The-Platform]: https://github.com/catseye/The-Platform
+[https://codeberg.org/catseye/The-Platform]: https://codeberg.org/catseye/The-Platform
 [https://7-zip.org/]: https://7-zip.org/
 [https://www.qemu.org/download/]: https://www.qemu.org/download/
 [https://qemu.weilnetz.de/]: https://qemu.weilnetz.de/

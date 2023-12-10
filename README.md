@@ -13,7 +13,7 @@ The current released version of The Cat's Eye Technologies Platform is
 version **0.5**.  It can be built with Funicular version 0.6 and uses
 shelf version 0.7 as its "packaging system". Its source can be found
 at the tag `0.5` in the repository, for example
-[on Github here](https://github.com/catseye/The-Platform/tree/0.5).
+[on Codeberg here](https://codeberg.org/catseye/The-Platform/src/tag/0.5).
 
 **If you want to download a pre-built disk image of The Platform**,
 it is available on the Internet Archive here:
@@ -36,8 +36,8 @@ or if you simply want to know more about its internals, read on.
 [The-Cats-Eye-Technologies-Platform-0.5.torrent]: https://raw.githubusercontent.com/catseye/The-Platform/master/torrent/The-Cats-Eye-Technologies-Platform-0.5.torrent
 
 [NetBSD]: https://netbsd.org/
-[shelf]: https://github.com/catseye/shelf/
-[Funicular]: https://github.com/catseye/Funicular/
+[shelf]: https://codeberg.org/catseye/shelf/
+[Funicular]: https://codeberg.org/catseye/Funicular/
 [Cat's Eye Technologies]: https://catseye.tc/
 
 Background
